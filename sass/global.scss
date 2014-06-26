@@ -1,0 +1,28 @@
+body {
+    background-color: blue;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    width: 100%;
+    nav {
+        width: 80%;
+        margin: 0 auto;
+        ul {
+            list-style: none;
+            li {
+                display: inline;
+                padding-left: 5%;
+                padding-right: 5%;
+                text-align: center;
+                a{
+                    color: orange;
+                    text-decoration: none;
+                    font-size: 3em;
+                }
+            }
+        }
+
+    }
+}
