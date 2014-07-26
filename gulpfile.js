@@ -42,13 +42,13 @@ var jsConcatDest = 'scripts.min.js';
 //========================================================================== //
 
 // WATCH PATH
-var sassWatch = 'library/sass/**/*.scss';
+var sassWatch = 'library/scss/**/*.scss';
 //SASS PATH
-var sassPath = 'library/sass';
+var sassPath = 'library/scss';
 // CSS PATH
 var cssPath = 'library/css';
 // CONFIG.RB PATH
-var configPath = 'config.rb';
+var configPath = 'library/scss/config.rb';
 
 
 // ==========================================================================//

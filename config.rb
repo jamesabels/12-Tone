@@ -5,10 +5,10 @@ require 'breakpoint'
 
 preferred_syntax = :scss
 http_path = '/'
-css_dir = 'libs/css'
-sass_dir = 'sass'
-images_dir = 'libs/img'
-javascripts_dir = 'libs/js'
+css_dir = 'library/css'
+sass_dir = 'library/sass'
+images_dir = 'library/img'
+javascripts_dir = 'library/js'
 relative_assets = true
 line_comments = true
 output_style = :compressed
