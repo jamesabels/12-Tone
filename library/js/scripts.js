@@ -6,10 +6,8 @@ var derp4 =  "Derp4";
 function derp() {
     if(1 === 1){
      console.log(derp);
-
     }
     else {
-
         console.log('Failz');
-        }
-}
+
+};

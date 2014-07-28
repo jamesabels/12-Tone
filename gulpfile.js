@@ -101,21 +101,14 @@ gulp.task('js-lint', function() {
         .pipe(jshint.reporter('jshint-stylish'))
 });
 
-//CONCAT JS
-gulp.task('js-concat', function() {
+//CONCAT & MINIFY
+gulp.task('js-process', function() {
     gulp.src(jsConcatSrc)
         .pipe(changed(jsConcatSrc))
-        .pipe(concat(jsConcatDest))
-        .pipe(gulp.dest(jsMinDest))
-});
-
-//UGLIFY JS
-gulp.task('js-uglify', function() {
-    gulp.src(jsMinSrc)
         .pipe(plumber())
+        .pipe(concat(jsConcatDest))
         .pipe(uglify())
         .pipe(gulp.dest(jsMinDest))
-        .pipe(livereload())
 });
 
 // ==========================================================================//
@@ -165,4 +158,4 @@ gulp.task('connect', function() {
 gulp.task('default', ['sass', 'js-lint', 'js-concat', 'js-uglify', 'watch'] );
 gulp.task('js-debug', ['js-lint'] );
 gulp.task('serve', ['connect', 'sass', 'js-lint', 'js-concat', 'js-uglify', 'watch'] );
-
+gulp.task('production', ['sass', 'js-concat', 'js-uglify']);

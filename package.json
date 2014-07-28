@@ -1,7 +1,7 @@
 {
-  "name": "HSTheme",
+  "name": "GulpBoilderplate",
   "version": "0.0.0",
-  "description": "A Lightweight Wordpress Development Theme",
+  "description": "A generic gulp template",
   "main": "gulpfile.js",
   "dependencies": {
     "gulp": "^3.8.6"
