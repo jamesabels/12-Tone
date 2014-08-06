@@ -155,7 +155,7 @@ gulp.task('connect', function() {
 //    4.0 --- CUSTOM TASKS                                                   //
 //========================================================================== //
 
-gulp.task('default', ['sass', 'js-lint', 'js-concat', 'js-uglify', 'watch'] );
+gulp.task('default', ['sass', 'js-lint', 'js-process', 'watch'] );
 gulp.task('js-debug', ['js-lint'] );
-gulp.task('serve', ['connect', 'sass', 'js-lint', 'js-concat', 'js-uglify', 'watch'] );
-gulp.task('production', ['sass', 'js-concat', 'js-uglify']);
+gulp.task('serve', ['connect', 'sass', 'js-lint', 'js-process', 'watch'] );
+gulp.task('production', ['sass', 'js-process']);
