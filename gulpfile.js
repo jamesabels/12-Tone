@@ -83,7 +83,7 @@ var compassSettings = {
 
 //WATCH
 gulp.task('watch', function(){
-    gulp.watch(jsWatch, [ 'js-lint', 'js-concat', 'js-uglify']);
+    gulp.watch(jsWatch, [ 'js-lint', 'js-process']);
     gulp.watch(sassWatch, ['sass']);
     gulp.watch(htmlSrc, ['html-reload']);
     gulp.watch(phpSrc, ['php-reload']);
