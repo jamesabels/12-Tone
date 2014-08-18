@@ -43,6 +43,8 @@ var jsConcatDest = 'scripts.min.js';
 
 // WATCH PATH
 var sassWatch = 'library/scss/**/*.scss';
+// SASS COMPILE
+var sassCompile = 'library/scss/*.scss'
 //SASS PATH
 var sassPath = 'library/scss';
 // CSS PATH
@@ -117,7 +119,7 @@ gulp.task('js-process', function() {
 
 //COMPILE SASS
 gulp.task('sass', function() {
-    gulp.src(sassWatch)
+    gulp.src(sassCompile)
         .pipe(plumber())
         .pipe(changed(sassWatch))
         .pipe(compass(compassSettings))
