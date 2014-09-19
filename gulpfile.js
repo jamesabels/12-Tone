@@ -29,15 +29,18 @@ var libs = 'library';
 //========================================================================== //
 
 // WATCH PATH
-var jsWatch = 'library/js/**/*.js';
+var jsWatch = 'library/js/{!(min)/*.js,*.js}';
 // GENERAL PATH
 var jsPath = 'library/js';
 // MINIFY PATHS
 var jsMinSrc = 'library/js/min/scripts.min.js';
 var jsMinDest = 'library/js/min';
 // CONCAT PATHS
-var jsConcatSrc =  'library/js/*.js';
+var jsConcatSrc =  'library/js/{!(min)/*.js,*.js}';
 var jsConcatDest = 'scripts.min.js';
+// JS HINT PATHS
+var jsHintPath = 'library/js/*.js}'
+
 
 // ==========================================================================//
 //    1.3 --- SASS/CSS PATHS                                                 //
@@ -98,8 +101,7 @@ gulp.task('watch', function(){
 
 //LINT JS
 gulp.task('js-lint', function() {
-    gulp.src(jsConcatSrc)
-        .pipe(changed(jsConcatSrc))
+    gulp.src(jsHintPath)
         .pipe(jshint())
         .pipe(jshint.reporter('jshint-stylish'))
 });
@@ -107,7 +109,6 @@ gulp.task('js-lint', function() {
 //CONCAT & MINIFY
 gulp.task('js-process', function() {
     gulp.src(jsConcatSrc)
-        .pipe(changed(jsConcatSrc))
         .pipe(plumber())
         .pipe(concat(jsConcatDest))
         .pipe(uglify())
@@ -123,7 +124,7 @@ gulp.task('sass', function() {
     gulp.src(sassWatch)
         .pipe(plumber())
         .pipe(changed(sassWatch))
-        .pipe(prefix("last 2 versions", "> 1%", "Explorer", "ie 9", "ie 8", "ie 7", "Firefox ESR", "Firefox", "iOS", "Chrome", "Safari"))
+        .pipe(prefix("last 2 versions", "> 1%", "ie 9", "ie 8", "ie 7", "Firefox ESR", "Firefox", "iOS", "Chrome", "Safari"))
         .pipe(compass(compassSettings))
         .pipe(gulp.dest(cssPath))
         .pipe(livereload())
