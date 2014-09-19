@@ -124,7 +124,7 @@ gulp.task('sass', function() {
     gulp.src(sassWatch)
         .pipe(plumber())
         .pipe(changed(sassWatch))
-        .pipe(prefix("last 2 versions", "> 1%", "ie 9", "ie 8", "ie 7", "Firefox ESR", "Firefox", "iOS", "Chrome", "Safari"))
+        .pipe(prefix("last 2 versions", "> 1%"))
         .pipe(compass(compassSettings))
         .pipe(gulp.dest(cssPath))
         .pipe(livereload())
