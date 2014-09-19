@@ -13,6 +13,8 @@ var stylish = require('jshint-stylish');
 var jshint = require('gulp-jshint');
 var connect = require('gulp-connect');
 var changed = require('gulp-changed');
+var prefix = require('gulp-autoprefixer');
+var imagemin = require('gulp-imagemin');
 
 
 // ==========================================================================//
@@ -43,8 +45,6 @@ var jsConcatDest = 'scripts.min.js';
 
 // WATCH PATH
 var sassWatch = 'library/scss/**/*.scss';
-// SASS COMPILE
-var sassCompile = 'library/scss/*.scss'
 //SASS PATH
 var sassPath = 'library/scss';
 // CSS PATH
@@ -65,8 +65,8 @@ var phpSrc = '**/*.php';
 //    1.5 --- IMAGE PATHS                                                    //
 //========================================================================== //
 
-var imgRawPath = 'library/img';
-var imgPath = 'library/img';
+var imgAll = 'library/images/*';
+var imgPath = 'library/images';
 
 // ==========================================================================//
 //    1.6 --- PLUGIN SETTINGS                                                //
@@ -89,6 +89,7 @@ gulp.task('watch', function(){
     gulp.watch(sassWatch, ['sass']);
     gulp.watch(htmlSrc, ['html-reload']);
     gulp.watch(phpSrc, ['php-reload']);
+    gulp.watch(imgPath, ['img']);
 });
 
 // ==========================================================================//
@@ -119,17 +120,28 @@ gulp.task('js-process', function() {
 
 //COMPILE SASS
 gulp.task('sass', function() {
-    gulp.src(sassCompile)
+    gulp.src(sassWatch)
         .pipe(plumber())
         .pipe(changed(sassWatch))
+        .pipe(prefix("last 2 versions", "> 1%", "Explorer", "ie 9", "ie 8", "ie 7", "Firefox ESR", "Firefox", "iOS", "Chrome", "Safari"))
         .pipe(compass(compassSettings))
         .pipe(gulp.dest(cssPath))
         .pipe(livereload())
 });
 
+// ==========================================================================//
+//    2.4 --- IMAGE TASKS                                                    //
+//========================================================================== //
+gulp.task('img', function(){
+    return gulp.src(imgAll)
+        .pipe(plumber())
+        .pipe(changed(imgAll))
+        .pipe(imagemin())
+        .pipe(gulp.dest(imgPath))
+});
 
 // ==========================================================================//
-//    0.1 --- HTML AND PHP RELOAD                                            //
+//    2.5 --- HTML AND PHP RELOAD                                            //
 //========================================================================== //
 
 gulp.task('html-reload', function(){
@@ -157,7 +169,7 @@ gulp.task('connect', function() {
 //    4.0 --- CUSTOM TASKS                                                   //
 //========================================================================== //
 
-gulp.task('default', ['sass', 'js-lint', 'js-process', 'watch'] );
+gulp.task('default', ['sass', 'js-lint', 'js-process', 'img', 'watch'] );
 gulp.task('js-debug', ['js-lint'] );
-gulp.task('serve', ['connect', 'sass', 'js-lint', 'js-process', 'watch'] );
-gulp.task('production', ['sass', 'js-process']);
+gulp.task('serve', ['connect', 'sass', 'js-lint', 'js-process', 'img', 'watch'] );
+gulp.task('production', ['sass', 'js-process', 'img']);

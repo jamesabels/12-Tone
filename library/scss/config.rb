@@ -1,15 +1,15 @@
 require 'compass'
 require 'susy'
-require 'breakpoint'
 
 
 preferred_syntax = :scss
 http_path = '/'
-css_dir = 'library/css'
-sass_dir = 'library/scss/*.scss'
-images_dir = 'library/img'
-javascripts_dir = 'library/js'
+css_dir = '../css'
+sass_dir = './*/*.scss'
+images_dir = '../img'
+javascripts_dir = '../js'
 relative_assets = true
 line_comments = true
+#output_style = :expanded
 output_style = :compressed
 sourcemap = true
