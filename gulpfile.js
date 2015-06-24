@@ -1,176 +1,87 @@
-// ==========================================================================//
-//    1 --- IMPORTS AND VARIABLES                                            //
-//========================================================================== //
-
-// PLUGIN CALLS
+// Plugin Requires
 var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-var compass = require('gulp-compass');
-var plumber = require('gulp-plumber');
-var concat = require('gulp-concat');
-var livereload = require('gulp-livereload');
-var stylish = require('jshint-stylish');
+var stylus = require('gulp-stylus');
+var typographic = require('typographic');
+var nib = require('nib');
+var rupture = require('rupture');
 var jshint = require('gulp-jshint');
-var connect = require('gulp-connect');
-var changed = require('gulp-changed');
-var prefix = require('gulp-autoprefixer');
-var imagemin = require('gulp-imagemin');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var livereloadForWas = require('gulp-livereload-for-was');
+
+// PATHS
+var stylusDir = 'library/stylus/**/*.styl';
+var cssDir    = 'library/css';
+var jsDir     = 'library/js/*.js';
+var jsVendor  = 'library/js/vendor/*.js';
+var jsMin     = 'library/js/min'
+var jsComp    = 'library/js/min/main.min.js'
+var allDir    =  './library/**/*.**'
+var htmlDir   = '*.html';
 
 
-// ==========================================================================//
-//    1.1 --- GENERAL FILE PATHS                                             //
-//========================================================================== //
+// TASKS
 
-var libs = 'library';
-
-
-// ==========================================================================//
-//    1.2 --- JAVASCRIPT PATHS                                               //
-//========================================================================== //
-
-// WATCH PATH
-var jsWatch = 'library/js/{!(min)/*.js,*.js}';
-// GENERAL PATH
-var jsPath = 'library/js';
-// MINIFY PATHS
-var jsMinSrc = 'library/js/min/scripts.min.js';
-var jsMinDest = 'library/js/min';
-// CONCAT PATHS
-var jsConcatSrc =  'library/js/{!(min)/*.js,*.js}';
-var jsConcatDest = 'scripts.min.js';
-// JS HINT PATHS
-var jsHintPath = 'library/js/*.js'
-
-
-// ==========================================================================//
-//    1.3 --- SASS/CSS PATHS                                                 //
-//========================================================================== //
-
-// WATCH PATH
-var sassWatch = 'library/scss/**/*.scss';
-//SASS PATH
-var sassPath = 'library/scss';
-// CSS PATH
-var cssPath = 'library/css';
-// CONFIG.RB PATH
-var configPath = 'library/scss/config.rb';
-
-
-// ==========================================================================//
-//    1.4 --- HTML AND PHP PATHS                                             //
-//========================================================================== //
-
-var htmlSrc = '**/*.html';
-var phpSrc = '**/*.php';
-
-
-// ==========================================================================//
-//    1.5 --- IMAGE PATHS                                                    //
-//========================================================================== //
-
-var imgAll = 'library/images/*';
-var imgPath = 'library/images';
-
-// ==========================================================================//
-//    1.6 --- PLUGIN SETTINGS                                                //
-//========================================================================== //
-
-//PLUGIN SETTINGS
-var compassSettings = {
-    config_file: configPath,
-    css: cssPath,
-    sass: sassPath,
-}
-
-// ==========================================================================//
-//    2.0 --- TASKS                                                          //
-//========================================================================== //
-
-//WATCH
-gulp.task('watch', function(){
-    gulp.watch(jsWatch, [ 'js-lint', 'js-process']);
-    gulp.watch(sassWatch, ['sass']);
-    gulp.watch(htmlSrc, ['html-reload']);
-    gulp.watch(phpSrc, ['php-reload']);
-    gulp.watch(imgPath, ['img']);
+// Complie Styles
+gulp.task('styles', function() {
+  gulp.src(stylusDir)
+    .pipe(stylus({
+      use: [typographic(), nib(), rupture()],
+      compress: true
+    }))
+    .pipe(gulp.dest(cssDir));
 });
 
-// ==========================================================================//
-//    2.1 --- JAVASCRIPT                                                     //
-//========================================================================== //
-
-//LINT JS
-gulp.task('js-lint', function() {
-    gulp.src(jsHintPath)
-        .pipe(jshint())
-        .pipe(jshint.reporter('jshint-stylish'))
+// Watch Styles
+gulp.task('watch:styles', function() {
+  gulp.watch(stylusDir, ['styles'])
 });
 
-//CONCAT & MINIFY
-gulp.task('js-process', function() {
-    gulp.src(jsConcatSrc)
-        .pipe(plumber())
-        .pipe(concat(jsConcatDest))
-        .pipe(uglify())
-        .pipe(gulp.dest(jsMinDest))
+// Hint JS
+gulp.task('hint', function() {
+  return gulp.src(jsDir)
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'));
 });
 
-// ==========================================================================//
-//    2.2 --- SASS                                                           //
-//========================================================================== //
-
-//COMPILE SASS
-gulp.task('sass', function() {
-    gulp.src(sassWatch)
-        .pipe(plumber())
-        .pipe(changed(sassWatch))
-        .pipe(prefix("last 2 versions", "> 1%"))
-        .pipe(compass(compassSettings))
-        .pipe(gulp.dest(cssPath))
-        .pipe(livereload())
+// Watch Hint
+gulp.task('watch:hint', function() {
+  gulp.watch(jsDir, ['hint'])
 });
 
-// ==========================================================================//
-//    2.4 --- IMAGE TASKS                                                    //
-//========================================================================== //
-gulp.task('img', function(){
-    return gulp.src(imgAll)
-        .pipe(plumber())
-        .pipe(changed(imgAll))
-        .pipe(imagemin())
-        .pipe(gulp.dest(imgPath))
+// Concat JS
+gulp.task('concat', function() {
+  return gulp.src(jsDir)
+    .pipe(concat('main.min.js'))
+    .pipe(gulp.dest(jsMin));
 });
 
-// ==========================================================================//
-//    2.5 --- HTML AND PHP RELOAD                                            //
-//========================================================================== //
-
-gulp.task('html-reload', function(){
-    return gulp.src(htmlSrc)
-        .pipe(changed(htmlSrc))
-        .pipe(livereload())
+// Watch Concat
+gulp.task('watch:concat', function() {
+  gulp.watch(jsDir, ['concat'])
 });
 
-gulp.task('php-reload', function(){
-    return gulp.src(phpSrc)
-        .pipe(changed(phpSrc))
-        .pipe(livereload())
+// Minify JS
+gulp.task('minify', function() {
+  return gulp.src(jsComp)
+    .pipe(uglify())
+    .pipe(gulp.dest(jsMin));
+});
+
+// Watch Concat
+gulp.task('watch:minify', function() {
+  gulp.watch(jsComp, ['minify'])
 });
 
 
-// ==========================================================================//
-//    3.0 --- CONNECT SERVER                                                 //
-//========================================================================== //
+// BUILD TASKS
 
-gulp.task('connect', function() {
-  connect.server();
+gulp.task('watch', function() {
+  livereloadForWas.listen();
+  gulp.watch(stylusDir, ['styles'])
+  gulp.watch(jsDir, ['hint'])
+  gulp.watch(jsDir, ['concat'])
+  gulp.watch(jsComp, ['minify'])
+  gulp.watch(allDir).on('change', livereloadForWas.changed);
+  gulp.watch(htmlDir).on('change', livereloadForWas.changed);
 });
-
-// ==========================================================================//
-//    4.0 --- CUSTOM TASKS                                                   //
-//========================================================================== //
-
-gulp.task('default', ['sass', 'js-lint', 'js-process', 'img', 'watch'] );
-gulp.task('js-debug', ['js-lint'] );
-gulp.task('serve', ['connect', 'sass', 'js-lint', 'js-process', 'img', 'watch'] );
-gulp.task('production', ['sass', 'js-process', 'img']);
