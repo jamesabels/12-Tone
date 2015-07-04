@@ -1,6 +1,6 @@
 // Plugin Requires
-var livereloadForWas = require('gulp-livereload-for-was');
-var bootstrap = require('bootstrap-styl')
+var browserSync = require('browser-sync').create();
+var bootstrap = require('bootstrap-styl');
 var typographic = require('typographic');
 var stylish = require('jshint-stylish');
 var plumber = require('gulp-plumber');
@@ -13,36 +13,25 @@ var jeet = require('jeet');
 var gulp = require('gulp');
 var nib = require('nib');
 
-// PATHS
-var stylusDir = 'library/stylus/*.styl';
-var cssDir    = 'library/css';
-var jsDir     = 'library/js/*.js';
-var jsBS      = 'library/js/bootstrap/*.js';
-var jsVendor  = 'library/js/vendor/*.js';
-var jsMin     = 'library/js/min';
-var jsConcat  = 'library/js/!min/*.js';
-var jsComp    = 'library/js/min/main.min.js';
-var allDir    =  './library/**/*.**';
-var htmlDir   = '*.html';
-
 // TASKS
+
 // Complie Styles
 gulp.task('styles', function() {
-  gulp.src(stylusDir)
+  gulp.src('library/stylus/*.styl')
     .pipe(plumber())
     .pipe(stylus({
       use: [typographic(), nib(), rupture(), jeet(), bootstrap()],
       compress: true
     }))
-    .pipe(gulp.dest(cssDir));
+    .pipe(gulp.dest('library/css'))
+    .pipe(browserSync.stream());
 });
 
 // Hint JS
 gulp.task('hint', function() {
-  return gulp.src(jsDir)
+  return gulp.src('library/js/*.js')
     .pipe(plumber())
     .pipe(jshint())
-
     .pipe(jshint.reporter('jshint-stylish'));
 });
 
@@ -51,25 +40,32 @@ gulp.task('concat', function() {
   return gulp.src(['library/**/*.js', '!library/js/**/*.min.js'])
     .pipe(plumber())
     .pipe(concat('main.min.js'))
-    .pipe(gulp.dest(jsMin));
+    .pipe(gulp.dest('library/js/min'))
+    .pipe(browserSync.stream());
 });
 
 // Minify JS
 gulp.task('minify', function() {
-  return gulp.src(jsComp)
+  return gulp.src('library/js/min/main.min.js')
     .pipe(plumber())
     .pipe(uglify())
-    .pipe(gulp.dest(jsMin));
+    .pipe(gulp.dest('library/js/min'))
+    .pipe(browserSync.stream());
 });
 
 
 // BUILD TASKS
-gulp.task('watch', function() {
-  livereloadForWas.listen();
-  gulp.watch(stylusDir, ['styles']);
-  gulp.watch(jsDir, ['hint']);
-  gulp.watch(jsDir, ['concat']);
-  gulp.watch(jsComp, ['minify'])
-  gulp.watch(allDir).on('change', livereloadForWas.changed);
-  gulp.watch(htmlDir).on('change', livereloadForWas.changed);
+// BrowserSync
+gulp.task('watch', ['styles'], function() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+    gulp.watch('library/stylus/*.styl', ['styles']);
+    gulp.watch('*.html').on('change', browserSync.reload);
+    gulp.watch().on('change', browserSync.reload);
+    gulp.watch('library/js/*.js', ['hint']);
+    gulp.watch('library/js/min/main.min.js', ['minify']);
+    gulp.watch('library/js/*.js', ['concat']);
 });
