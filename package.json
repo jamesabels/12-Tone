@@ -1,7 +1,7 @@
 {
-  "name": "gulp-boilerplate",
-  "version": "1.0.0",
-  "description": "A simple gulp boilerplate",
+  "name": "web-boilerplate",
+  "version": "0.0.1",
+  "description": "A simple website boilerplate",
   "main": "gulpfile.js",
   "devDependencies": {
     "bootstrap-styl": "^4.0.5",
@@ -25,9 +25,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://jamesabels@bitbucket.org/jamesabels/gulp-boilerplate.git"
+    "url": "git+https://jamesabels@bitbucket.org/jamesabels/web-boilerplate.git"
   },
   "author": "James Abels",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/jamesabels/gulp-boilerplate#readme"
+  "homepage": "https://bitbucket.org/jamesabels/web-boilerplate#readme"
 }
