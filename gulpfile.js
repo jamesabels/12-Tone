@@ -1,6 +1,5 @@
 // Plugin Requires
 var browserSync = require('browser-sync').create();
-var bootstrap = require('bootstrap-styl');
 var typographic = require('typographic');
 var imagemin = require('gulp-imagemin');
 var stylish = require('jshint-stylish');
