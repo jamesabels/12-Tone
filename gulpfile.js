@@ -2,7 +2,9 @@
 var browserSync = require('browser-sync').create();
 var bootstrap = require('bootstrap-styl');
 var typographic = require('typographic');
+var imagemin = require('gulp-imagemin');
 var stylish = require('jshint-stylish');
+var vinylPaths = require('vinyl-paths');
 var plumber = require('gulp-plumber');
 var stylus = require('gulp-stylus');
 var jshint = require('gulp-jshint');
@@ -12,6 +14,7 @@ var rupture = require('rupture');
 var jeet = require('jeet');
 var gulp = require('gulp');
 var nib = require('nib');
+var del = require('del');
 
 // TASKS
 // Complie Styles
@@ -52,6 +55,23 @@ gulp.task('minify', function() {
     .pipe(browserSync.stream());
 });
 
+// Optimize Images
+gulp.task('image-min', function () {
+    return gulp.src(['library/img/*.jpg','library/img/*.jpeg', 'library/img/*.png', 'library/img/*.gif', 'library/img/*.svg' ])
+        .pipe(plumber())
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}]
+        }))
+        .pipe(gulp.dest('library/img/min'));
+});
+
+// Delete Original Images
+gulp.task('image-clean', function () {
+    return gulp.src(['library/img/*.jpg','library/img/*.jpeg', 'library/img/*.png', 'library/img/*.gif', 'library/img/*.svg'])
+      .pipe(plumber())
+      .pipe(vinylPaths(del));
+});
 
 // BUILD TASKS
 // BrowserSync
@@ -67,4 +87,5 @@ gulp.task('watch', ['styles'], function() {
     gulp.watch('library/js/*.js', ['hint']);
     gulp.watch('library/js/min/main.min.js', ['minify']);
     gulp.watch('library/js/*.js', ['concat']);
+    gulp.watch(['library/img/*.jpg','library/img/*.jpeg', 'library/img/*.png', 'library/img/*.gif', 'library/img/*.svg'] , ['image-min', 'image-clean']);
 });
