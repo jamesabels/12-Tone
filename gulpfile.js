@@ -33,7 +33,7 @@ gulp.task('styles', function() {
 gulp.task('prefix-css', function() {
   gulp.src('library/css/*.css')
     .pipe(plumber())
-    .pipe(autoprefixer({browsers: ['> 5% in US', 'last 2 versions'], cascade: false}))
+    .pipe(autoprefixer({browsers: ['> 5% in US', 'last 5 versions'], cascade: false}))
     .pipe(gulp.dest('library/css'))
     .pipe(browserSync.stream());
 });
@@ -91,6 +91,7 @@ gulp.task('watch', ['styles'], function() {
         }
     });
     gulp.watch('library/stylus/*.styl', ['styles']);
+    gulp.watch('library/css/*.css', ['prefix-css']);
     gulp.watch('*.html').on('change', browserSync.reload);
     gulp.watch().on('change', browserSync.reload);
     gulp.watch('library/js/*.js', ['hint']);
