@@ -1,5 +1,6 @@
-// Plugin Requires
+// Plugin Calls
 var browserSync = require('browser-sync').create();
+var autoprefixer = require('gulp-autoprefixer');
 var typographic = require('typographic');
 var imagemin = require('gulp-imagemin');
 var stylish = require('jshint-stylish');
@@ -21,9 +22,18 @@ gulp.task('styles', function() {
   gulp.src('library/stylus/*.styl')
     .pipe(plumber())
     .pipe(stylus({
-      use: [typographic(), nib(), rupture(), jeet(), bootstrap()],
+      use: [typographic(), nib(), rupture(), jeet()],
       compress: true
     }))
+    .pipe(gulp.dest('library/css'))
+    .pipe(browserSync.stream());
+});
+
+// Prefix CSS
+gulp.task('prefix-css', function() {
+  gulp.src('library/css/*.css')
+    .pipe(plumber())
+    .pipe(autoprefixer({browsers: ['> 5% in US', 'last 2 versions'], cascade: false}))
     .pipe(gulp.dest('library/css'))
     .pipe(browserSync.stream());
 });
