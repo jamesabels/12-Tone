@@ -1,15 +1,5 @@
+// Base Imports
 @import "partials/_normalize";
 @import "partials/config";
 
-
-
-body {
-  background: lime;
-  @include container(960px);
-}
-
-
-.box{
-  background: #333;
-  @include span(25%);
-}
+// General Styles
