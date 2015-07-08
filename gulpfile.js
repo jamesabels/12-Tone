@@ -79,7 +79,7 @@ gulp.task('image-clean', function () {
 
 // BUILD TASKS
 // BrowserSync
-gulp.task('watch', ['sass'], function() {
+gulp.task('watch', ['sass', 'prefix-css', 'hint', 'concat', 'image-min', 'image-clean'], function() {
     browserSync.init({
         server: {
             baseDir: "./"
@@ -92,5 +92,5 @@ gulp.task('watch', ['sass'], function() {
     gulp.watch('library/js/*.js', ['hint']);
     gulp.watch('library/js/min/main.min.js', ['minify']);
     gulp.watch('library/js/*.js', ['concat']);
-    gulp.watch(['library/img/*.jpg','library/img/*.jpeg', 'library/img/*.png', 'library/img/*.gif', 'library/img/*.svg'] , ['image-min', 'image-clean']);
+    gulp.watch('library/img/*.**' , ['image-min', 'image-clean']);
 });
