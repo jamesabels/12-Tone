@@ -1,30 +1,25 @@
 // Plugin Calls
 var browserSync = require('browser-sync').create();
 var autoprefixer = require('gulp-autoprefixer');
-var typographic = require('typographic');
+var sourcemaps = require('gulp-sourcemaps');
 var imagemin = require('gulp-imagemin');
 var stylish = require('jshint-stylish');
 var vinylPaths = require('vinyl-paths');
 var plumber = require('gulp-plumber');
-var stylus = require('gulp-stylus');
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var rupture = require('rupture');
-var jeet = require('jeet');
+var sass = require('gulp-sass');
 var gulp = require('gulp');
-var nib = require('nib');
 var del = require('del');
 
-// TASKS
-// Complie Styles
-gulp.task('styles', function() {
-  gulp.src('library/stylus/*.styl')
+// Complie Sass
+gulp.task('sass', function() {
+  gulp.src('library/sass/*.scss')
     .pipe(plumber())
-    .pipe(stylus({
-      use: [typographic(), nib(), rupture(), jeet()],
-      compress: true
-    }))
+    .pipe(sourcemaps.init())
+    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest('library/css'))
     .pipe(browserSync.stream());
 });
@@ -84,13 +79,13 @@ gulp.task('image-clean', function () {
 
 // BUILD TASKS
 // BrowserSync
-gulp.task('watch', ['styles'], function() {
+gulp.task('watch', ['sass'], function() {
     browserSync.init({
         server: {
             baseDir: "./"
         }
     });
-    gulp.watch('library/stylus/*.styl', ['styles']);
+    gulp.watch('library/sass/*.scss', ['sass']);
     gulp.watch('library/css/*.css', ['prefix-css']);
     gulp.watch('*.html').on('change', browserSync.reload);
     gulp.watch().on('change', browserSync.reload);
