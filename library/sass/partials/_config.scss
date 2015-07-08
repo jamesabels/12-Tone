@@ -1,0 +1,10 @@
+@import "bower_components/susy/sass/susy";
+@import "bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
+
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
