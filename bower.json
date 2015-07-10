@@ -16,7 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    "susy": "~2.2.5",
-    "bourbon": "~4.2.3"
+    "susy": "~2.2.5"
   }
 }
