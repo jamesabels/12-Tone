@@ -1,6 +1,7 @@
 // Plugin Calls
 var browserSync = require('browser-sync').create();
 var autoprefixer = require('gulp-autoprefixer');
+var spritesmith = require('gulp.spritesmith');
 var styledocco = require('gulp-styledocco');
 var sourcemaps = require('gulp-sourcemaps');
 var imagemin = require('gulp-imagemin');
@@ -41,7 +42,7 @@ gulp.task('style-guide', function () {
       out: 'docs',
       name: 'Web Boilerplate',
       preprocessor: 'node_modules/gulp-sass',
-      include: ["library/css/global.css"]
+      include: ["library/css/global.css",]
     }));
 });
 
@@ -73,7 +74,7 @@ gulp.task('minify', function() {
 
 // Optimize Images
 gulp.task('image-min', function () {
-    return gulp.src(['library/img/*.jpg','library/img/*.jpeg', 'library/img/*.png', 'library/img/*.gif', 'library/img/*.svg' ])
+    return gulp.src(['library/img/*.jpg','library/img/*.jpeg', 'library/img/*.png', 'library/img/*.gif', 'library/img/*.svg'])
         .pipe(plumber())
         .pipe(imagemin({
             progressive: true,
@@ -81,6 +82,32 @@ gulp.task('image-min', function () {
         }))
         .pipe(gulp.dest('library/img/min'));
 });
+
+// Initialize Sprites
+gulp.task('sprite-init', function () {
+    return gulp.src('library/img/sprites/min/*.**')
+      .pipe(plumber())
+      .pipe(vinylPaths(del));
+});
+
+// Create Spritesheet
+gulp.task('sprite', function () {
+  var spriteData = gulp.src(['library/img/sprites/*.png', 'library/img/sprites/*.jpg'])
+  .pipe(plumber())
+  .pipe(spritesmith({
+    imgName: 'sprite.png',
+    cssName: 'sprite.css'
+  }))
+  return spriteData.pipe(gulp.dest('library/img/sprites/min'));
+});
+
+// Clean Sprites
+gulp.task('sprite-clean', function () {
+    return gulp.src(['library/img/sprites/*.jpg','library/img/sprites/*.jpeg', 'library/img/sprites/*.png', 'library/img/sprites/*.gif', 'library/img/sprites/*.svg'])
+      .pipe(plumber())
+      .pipe(vinylPaths(del));
+});
+
 
 // Delete Original Images
 gulp.task('image-clean', function () {
@@ -91,7 +118,7 @@ gulp.task('image-clean', function () {
 
 // BUILD TASKS
 // BrowserSync
-gulp.task('watch', ['sass', 'prefix-css', 'style-guide', 'hint', 'concat', 'image-min', 'image-clean'], function() {
+gulp.task('watch', ['sass', 'prefix-css', 'style-guide', 'hint', 'concat', 'image-min', 'image-clean', 'sprite'], function() {
     browserSync.init({
         server: {
             baseDir: "./"
@@ -104,6 +131,11 @@ gulp.task('watch', ['sass', 'prefix-css', 'style-guide', 'hint', 'concat', 'imag
     gulp.watch().on('change', browserSync.reload);
     gulp.watch('library/js/*.js', ['hint']);
     gulp.watch('library/js/min/main.min.js', ['minify']);
-    gulp.watch('library/js/*.js', ['concat']);
-    gulp.watch('library/img/*.**' , ['image-min', 'image-clean']);
+    gulp.watch('library/js/*.js', ['concat', 'style-guide']);
+    gulp.watch(['library/img/*.**', 'library/img/sprites/min/*.png'] , ['image-min', 'image-clean']);
 });
+
+// Manage Sprites
+gulp.task('make-sprites', ['sprite'], function() {});
+gulp.task('reset-sprites', ['sprite-init'], function() {});
+gulp.task('prune-sprites', ['sprite-clean'], function() {});
