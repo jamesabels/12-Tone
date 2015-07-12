@@ -1,6 +1,6 @@
 // Site Settings
-@import "partials/_normalize";
-@import "partials/config";
+@import "settings/_normalize";
+@import "settings/config";
 
 // Media Queries
 $xsmall: max-width 600px;
@@ -8,9 +8,3 @@ $small: 600px;
 $medium: 720px;
 $large: 1020px;
 $xlarge: 1920px;
-
-// Design Styles
-@import "library/sass/styles/style.scss";
-
-// Structural Styles
-@import "library/sass/structure/structure.scss";
