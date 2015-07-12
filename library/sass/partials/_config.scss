@@ -1,8 +1,18 @@
 // Library Imports
 @import "bower_components/susy/sass/susy";
-// @import "bower_components/breakpoint/breakpoint";
 
 // Include Imports
+@import "library/sass/media queries/_small.scss";
+@import "library/sass/media queries/_medium.scss";
+@import "library/sass/media queries/_large.scss";
+@import "library/sass/media queries/_xlarge.scss";
+
+// Standard Breakpoints
+$xsmall: 480;
+$small: 720;
+$medium: 960;
+$large: 1280;
+$xlarge: 1920;
 
 // Susy Settings
 $susy: (
