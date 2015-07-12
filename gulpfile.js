@@ -2,7 +2,6 @@
 var browserSync = require('browser-sync').create();
 var autoprefixer = require('gulp-autoprefixer');
 var spritesmith = require('gulp.spritesmith');
-var styledocco = require('gulp-styledocco');
 var sourcemaps = require('gulp-sourcemaps');
 var imagemin = require('gulp-imagemin');
 var stylish = require('jshint-stylish');
@@ -35,16 +34,6 @@ gulp.task('prefix-css', function() {
     .pipe(browserSync.stream());
 });
 
-//Build Styleguide
-gulp.task('style-guide', function () {
-  gulp.src("library/sass/*.scss")
-    .pipe(styledocco({
-      out: 'docs',
-      name: 'Web Boilerplate',
-      preprocessor: 'node_modules/gulp-sass',
-      include: ["library/css/global.css",]
-    }));
-});
 
 // Hint JS
 gulp.task('hint', function() {
@@ -97,7 +86,7 @@ gulp.task('sprite', function () {
   .pipe(spritesmith({
     imgName: 'sprite.png',
     cssName: 'sprite.css'
-  }))
+  }));
   return spriteData.pipe(gulp.dest('library/img/sprites/min'));
 });
 
@@ -118,7 +107,7 @@ gulp.task('image-clean', function () {
 
 // BUILD TASKS
 // BrowserSync
-gulp.task('watch', ['sass', 'prefix-css', 'style-guide', 'hint', 'concat', 'image-min', 'image-clean', 'sprite'], function() {
+gulp.task('watch', ['sass', 'prefix-css', 'hint', 'concat', 'image-min', 'image-clean', 'sprite'], function() {
     browserSync.init({
         server: {
             baseDir: "./"
@@ -126,12 +115,11 @@ gulp.task('watch', ['sass', 'prefix-css', 'style-guide', 'hint', 'concat', 'imag
     });
     gulp.watch('library/sass/**/*.scss', ['sass']);
     gulp.watch('library/css/*.css', ['prefix-css']);
-        gulp.watch('library/css/*.css', ['style-guide']);
     gulp.watch('*.html').on('change', browserSync.reload);
     gulp.watch().on('change', browserSync.reload);
     gulp.watch('library/js/*.js', ['hint']);
     gulp.watch('library/js/min/main.min.js', ['minify']);
-    gulp.watch('library/js/*.js', ['concat', 'style-guide']);
+    gulp.watch('library/js/*.js', ['concat']);
     gulp.watch(['library/img/*.**', 'library/img/sprites/min/*.png'] , ['image-min', 'image-clean']);
 });
 

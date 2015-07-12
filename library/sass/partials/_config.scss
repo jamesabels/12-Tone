@@ -1,5 +1,6 @@
 // Library Imports
 @import "bower_components/susy/sass/susy";
+// @import "bower_components/breakpoint/breakpoint";
 
 // Include Imports
 
@@ -10,4 +11,20 @@ $susy: (
   math: fluid,
   output: float,
   gutter-position: inside,
+);
+
+$xsmall: (
+columns: 4,
+gutters: 1/4,
+math: fluid,
+output: float,
+gutter-position: inside,
+);
+
+$small: (
+columns: 8,
+gutters: 1/4,
+math: fluid,
+output: float,
+gutter-position: inside,
 );
