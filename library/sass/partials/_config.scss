@@ -8,33 +8,16 @@
 @import "library/sass/media queries/_xlarge.scss";
 
 // Standard Breakpoints
-$xsmall: 480;
-$small: 720;
-$medium: 960;
-$large: 1280;
+$small: 600;
+$medium: 720;
+$large: 1024;
 $xlarge: 1920;
 
 // Susy Settings
 $susy: (
-  columns: 12,
+  columns: 4,
   gutters: 1/4,
   math: fluid,
   output: float,
   gutter-position: inside,
-);
-
-$xsmall: (
-columns: 4,
-gutters: 1/4,
-math: fluid,
-output: float,
-gutter-position: inside,
-);
-
-$small: (
-columns: 8,
-gutters: 1/4,
-math: fluid,
-output: float,
-gutter-position: inside,
 );
