@@ -15,7 +15,8 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "susy": "~2.2.5"
+  "devDependencies": {
+    "susy": "~2.2.5",
+    "compass-breakpoint": "~2.6.1"
   }
 }

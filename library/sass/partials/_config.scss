@@ -1,21 +1,26 @@
 // Library Imports
 @import "bower_components/susy/sass/susy";
-
-// Include Imports
-@import "library/sass/media queries/_small.scss";
-@import "library/sass/media queries/_medium.scss";
-@import "library/sass/media queries/_large.scss";
-@import "library/sass/media queries/_xlarge.scss";
-
-// Standard Breakpoints
-$small: 600;
-$medium: 720;
-$large: 1024;
-$xlarge: 1920;
+@import "bower_components/compass-breakpoint/stylesheets/_breakpoint.scss";
 
 // Susy Settings
 $susy: (
   columns: 4,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+); 
+
+$tablet: (
+  columns: 8,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+
+$desktop: (
+  columns: 12,
   gutters: 1/4,
   math: fluid,
   output: float,
