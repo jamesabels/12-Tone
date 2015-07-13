@@ -157,3 +157,6 @@ gulp.task('prune-sprites', ['sprite-clean'], function() {});
 
 // Generate Styleguide
 gulp.task('styleguide', ['styleguide:generate', 'styleguide:apply']);
+
+// Prune for Production
+gulp.task('production', ['sprite-clean', 'image-clean'], function() {}); 
