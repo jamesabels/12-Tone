@@ -3,6 +3,7 @@ var browserSync = require('browser-sync').create();
 var autoprefixer = require('gulp-autoprefixer');
 var spritesmith = require('gulp.spritesmith');
 var sourcemaps = require('gulp-sourcemaps');
+var styleguide = require('sc5-styleguide');
 var imagemin = require('gulp-imagemin');
 var stylish = require('jshint-stylish');
 var vinylPaths = require('vinyl-paths');
@@ -34,6 +35,31 @@ gulp.task('prefix-css', function() {
     .pipe(browserSync.stream());
 });
 
+// Generate Styleguide
+gulp.task('styleguide:generate', function() {
+  return gulp.src('library/sass/**/*.scss')
+    .pipe(plumber())
+    .pipe(styleguide.generate({
+        title: 'Web Boilerplate',
+        server: true,
+        port: 3008,
+        rootPath: 'docs'
+      }))
+    .pipe(gulp.dest('docs'))
+    .pipe(browserSync.stream());
+});
+
+// Apply Styleguide
+gulp.task('styleguide:apply', function() {
+  return gulp.src('library/css/global.css')
+    .pipe(plumber())
+    .pipe(sass({
+      errLogToConsole: true
+    }))
+    .pipe(styleguide.applyStyles())
+    .pipe(gulp.dest('docs'))
+    .pipe(browserSync.stream());
+});
 
 // Hint JS
 gulp.task('hint', function() {
@@ -107,13 +133,14 @@ gulp.task('image-clean', function () {
 
 // BUILD TASKS
 // BrowserSync
-gulp.task('watch', ['sass', 'prefix-css', 'hint', 'concat', 'image-min', 'image-clean', 'sprite'], function() {
+gulp.task('watch', ['sass', 'prefix-css', 'hint', 'concat', 'image-min', 'image-clean', 'sprite', 'styleguide:generate', 'styleguide:apply'], function() {
     browserSync.init({
         server: {
             baseDir: "./"
         }
     });
     gulp.watch('library/sass/**/*.scss', ['sass']);
+    gulp.watch('library/sass/**/*.scss', ['sass','styleguide']);
     gulp.watch('library/css/*.css', ['prefix-css']);
     gulp.watch('*.html').on('change', browserSync.reload);
     gulp.watch().on('change', browserSync.reload);
@@ -127,3 +154,6 @@ gulp.task('watch', ['sass', 'prefix-css', 'hint', 'concat', 'image-min', 'image-
 gulp.task('make-sprites', ['sprite'], function() {});
 gulp.task('reset-sprites', ['sprite-init'], function() {});
 gulp.task('prune-sprites', ['sprite-clean'], function() {});
+
+// Generate Styleguide
+gulp.task('styleguide', ['styleguide:generate', 'styleguide:apply']);
