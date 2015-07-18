@@ -5,11 +5,11 @@ var modeMenu = $("#mode-select");
 var displaySect = $("display-section");
 var modeMenu = $("#mode-select");
 
-function init () {
+(function init () {
   if (keyMenu.val() == "c" && modeMenu.val() == "major") {
     keyDesc.append(Cmaj.keyChar);
   }
-}
+}());
 
 
 function test () {
