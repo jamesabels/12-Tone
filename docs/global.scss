@@ -12,3 +12,39 @@ $xlarge: 1920px;
 
 @import "library/sass/partials/typography.scss";
  
+// Class for hiding elements
+.hidden {
+  display: none;
+}
+
+
+body {
+
+// General Page Wrap
+    .page-wrap {
+        height: 100vh;
+
+// The section for picking the Key
+    .key-section {
+      background: gray;
+      height: 50vh;
+      width: 100%;
+
+// Wrapper for the option box
+      .dropdown-wrap {
+        margin-top: 100px;
+        width: 190px;
+        margin: 0 auto;
+      } // end dropdown-wrap
+
+    } // end key-section
+
+    .display-section {
+      background: #999;
+      width: 100%;
+      height: 50vh;
+    } // end display-section
+
+  } // end page-wrap
+
+} // end body

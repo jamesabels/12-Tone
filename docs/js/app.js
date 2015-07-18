@@ -180,6 +180,16 @@ angular.module('sgApp', [
 
       angular.forEach(sortedVariables, function(variable) {
         var cleanedValue = variable.value.replace(/\s*\!default$/, '');
+
+        if (cleanedValue.match('\[\$\@]') !== null) {
+          var varName = cleanedValue.substring(1);
+          angular.forEach(sortedVariables, function(_var) {
+            if (_var.name === varName) {
+              cleanedValue = _var.value;
+            }
+          });
+        }
+
         str = str.replace(new RegExp('\[\$\@]' + variable.name, 'g'), cleanedValue);
       });
       return str;
@@ -619,6 +629,18 @@ angular.module('sgApp')
         // We want to run updateCurrentReference after digest is complete
         $timeout(function() {
           updateCurrentReference();
+        });
+
+        // Emit an event that an element is rendered
+        element.ready(function() {
+          var event = new CustomEvent('styleguide:onRendered', {
+            detail: {
+              elements: element
+            },
+            bubbles: true,
+            cancelable: true
+          });
+          $window.dispatchEvent(event);
         });
       }
     };

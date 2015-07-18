@@ -139,3 +139,24 @@ table {
 
 td, th {
   padding: 0; }
+
+.hidden {
+  display: none; }
+
+body .page-wrap {
+  height: 100vh; }
+
+body .page-wrap .key-section {
+  background: gray;
+  height: 50vh;
+  width: 100%; }
+
+body .page-wrap .key-section .dropdown-wrap {
+  margin-top: 100px;
+  width: 190px;
+  margin: 0 auto; }
+
+body .page-wrap .display-section {
+  background: #999;
+  width: 100%;
+  height: 50vh; }
