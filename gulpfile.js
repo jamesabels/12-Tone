@@ -40,9 +40,9 @@ gulp.task('styleguide:generate', function() {
   return gulp.src('library/sass/**/*.scss')
     .pipe(plumber())
     .pipe(styleguide.generate({
-        title: 'Web Boilerplate',
+        title: '12 Tone',
         server: true,
-        port: 3008,
+        port: 4000,
         rootPath: 'docs'
       }))
     .pipe(gulp.dest('docs'))
