@@ -1,5 +1,5 @@
-// WRITE C MAJOR OBJECT TO HTML //
-function printCmaj () {
+// A function for all of the logic of printing the key, just pass the correct key object
+function printKey( musicalKey ) {
 
     // Empty before appending
     $(keyChar).empty();
@@ -7,68 +7,29 @@ function printCmaj () {
     $(chordList).empty();
 
     // Append new key description
-    $("<p class='key-char'>" + Cmaj.keyChar + "</p>").appendTo(keyDesc);
+    $("<p class='key-char'>" + musicalKey.keyChar + "</p>").appendTo(keyDesc);
 
     // Append note array to unordered list.
-    $.each(Cmaj.scale, function(i) {
+    $.each(musicalKey.scale, function(i) {
         var li = $('<li/>')
             .addClass('scale-degree')
             .attr('role', 'menuitem')
             .appendTo($(notelist));
         var liLink = $('<a/>')
             .addClass('scale-link')
-            .text(Cmaj.scale[i])
+            .text(musicalKey.scale[i])
             .appendTo(li);
     });
 
     // Append chord array to unordered list
-    $.each(Cmaj.chord, function(i) {
+    $.each(musicalKey.chord, function(i) {
         var li = $('<li/>')
             .addClass('chord-degree')
             .attr('role', 'menuitem')
             .appendTo($(chordList));
         var liLink = $('<a/>')
             .addClass('chord-link')
-            .text(Cmaj.chord[i])
+            .text(musicalKey.chord[i])
             .appendTo(li);
     });
-}
-// END printCmaj //
-
-
-// WRITE C MINOR OBJECT TO HTML
-function printCmin () {
-
-    // Empty before appending
-    $(keyChar).empty();
-    $(notelist).empty();
-    $(chordList).empty();
-
-    // Append new key description
-    $("<p class='key-char'>" + Cmin.keyChar + "</p>").appendTo(keyDesc);
-
-        // Append note array to unordered list.
-    $.each(Cmin.scale, function(i) {
-        var li = $('<li/>')
-            .addClass('scale-degree')
-            .attr('role', 'menuitem')
-            .appendTo($(notelist));
-        var liLink = $('<a/>')
-            .addClass('scale-link')
-            .text(Cmin.scale[i])
-            .appendTo(li);
-    });
-
-    // Append chord array to unordered list
-    $.each(Cmin.chord, function(i) {
-        var li = $('<li/>')
-            .addClass('chord-degree')
-            .attr('role', 'menuitem')
-            .appendTo($(chordList));
-        var liLink = $('<a/>')
-            .addClass('chord-link')
-            .text(Cmin.chord[i])
-            .appendTo(li);
-    });
-// END printCmaj //
 }
