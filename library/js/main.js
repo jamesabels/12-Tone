@@ -89,15 +89,8 @@ function changeKey() {
         // Print Dmin
         printKey(Bmin);
     }
-
-
-
-
-
-
-
     // SHARP AND FLAT KEYS
-    // C# MAJOR or
+    // C# MAJOR
     if ($(keyMenu).val() === "c#" && $(modeMenu).val() === "major") {
         // Print C#Maj
         printKey(CSharpMaj);
@@ -107,5 +100,44 @@ function changeKey() {
         // Print C#min
         printKey(CSharpMin);
     }
-
+    // D# MAJOR
+    if ($(keyMenu).val() === "d#" && $(modeMenu).val() === "major") {
+        // Print D#Maj
+        printKey(DSharpMaj);
+    }
+    // D# MINOR
+    if ( $(keyMenu).val() === "d#" && $(modeMenu).val() === "minor") {
+        // Print D#min
+        printKey(DSharpMin);
+    }
+    // F# MAJOR
+    if ($(keyMenu).val() === "f#" && $(modeMenu).val() === "major") {
+        // Print F#Maj
+        printKey(FSharpMaj);
+    }
+    // F# MINOR
+    if ( $(keyMenu).val() === "f#" && $(modeMenu).val() === "minor") {
+        // Print F#min
+        printKey(FSharpMin);
+    }
+    // G# MAJOR
+    if ($(keyMenu).val() === "g#" && $(modeMenu).val() === "major") {
+        // Print G#Maj
+        printKey(GSharpMaj);
+    }
+    // G# MINOR
+    if ( $(keyMenu).val() === "g#" && $(modeMenu).val() === "minor") {
+        // Print G#min
+        printKey(GSharpMin);
+    }
+        // A# MAJOR
+    if ($(keyMenu).val() === "a#" && $(modeMenu).val() === "major") {
+        // Print A#Maj
+        printKey(ASharpMaj);
+    }
+    // A# MINOR
+    if ( $(keyMenu).val() === "a#" && $(modeMenu).val() === "minor") {
+        // Print A#min
+        printKey(ASharpMin);
+    }
 }

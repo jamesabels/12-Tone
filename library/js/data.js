@@ -1,6 +1,7 @@
 var dim = "&deg;";
 var flat = "&#9837;";
 var sharp = "&sharp;";
+var doubleSharp = "&#119082;";
 
 var red = "#110a08";
 var yellow = "#FFFF00";
@@ -112,30 +113,69 @@ var Bmin = {
   color: paleBlue
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
 // SHARP AND FLAT KEYS
 
 // C# MAJOR
 var CSharpMaj = {
-  keyChar: "A leering key, degenerating into grief and rapture. It cannot laugh, but it can smile; it     cannot howl, but it can at least grimace its crying.",
+  keyChar: "A leering key, degenerating into grief and rapture. It cannot laugh, but it can smile; it     cannot howl, but it can at least grimace its crying. --Consequently only unusual characters and         feelings can be brought out in this key.",
   scale: ["C&sharp;","D&sharp;","E&sharp;","F&sharp;","G&sharp;","A&sharp;","B&sharp;"],
   color: red
 };
-
 // C# MINOR
 var CSharpMin = {
-  keyChar: "Penitential lamentation, intimate conversation with God, the friend and help-meet of life; sighs of disappointed friendship and love lie in its radius.",
+  keyChar: "Penitential lamentation, intimate conversation with God, the friend and help-meet of life;     sighs of disappointed friendship and love lie in its radius.",
   scale: ["C&sharp;","D&sharp;","E","F&sharp;","G&sharp;","A","B"],
   color: red
+};
+
+// D# MAJOR
+var DSharpMaj = {
+  keyChar: "The key of love, of devotion, of intimate conversation with God.",
+  scale: ["D","E&#9837","F","G","A#9837","B#9837","C"],
+  color: yellow
+};
+// D# MINOR
+var DSharpMin = {
+  keyChar: "Feelings of the anxiety of the soul's deepest distress, of brooding despair, of blackest       depresssion, of the most gloomy condition of the soul. Every fear, every hesitation of the shuddering   heart, breathes out of horrible D# minor. If ghosts could speak, their speech would approximate this     key.",
+  scale: ["D&sharp;","E&sharp;","F&sharp;","G&sharp;","A&sharp;","B","C&sharp;"],
+  color: yellow
+};
+
+// F# MAJOR
+var FSharpMaj = {
+  keyChar: "Triumph over difficulty, free sigh of relief utered when hurdles are surmounted; echo of a     soul which has fiercely struggled and finally conquered lies in all uses of this key.",
+  scale: ["F&sharp;","G&sharp;","A&sharp;","B","C&sharp;","D&sharp;","E&sharp;"],
+  color: darkRed
+};
+// F# MINOR
+var FSharpMin = {
+  keyChar: "A gloomy key: it tugs at passion as a dog biting a dress. Resentment and discontent are its   language.",
+  scale: ["F&sharp;","G&sharp;","A","B","C&sharp;","D","E"],
+  color: darkRed
+};
+
+// G# MAJOR
+var GSharpMaj = {
+  keyChar: "Key of the grave. Death, grave, putrefaction, judgment, eternity lie in its radius.",
+  scale: ["G&sharp;","A&sharp;","B&sharp;","C&sharp;","D&sharp;","E&sharp;", "F&#119082;"],
+  color: orange
+};
+// G# MINOR
+var GSharpMin = {
+  keyChar: "Grumbler, heart squeezed until it suffocates; wailing lament, difficult struggle; in a word,   the color of this key is everything struggling with difficulty.",
+  scale: ["G&sharp;","A&sharp;","B&sharp;","C&sharp;","D&sharp;","E&sharp;", "F&#119082;"],
+  color: orange
+};
+
+// A# MAJOR
+var ASharpMaj = {
+  keyChar: "Cheerful love, clear conscience, hope aspiration for a better world.",
+  scale: ["A","B&#9837;","C","D","E&#9837;", "F", "G"],
+  color: purple
+};
+// A# MINOR
+var ASharpMin = {
+  keyChar: "A quaint creature, often dressed in the garment of night. It is somewhat surly and very       seldom takes on a pleasant countenance. Mocking God and the world; discontented with itself and with     everything; preparation for suicide sounds in this key.",
+  scale: ["A&sharp;","B&sharp;","C&sharp;","D&sharp;","E&sharp;", "F&sharp;", "G&sharp;"],
+  color: purple
 };
