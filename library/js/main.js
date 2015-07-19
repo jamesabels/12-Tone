@@ -39,7 +39,56 @@ function changeKey() {
         // Print Dmin
         printKey(Dmin);
     }
-
+    // E MAJOR
+    if ( $(keyMenu).val() === "e" && $(modeMenu).val() === "major") {
+        // Print Dmaj
+        printKey(Emaj);
+    }
+    // E MINOR
+    if ( $(keyMenu).val() === "e" && $(modeMenu).val() === "minor") {
+        // Print Dmin
+        printKey(Emin);
+    }
+    // F MAJOR
+    if ( $(keyMenu).val() === "f" && $(modeMenu).val() === "major") {
+        // Print Dmaj
+        printKey(Fmaj);
+    }
+    // F MINOR
+    if ( $(keyMenu).val() === "f" && $(modeMenu).val() === "minor") {
+        // Print Dmin
+        printKey(Fmin);
+    }
+    // G MAJOR
+    if ( $(keyMenu).val() === "g" && $(modeMenu).val() === "major") {
+        // Print Dmaj
+        printKey(Gmaj);
+    }
+    // G MINOR
+    if ( $(keyMenu).val() === "g" && $(modeMenu).val() === "minor") {
+        // Print Dmin
+        printKey(Gmin);
+    }
+    // A MAJOR
+    if ( $(keyMenu).val() === "a" && $(modeMenu).val() === "major") {
+        // Print Dmaj
+        printKey(Amaj);
+    }
+    // A MINOR
+    if ( $(keyMenu).val() === "a" && $(modeMenu).val() === "minor") {
+        // Print Dmin
+        printKey(Amin);
+    }
+        // B MAJOR
+    if ( $(keyMenu).val() === "b" && $(modeMenu).val() === "major") {
+        // Print Dmaj
+        printKey(Bmaj);
+    }
+    // B MINOR
+    if ( $(keyMenu).val() === "b" && $(modeMenu).val() === "minor") {
+        // Print Dmin
+        printKey(Bmin);
+    }
 
 
 
