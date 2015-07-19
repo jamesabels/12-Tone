@@ -16,23 +16,31 @@ var modeMenu = "#mode-select";
     }
 }());
 
+
+// WRITE C MAJOR OBJECT TO HTML
+function printCmaj () {
+    // Empty key description
+    $(keyChar).empty();
+    // Append new key description
+    $("<p class='key-char'>" + Cmaj.keyChar + "</p>").appendTo(keyDesc);
+}
+
+// WRITE C MINOR OBJECT TO HTML
+function printCmin () {
+    // Empty key description
+    $(keyChar).empty();
+    // Append new key description
+    $("<p class='key-char'>" + Cmin.keyChar + "</p>").appendTo(keyDesc);
+}
+
+
 function changeKey() {
     // C MAJOR
     if ( $(keyMenu).val() === "c" && $(modeMenu).val() === "major") {
-
-        // Empty key description
-        $(keyChar).empty();
-
-        // Append new key description
-        $("<p class='key-char'>" + Cmaj.keyChar + "</p>").appendTo(keyDesc);
+        printCmaj();
     }
     // C MINOR
     if ( $(keyMenu).val() === "c" && $(modeMenu).val() === "minor") {
-
-        // Empty key description
-        $(keyChar).empty();
-
-        // Append new key description
-        $("<p class='key-char'>" + Cmin.keyChar + "</p>").appendTo(keyDesc);
+        printCmin();
     }
 }
