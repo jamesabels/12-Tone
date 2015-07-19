@@ -52,6 +52,6 @@ var Dmaj = {
 // D MINOR
 var Dmin = {
   keyChar: "Melancholy womanliness, the spleen and humours brood.",
-  scale: ["D","E","F","G","A","B&deg;","C"],
+  scale: ["D","E","F","G","A","B&sharp;","C"],
   color: yellow
 };
