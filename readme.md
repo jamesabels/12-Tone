@@ -1,1 +1,1 @@
-A simple website boilerplate.
+A simple music theory reference app.
