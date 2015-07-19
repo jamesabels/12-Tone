@@ -26,4 +26,20 @@ function changeKey() {
     if ( $(keyMenu).val() === "c" && $(modeMenu).val() === "minor") {
         printKey(Cmin);
     }
+    // C# MAJOR
+    if ( $(keyMenu).val() === "c#" && $(modeMenu).val() === "major") {
+        printKey(CSharpMaj);
+    }
+    // C# MINOR
+    if ( $(keyMenu).val() === "c#" && $(modeMenu).val() === "minor") {
+        printKey(CSharpMin);
+    }
+    // D MAJOR
+    if ( $(keyMenu).val() === "d" && $(modeMenu).val() === "major") {
+        printKey(Dmaj);
+    }
+    // D MINOR
+    if ( $(keyMenu).val() === "d" && $(modeMenu).val() === "minor") {
+        printKey(Dmin);
+    }
 }
