@@ -1,17 +1,38 @@
-var dropdownWrap = $(".dropdown-wrap");
-var keyMenu = $("#key-select");
-var keyDesc = $("#key-char");
-var modeMenu = $("#mode-select");
-var displaySect = $("display-section");
-var modeMenu = $("#mode-select");
+// HTML TAGS
+var dropdownWrap = ".dropdown-wrap";
+var keyMenu = "#key-select";
+var keyDesc = ".key-desc";
+var keyChar = ".key-char";
+var modeMenu = "#mode-select";
+var displaySect = "display-section";
+var modeMenu = "#mode-select";
 
+// INIT C MAJOR KEY
 (function init () {
-  if (keyMenu.val() == "c" && modeMenu.val() == "major") {
-    keyDesc.append(Cmaj.keyChar);
-  }
+    // Initialize C Major
+    if ( $(keyMenu).val() === "c" && $(modeMenu).val() === "major") {
+        // Append new key description
+        $("<p class='key-char'>" + Cmaj.keyChar + "</p>").appendTo(keyDesc);
+    }
 }());
 
+function changeKey() {
+    // C MAJOR
+    if ( $(keyMenu).val() === "c" && $(modeMenu).val() === "major") {
 
-function test () {
-  alert(Cmaj.keyChar);
+        // Empty key description
+        $(keyChar).empty();
+
+        // Append new key description
+        $("<p class='key-char'>" + Cmaj.keyChar + "</p>").appendTo(keyDesc);
+    }
+    // C MINOR
+    if ( $(keyMenu).val() === "c" && $(modeMenu).val() === "minor") {
+
+        // Empty key description
+        $(keyChar).empty();
+
+        // Append new key description
+        $("<p class='key-char'>" + Cmin.keyChar + "</p>").appendTo(keyDesc);
+    }
 }
