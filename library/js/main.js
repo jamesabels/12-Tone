@@ -45,48 +45,6 @@ var chordList = ".chord-list";
 }());
 
 
-// WRITE C MAJOR OBJECT TO HTML
-function printCmaj () {
-    // Empty key description
-    $(keyChar).empty();
-    // Append new key description
-    $("<p class='key-char'>" + Cmaj.keyChar + "</p>").appendTo(keyDesc);
-
-    // Append note array to unordered list.
-    $.each(Cmaj.scale, function(i) {
-        var li = $('<li/>')
-            .addClass('scale-degree')
-            .attr('role', 'menuitem')
-            .appendTo($(notelist));
-        var liLink = $('<a/>')
-            .addClass('scale-link')
-            .text(Cmaj.scale[i])
-            .appendTo(li);
-    });
-
-    // Append chord array to unordered list
-    $.each(Cmaj.chord, function(i) {
-        var li = $('<li/>')
-            .addClass('chord-degree')
-            .attr('role', 'menuitem')
-            .appendTo($(notelist));
-        var liLink = $('<a/>')
-            .addClass('chord-link')
-            .text(Cmaj.chord[i])
-            .appendTo(li);
-    });
-
-
-} // END printCmaj
-
-// WRITE C MINOR OBJECT TO HTML
-function printCmin () {
-    // Empty key description
-    $(keyChar).empty();
-    // Append new key description
-    $("<p class='key-char'>" + Cmin.keyChar + "</p>").appendTo(keyDesc);
-}
-
 // CHANGE KEYS
 function changeKey() {
     // C MAJOR
