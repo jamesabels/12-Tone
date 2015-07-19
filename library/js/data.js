@@ -1,11 +1,11 @@
 // Major key roman numerals
 var majorNumerals = {
     nums: ["I", "ii", "iii", "IV", "V", "vi", "vii&deg;"]
-}
+};
 // Major key roman numerals
 var minorNumerals = {
     nums: ["i", "ii &deg;", "III&#9837;", "iv", "v", "VI&#9837;", "VII&#9837;"]
-}
+};
 
 
 // C MAJOR
