@@ -33,7 +33,7 @@ function printCmin () {
     $("<p class='key-char'>" + Cmin.keyChar + "</p>").appendTo(keyDesc);
 }
 
-
+// CHANGE KEYS
 function changeKey() {
     // C MAJOR
     if ( $(keyMenu).val() === "c" && $(modeMenu).val() === "major") {
