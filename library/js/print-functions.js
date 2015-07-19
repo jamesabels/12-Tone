@@ -11,7 +11,7 @@ function printLogic(key, mode) {
                 .appendTo($(notelist));
             var liLink = $('<a/>')
                 .addClass('scale-link')
-                .text(key.scale[i])
+                .html(key.scale[i])
                 .appendTo(li);
         });
 
@@ -23,19 +23,19 @@ function printLogic(key, mode) {
                 .appendTo($(chordLabels));
             var liLink = $('<a/>')
                 .addClass('chord-link')
-                .html(majorNumerals.nums[i])
+                .html(mode.nums[i])
                 .appendTo(li);
         });
 
         // Append chord array to unordered list
-        $.each(key.chord, function(i) {
+        $.each(key.scale, function(i) {
             var li = $('<li/>')
                 .addClass('chord-degree')
                 .attr('role', 'menuitem')
                 .appendTo($(chordList));
             var liLink = $('<a/>')
                 .addClass('chord-link')
-                .text(key.chord[i])
+                .html(key.scale[i])
                 .appendTo(li);
         });
 }
