@@ -8,6 +8,7 @@ var displaySect = "display-section";
 var modeMenu = "#mode-select";
 var notelist = ".note-list";
 var chordList = ".chord-list";
+var chordLabels = ".chord-labels";
 
 // INIT C MAJOR KEY
 (function init () {
