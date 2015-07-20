@@ -1,7 +1,6 @@
 // styleguide:ignore:start
 @import "settings/_normalize";
 @import "settings/config";
-@import "library/sass/vendor/_bootstrap.scss";
 // styleguide:ignore:end
 
 // Media Queries
@@ -11,6 +10,7 @@ $medium: 720px;
 $large: 1020px;
 $xlarge: 1920px;
 
+@import "library/sass/vendor/_bootstrap.scss";
 @import "library/sass/partials/partials.scss";
-@import "library/sass/partials/structure.scss";
+
 
