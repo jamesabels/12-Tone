@@ -18,9 +18,15 @@ body {
 
     // Wrapper for the option box
     .dropdown-wrap {
-        width: 192px;
+        width: 500px;
         position: relative;
         margin: 0 auto;
+        // Override dropbox styles
+        #key-select, #mode-select, .form-control {
+            display: inline-block;
+            position: relative;
+            width: 200px;
+        }
     }
 }
 
