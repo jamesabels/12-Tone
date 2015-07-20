@@ -3,14 +3,91 @@
 // Styleguide 2.0
 
 
+// Key Section
+//
+// markup:
+// <div id="key-section">
+//    <div class="dropdown-wrap">
+//            <select id="key-select" autocomplete=off class="form-control">
+//                <option value="c" selected>C</option>
+//                <option value="c#">C#</option>
+//                <option value="d">D</option>
+//                <option value="d#">D#</option>
+//                <option value="e">E</option>
+//                <option value="f">F</option>
+//                <option value="f#">F#</option>
+//                <option value="g">G</option>
+//                <option value="g#">G#</option>
+//                <option value="a">A</option>
+//                <option value="a#">A#</option>
+//                <option value="b">B</option>
+//            </select>
+//          <select id="mode-select" class="form-control">
+//            <option value="major" selected>Major</option>
+//              <option value="minor">Minor</option>
+//          </select>
+//        <input type="submit" id="submit-key" class="btn" value="Submit" onclick="changeKey();">
+//    </div>
+// </div>
+//
+// Styleguide 2.1
+
+#key-section  {
+    #dropdown-wrap  {
+
+    }
+}
+
 
 // Key Select
 //
 // markup:
-// <select id="mode-select" id="key-select" class="form-control">
-//    <option value="c" selected>C</option>
-//    <option value="c#">C#</option>
-//    <option value="d">D</option>
-// </select>
+//    <select id="key-select" autocomplete=off class="form-control">
+//        <option value="c" selected>C</option>
+//        <option value="c#">C#</option>
+//        <option value="d">D</option>
+//        <option value="d#">D#</option>
+//        <option value="e">E</option>
+//        <option value="f">F</option>
+//        <option value="f#">F#</option>
+//        <option value="g">G</option>
+//        <option value="g#">G#</option>
+//        <option value="a">A</option>
+//        <option value="a#">A#</option>
+//        <option value="b">B</option>
+//    </select>
 //
-// Styleguide 2.1
+// Styleguide 2.2
+
+#key-select {
+    option {
+
+    }
+}
+
+// Mode Select
+//
+// markup:
+//  <select id="mode-select" class="form-control">
+//    <option value="major" selected>Major</option>
+//      <option value="minor">Minor</option>
+//  </select>
+//
+// Styleguide 2.3
+
+#mode-select {
+    option {
+
+    }
+}
+
+// Submit Key
+//
+// markup:
+//    <input type="submit" id="submit-key" class="btn" value="Submit" onclick="changeKey();">
+//
+// Styleguide 2.4
+
+#submit-key {
+
+}
