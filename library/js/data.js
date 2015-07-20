@@ -19,7 +19,6 @@ var minorNumerals = {
     nums: ["i", "ii&deg;", "III", "iv", "v", "VI", "VII"]
 };
 
-
 // BASIC KEYS
 
 // C MAJOR
@@ -131,7 +130,7 @@ var CSharpMin = {
 // D# MAJOR
 var DSharpMaj = {
   keyChar: "The key of love, of devotion, of intimate conversation with God.",
-  scale: ["D","E&#9837","F","G","A#9837","B#9837","C"],
+  scale: ["D","E&#9837;","F","G","A&#9837;","B&#9837;","C"],
   color: yellow
 };
 // D# MINOR
@@ -157,13 +156,13 @@ var FSharpMin = {
 // G# MAJOR
 var GSharpMaj = {
   keyChar: "Key of the grave. Death, grave, putrefaction, judgment, eternity lie in its radius.",
-  scale: ["G&sharp;","A&sharp;","B&sharp;","C&sharp;","D&sharp;","E&sharp;", "F&#119082;"],
+  scale: ["G&sharp;","A&sharp;","B&sharp;","C&sharp;","D&sharp;","E&sharp;", "F&sharp;&sharp;"],
   color: orange
 };
 // G# MINOR
 var GSharpMin = {
   keyChar: "Grumbler, heart squeezed until it suffocates; wailing lament, difficult struggle; in a word,   the color of this key is everything struggling with difficulty.",
-  scale: ["G&sharp;","A&sharp;","B&sharp;","C&sharp;","D&sharp;","E&sharp;", "F&#119082;"],
+  scale: ["G&sharp;","A&sharp;","B&sharp;","C&sharp;","D&sharp;","E&sharp;", "F&sharp;&sharp;"],
   color: orange
 };
 

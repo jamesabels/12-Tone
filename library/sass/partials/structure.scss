@@ -4,34 +4,77 @@
 }
 
 
+// App structure
 body {
+    @include container(80%);
+    background-color: #333;
+}
 
-// General Page Wrap
-    .page-wrap {
-        height: 100%;
+// Key selection section
+.key-section {
+    padding: 50px;
+    margin-top: 10%;
+    background: tan;
 
-// The section for picking the Key
-    .key-section {
-      background: gray;
-      height: 20vh;
-      width: 100%;
-
-// Wrapper for the option box
-      .dropdown-wrap {
-        margin-top: 100px;
-        width: 190px;
+    // Wrapper for the option box
+    .dropdown-wrap {
+        width: 192px;
+        position: relative;
         margin: 0 auto;
-      } // end dropdown-wrap
+    }
+}
 
-    } // end key-section
+// Render section
+.display-section {
+    @include container(100%);
+    background: #666;
+    margin: 0;
+    padding: 20px;
 
-    .display-section {
-        background: #999;
-        width: 100%;
+    .display-wrap {
+        margin: 0 auto;
         height: 100%;
-        margin: 0;
-    } // end display-section
+    }
 
-  } // end page-wrap
+    .key-desc {
 
-} // end body
+    }
+
+    .chord-section {
+        margin: 0 auto;
+    }
+
+    // Appended lists
+    ul {
+        list-style-type: none;
+        padding: 0;
+        display: block;
+        li {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #555;
+            display: inline-block;
+            height: 50px;
+            @include span(1 of 7);
+
+            a {
+                position: absolute;
+                margin-top: 20px;
+            }
+
+        }
+    }
+
+    .list-wrap {
+        height: 100px;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        .note-list {
+            height: 50px;
+            margin-top: 50px;
+        }
+    }
+
+} // end display-section
