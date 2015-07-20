@@ -1,0 +1,28 @@
+// Containers
+//
+// Styleguide 4.0
+
+
+
+//Key Section
+//
+// markup:
+//  <div class="key-section">
+//      <select id="mode-select" id="key-select" class="form-control">
+//          <option value="c" selected>C</option>
+//          <option value="c#">C#</option>
+//          <option value="d">D</option>
+//      </select>
+//  </div>
+//
+// Styleguide 4.1
+
+.key-section {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #555;
+    height: 100px;
+    width: 100%;
+    padding: 34px;
+    margin: 0;
+}

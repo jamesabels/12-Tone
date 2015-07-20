@@ -7,14 +7,11 @@
 // App structure
 body {
     @include container(80%);
-    background-color: #333;
 }
 
 // Key selection section
 .key-section {
-    padding: 50px;
     margin-top: 10%;
-    background: tan;
 
     // Wrapper for the option box
     .dropdown-wrap {
@@ -33,9 +30,7 @@ body {
 // Render section
 .display-section {
     @include container(100%);
-    background: #666;
     margin: 0;
-    padding: 20px;
 
     .display-wrap {
         margin: 0 auto;
@@ -58,8 +53,6 @@ body {
         li {
             text-align: center;
             margin: 0;
-            padding: 0;
-            background-color: #555;
             display: inline-block;
             height: 50px;
             @include span(1 of 7);
