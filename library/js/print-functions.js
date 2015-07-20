@@ -18,7 +18,7 @@ function printLogic(key, mode) {
         // Append Roman Numeral array to unordered list
         $.each(mode.nums, function(i) {
             var li = $('<li/>')
-                .addClass('chord-degree')
+                .addClass('chord-numerals')
                 .attr('role', 'menuitem')
                 .appendTo($(chordLabels));
             var liLink = $('<a/>')
