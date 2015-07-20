@@ -37,7 +37,7 @@ gulp.task('prefix-css', function() {
 
 // Generate Styleguide
 gulp.task('styleguide:generate', function() {
-  return gulp.src('library/sass/**/*.scss')
+  return gulp.src(['library/sass/*.scss', 'library/sass/partials/*.scss'])
     .pipe(plumber())
     .pipe(styleguide.generate({
         title: '12 Tone',
