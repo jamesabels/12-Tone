@@ -2,14 +2,36 @@
 //
 // Styleguide 1.0
 
-// Navigation Bar
+header {
+
+}
+
+
+// Navigation
 //
 // markup:
-//     <div class="brand-wrap">
-//         <h1 class="brand">12 Tone</h1>
-//     </div>
-//     <div class="nav-wrap">
-//          <a href="" class="nav-button btn navbar-link" >Credits</a>
-//     </div>
+// <header>
+//   <div id="navigation" class="navbar navbar-default">
+//       <div id="brand-wrap">
+//           <h1 id="logo" class="brand">12 Tone</h1>
+//       </div>
+//       <div id="nav-wrap">
+//            <a href="" id="nav-button" class="btn navbar-link" >Credits</a>
+//       </div>
+//   </div>
+// </header>
 //
 // Styleguide 1.1
+
+#navigation {
+    #brand-wrap {
+        #logo {
+
+        }
+    }
+    #nav-wrap {
+        #nav-button {
+
+        }
+    }
+}
