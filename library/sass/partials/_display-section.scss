@@ -48,6 +48,14 @@
 //
 // Styleguide 3.1
 
+#display-section {
+    @include layout($chord-section);
+    @include span(7);
+
+    #display-wrap {
+    }
+}
+
 // Display Section UL
 //
 // markup:
@@ -65,14 +73,6 @@
 //
 // Styleguide 3.2
 
-
-#display-section {
-    @include layout($chord-section);
-    @include span(7);
-
-    #display-wrap {
-    }
-}
 
 #display-section {
     ul {
