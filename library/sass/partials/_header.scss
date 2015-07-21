@@ -6,22 +6,37 @@ header {
 
 }
 
-
 // Navigation
 //
 // markup:
-// <header>
-//   <div id="navigation" class="navbar navbar-default">
-//       <div id="brand-wrap">
-//           <h1 id="logo" class="brand">12 Tone</h1>
-//       </div>
-//       <div id="nav-wrap">
-//            <a href="" id="nav-button" class="btn navbar-link" >Credits</a>
-//       </div>
-//   </div>
-// </header>
+//    <header>
+//        <div id="navigation" class="navbar navbar-default">
+//            <div id="brand-wrap">
+//                <h1 id="logo" class="brand">12 Tone</h1>
+//            </div>
+//            <div id="nav-wrap">
+//                <div id="nav-button">
+//                    <p>=</p>
+//                </div>
+//                <div id="mobile-nav" class="hide">
+//                    <ul id="nav-list">
+//                        <li><a href="#">Credits</a></li>
+//                        <li><a href="#">Share</a></li>
+//                        <li><a href="#">Contact</a></li>
+//                        <li><a href="#">Support</a></li>
+//                        <li><a href="#">Buy</a></li>
+//                    </ul>
+//                    <div id="close-button">
+//                        <p>Back</p>
+//                    </div>
+//                </div>
+//            </div>
+//        </div>
+//    </header>
 //
 // Styleguide 1.1
+
+
 
 #navigation {
     #brand-wrap {
@@ -34,33 +49,58 @@ header {
     #nav-wrap {
         @include span(4);
         margin-top: 25px;
+    }
+}
 
-        #nav-button {
-            @include span(4);
-            background-color: lightcoral;
-            padding: 3px;
-            text-align: center;
-            font-size: 50px;
-        }
+// Navigation Button
+//
+// markup:
+//    <div id="nav-button">
+//        <p>=</p>
+//    </div>
+//
+// Styleguide 1.2
 
-        #mobile-nav {
-            background-color: lightslategrey;
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            height: 100vh;
-            width: 100vw;
 
-            #close-button {
-            position: fixed;
-            bottom: 0;
-            @include span(4);
-            background-color: lightcoral;
-            padding: 3px;
-            text-align: center;
-            font-size: 50px;
-            }
-        }
+#nav-button {
+    @include span(4);
+    background-color: lightcoral;
+    padding: 3px;
+    text-align: center;
+    font-size: 50px;
+}
+
+
+// Mobile Navigation
+//
+// markup:
+//    <div id="mobile-nav">
+//        <ul id="nav-list">
+//            <li><a href="#">Credits</a></li>
+//            <li><a href="#">Share</a></li>
+//            <li><a href="#">Contact</a></li>
+//            <li><a href="#">Support</a></li>
+//            <li><a href="#">Buy</a></li>
+//        </ul>
+//        <div id="close-button">
+//            <p>Back</p>
+//        </div>
+//    </div>
+//
+// Styleguide 1.3
+
+
+#mobile-nav {
+    background-color: lightslategrey;
+    animation-name: mobileNav;
+    animation-duration: 3s;
+
+    #close-button {
+        @include span(4);
+        background-color: lightcoral;
+        padding: 3px;
+        text-align: center;
+        font-size: 50px;
     }
 }
 
