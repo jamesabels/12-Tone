@@ -68,12 +68,9 @@
 
 #display-section {
     @include layout($chord-section);
-    margin-top: 20px;
-    padding: 0;
-    #display-wrap {
-    margin: 0;
-    padding: 0;
+    @include span(7);
 
+    #display-wrap {
     }
 }
 
@@ -81,12 +78,13 @@
     ul {
         li {
             @include span(1);
-            padding: 10px;
-            border: 2px solid white;
+            padding: 5px;
+            border: 1px solid white;
             text-align: center;
 
             a{
                 color: #111;
+                font-size: 1em;
             }
         }
     }
@@ -104,9 +102,9 @@
 .key-desc {
     @include span(7);
     background-color: lightgray;
-    padding: 30px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 10px;
 }
 
 // Note List
@@ -133,7 +131,7 @@
 }
 
 ul.note-list {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     li.scale-degree {
         background-color: lightcyan;
         a {
@@ -172,7 +170,7 @@ ul.note-list {
 
 .chord-section {
     @include span(7);
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 // Chord Labels

@@ -33,7 +33,9 @@
 // Styleguide 2.1
 
 #key-section  {
-    width: 100%;
+    @include span(4);
+    margin-bottom: 10px;
+    padding: 20px;
     #dropdown-wrap  {
         margin: 0 auto;
     }
