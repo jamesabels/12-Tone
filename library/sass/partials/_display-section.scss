@@ -31,7 +31,7 @@
 //                    <li class="chord-numerals" role="menuitem"><a class="chord-link">IV</a></li>
 //                    <li class="chord-numerals" role="menuitem"><a class="chord-link">V</a></li>
 //                    <li class="chord-numerals" role="menuitem"><a class="chord-link">vi</a></li>
-//                    <li class="chord-numerals" role="menuitem"><a class="chord-link">vii°</a></li>
+//                    <li class="chord-numerals" role="menuitem"><a class="chord-link">vii°</a>     </li>
 //                </ul>
 //                <ul class="chord-list list-inline">
 //                    <li class="chord-degree" role="menuitem"><a class="chord-link">C</a></li>
@@ -48,11 +48,47 @@
 //
 // Styleguide 3.1
 
+// Display Section UL
+//
+// markup:
+//    <div id="display-section">
+//        <ul class="note-list list-inline">
+//            <li class="scale-degree" role="menuitem"><a class="scale-link">C</a></li>
+//            <li class="scale-degree" role="menuitem"><a class="scale-link">D</a></li>
+//            <li class="scale-degree" role="menuitem"><a class="scale-link">E</a></li>
+//            <li class="scale-degree" role="menuitem"><a class="scale-link">F</a></li>
+//            <li class="scale-degree" role="menuitem"><a class="scale-link">G</a></li>
+//            <li class="scale-degree" role="menuitem"><a class="scale-link">A</a></li>
+//            <li class="scale-degree" role="menuitem"><a class="scale-link">B</a></li>
+//        </ul>
+//    </div>
+//
+// Styleguide 3.2
+
 
 #display-section {
-    @include span(12 of 12)
+    @include layout($chord-section);
+    margin-top: 20px;
+    padding: 0;
     #display-wrap {
+    margin: 0;
+    padding: 0;
 
+    }
+}
+
+#display-section {
+    ul {
+        li {
+            @include span(1);
+            padding: 10px;
+            border: 2px solid white;
+            text-align: center;
+
+            a{
+                color: #111;
+            }
+        }
     }
 }
 
@@ -63,10 +99,14 @@
 //        <p class="key-char lead">Completely pure. It's character is: innocence, simplicity, naïvety, children's talk.</p>
 //     </div>
 //
-// Styleguide 3.2
+// Styleguide 3.3
 
 .key-desc {
-
+    @include span(7);
+    background-color: lightgray;
+    padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 // Note List
@@ -84,14 +124,16 @@
 //        </ul>
 //    </div>
 //
-// Styleguide 3.3
+// Styleguide 3.4
 
 .list-wrap {
-
+    @include span(7);
 }
 
 ul.note-list {
+    margin-bottom: 50px;
     li.scale-degree {
+        background-color: lightcyan;
         a {
 
         }
@@ -122,12 +164,12 @@ ul.note-list {
 //        </ul>
 //    </div>
 //
-// Styleguide 3.4
+// Styleguide 3.5
 
 .chord-section {
-
+    @include span(7);
+    margin-top: 50px;
 }
-
 
 // Chord Labels
 //
@@ -142,13 +184,14 @@ ul.note-list {
 //        <li class="chord-numerals" role="menuitem"><a class="chord-link">vii°</a></li>
 //    </ul>
 //
-// Styleguide 3.5
+// Styleguide 3.6
 
 
 ul.chord-labels {
     li.chord-numerals {
+        background-color: tan;
+        border-bottom: 1px solid brown;
         a {
-
         }
     }
 }
@@ -167,12 +210,12 @@ ul.chord-labels {
 //        <li class="chord-degree" role="menuitem"><a class="chord-link">B</a></li>
 //    </ul>
 //
-// Styleguide 3.6
+// Styleguide 3.7
 
 ul.chord-list {
-    li {
-        a.chord-degree {
-
+    li.chord-degree {
+        background-color: lightsteelblue;
+        a {
         }
     }
 }

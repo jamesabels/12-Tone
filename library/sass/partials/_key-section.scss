@@ -33,9 +33,9 @@
 // Styleguide 2.1
 
 #key-section  {
-    @include span(12 of 12);
+    width: 100%;
     #dropdown-wrap  {
-
+        margin: 0 auto;
     }
 }
 
@@ -61,6 +61,7 @@
 // Styleguide 2.2
 
 #key-select {
+    @include span(4);
     option {
 
     }
@@ -77,6 +78,9 @@
 // Styleguide 2.3
 
 #mode-select {
+    @include span(4);
+    margin-top: 10px;
+    margin-bottom: 10px;
     option {
 
     }
@@ -90,5 +94,5 @@
 // Styleguide 2.4
 
 #submit-key {
-
+    @include span(4);
 }
