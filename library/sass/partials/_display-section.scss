@@ -112,6 +112,7 @@
 // Note List
 //
 // markup:
+//   <div id="display-section">
 //    <div class="list-wrap">
 //        <ul class="note-list list-inline">
 //            <li class="scale-degree" role="menuitem"><a class="scale-link">C</a></li>
@@ -123,6 +124,7 @@
 //            <li class="scale-degree" role="menuitem"><a class="scale-link">B</a></li>
 //        </ul>
 //    </div>
+//   </div>
 //
 // Styleguide 3.4
 
@@ -143,6 +145,7 @@ ul.note-list {
 // Chord Section
 //
 // markup:
+//   <div id="display-section">
 //    <div class="chord-section">
 //        <ul class="chord-labels list-inline">
 //            <li class="chord-numerals" role="menuitem"><a class="chord-link">I</a></li>
@@ -163,6 +166,7 @@ ul.note-list {
 //            <li class="chord-degree" role="menuitem"><a class="chord-link">B</a></li>
 //        </ul>
 //    </div>
+//   </div>
 //
 // Styleguide 3.5
 
@@ -174,6 +178,7 @@ ul.note-list {
 // Chord Labels
 //
 // markup:
+//   <div id="display-section">
 //    <ul class="chord-labels list-inline">
 //        <li class="chord-numerals" role="menuitem"><a class="chord-link">I</a></li>
 //        <li class="chord-numerals" role="menuitem"><a class="chord-link">ii</a></li>
@@ -183,6 +188,7 @@ ul.note-list {
 //        <li class="chord-numerals" role="menuitem"><a class="chord-link">vi</a></li>
 //        <li class="chord-numerals" role="menuitem"><a class="chord-link">vii°</a></li>
 //    </ul>
+//   </div>
 //
 // Styleguide 3.6
 
@@ -200,6 +206,7 @@ ul.chord-labels {
 // Chord List
 //
 // markup:
+//   <div id="display-section">
 //    <ul class="chord-list list-inline">
 //        <li class="chord-degree" role="menuitem"><a class="chord-link">C</a></li>
 //        <li class="chord-degree" role="menuitem"><a class="chord-link">D</a></li>
@@ -209,6 +216,7 @@ ul.chord-labels {
 //        <li class="chord-degree" role="menuitem"><a class="chord-link">A</a></li>
 //        <li class="chord-degree" role="menuitem"><a class="chord-link">B</a></li>
 //    </ul>
+//   </div>
 //
 // Styleguide 3.7
 
