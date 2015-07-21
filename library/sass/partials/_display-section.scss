@@ -50,6 +50,7 @@
 
 
 #display-section {
+    @include span(12 of 12)
     #display-wrap {
 
     }
