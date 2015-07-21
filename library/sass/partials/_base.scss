@@ -3,5 +3,6 @@ body {
 }
 
 .app-wrap {
-  @include container(80%);
+    @include container(80%);
+    margin: 0 auto;
 }
