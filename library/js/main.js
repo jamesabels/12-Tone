@@ -146,8 +146,11 @@ function changeKey() {
 // Open mobile nav
 $("#nav-button").click(function () {
     $("#mobile-nav").removeClass("hide");
+    $("#mobile-nav").addClass("full-screen");
+    $("#close-button").addClass("fixed-bottom");
 });
 // Close mobile nav
 $("#close-button").click(function () {
     $("#mobile-nav").addClass("hide");
+    $("#mobile-nav").removeClass("full-screen");
 });
