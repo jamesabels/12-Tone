@@ -6,3 +6,7 @@ body {
     @include container(80%);
     margin: 0 auto;
 }
+
+.hide {
+    display: none;
+}
