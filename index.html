@@ -13,7 +13,6 @@
         <link rel="stylesheet" href="library/css/global.css">
         <link rel="stylesheet" href="library/img/sprites/min/sprite.css">
         <script src="library/js/vendor/modernizr-2.8.3.min.js"></script>
-        <script src="library/js/vendor/bootstrap.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -22,16 +21,34 @@
 
         <!-- Add your site or application content here -->
 
-           <header>
-               <div id="navigation" class="navbar navbar-default">
-                   <div id="brand-wrap">
-                       <h1 id="logo" class="brand">12 Tone</h1>
-                   </div>
-                   <div id="nav-wrap">
-                        <a href="" id="nav-button" class="btn navbar-link" >Credits</a>
-                   </div>
-               </div>
-           </header>
+        <header>
+            <div id="navigation" class="navbar navbar-default">
+                <div id="brand-wrap">
+                    <h1 id="logo" class="brand">12 Tone</h1>
+                </div>
+                <div id="nav-wrap">
+
+                    <div id="nav-button">
+                        <p>=</p>
+                    </div>
+
+                    <div id="mobile-nav" class="hide">
+                        <ul id="nav-list">
+                            <li><a href="#">Credits</a></li>
+                            <li><a href="#">Share</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Buy</a></li>
+                        </ul>
+
+                        <div id="close-button">
+                            <p>Back</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
 
         <div class="app-wrap">
             <div id="key-section">
@@ -89,6 +106,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="library/js/vendor/jquery.min.js"><\/script>')</script>
         <script src="library/js/min/main.min.js"></script>
+        <script src="library/js/vendor/bootstrap.min.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

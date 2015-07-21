@@ -25,13 +25,56 @@ header {
 
 #navigation {
     #brand-wrap {
+        text-align: center;
+        @include span(4);
         #logo {
 
         }
     }
     #nav-wrap {
-        #nav-button {
+        @include span(4);
+        margin-top: 25px;
 
+        #nav-button {
+            @include span(4);
+            background-color: lightcoral;
+            padding: 3px;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        #mobile-nav {
+            background-color: lightslategrey;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            height: 100vh;
+            width: 100vw;
+
+            #close-button {
+            position: fixed;
+            bottom: 0;
+            @include span(4);
+            background-color: lightcoral;
+            padding: 3px;
+            text-align: center;
+            font-size: 50px;
+            }
+        }
+    }
+}
+
+#nav-list {
+    @include span(4);
+    list-style-type: none;
+    display: inline-block;
+    li {
+        padding: 30px;
+        background-color: lightsteelblue;
+        text-align: center;
+        border: 3px solid lightslategrey;
+        a {
+            text-transform: uppercase;
         }
     }
 }

@@ -141,3 +141,13 @@ function changeKey() {
         printKey(ASharpMin);
     }
 }
+
+
+// Open mobile nav
+$("#nav-button").click(function () {
+    $("#mobile-nav").removeClass("hide");
+});
+// Close mobile nav
+$("#close-button").click(function () {
+    $("#mobile-nav").addClass("hide");
+});
