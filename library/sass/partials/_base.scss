@@ -10,3 +10,16 @@ body {
 .hide {
     display: none;
 }
+
+.full-screen {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+}
