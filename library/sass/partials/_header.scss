@@ -54,6 +54,31 @@ header {
     }
 }
 
+#nav-list {
+    @include span(4);
+    list-style-type: none;
+    display: inline-block;
+    li {
+        padding: 30px;
+        background-color: lightsteelblue;
+        text-align: center;
+        border: 3px solid lightslategrey;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        a {
+            font-size: 1.8em;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+    }
+    li:hover {
+        border-bottom: 5px solid blue;
+    }
+}
+
 // Navigation Button
 //
 // markup:
@@ -67,11 +92,18 @@ header {
 #nav-button {
     @include span(4);
     background-color: lightcoral;
-    padding: 3px;
+    padding: 10px;
     text-align: center;
     font-size: 30px;
 }
 
+.nav-icon {
+    color: white;
+}
+
+.close-icon {
+    color: white;
+}
 
 // Mobile Navigation
 //
@@ -96,27 +128,16 @@ header {
     background-color: lightslategrey;
     animation-name: mobileNav;
     animation-duration: 3s;
-
-    #close-button {
-        @include span(4);
-        background-color: lightcoral;
-        padding: 3px;
-        text-align: center;
-        font-size: 30px;
-    }
 }
 
-#nav-list {
+#close-button {
     @include span(4);
-    list-style-type: none;
-    display: inline-block;
-    li {
-        padding: 30px;
-        background-color: lightsteelblue;
-        text-align: center;
-        border: 3px solid lightslategrey;
-        a {
-            text-transform: uppercase;
-        }
-    }
+    background-color: lightcoral;
+    padding: 3px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.close-icon {
+    color: white;
 }
