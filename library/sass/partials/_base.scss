@@ -1,3 +1,20 @@
+// Variables
+
+// Mobile Nav Colors
+$mobile-nav-btn-color: lightcoral;
+$mobile-nav-btn-icon-color: white;
+
+$mobile-nav-li-color: lightsteelblue;
+$mobile-nav-li-border-color: tan;
+$mobile-nav-li-hover-color: blue;
+$mobile-nav-bg-color: lightslategrey;
+
+
+// Key section Colors
+$submit-key-button-color: #888;
+$submit-key-text-color: white;
+
+
 body {
     @include container(100%);
 }
@@ -7,6 +24,7 @@ body {
     margin: 0 auto;
 }
 
+// Helper Classes
 .hide {
     display: none;
 }

@@ -60,9 +60,9 @@ header {
     display: inline-block;
     li {
         padding: 30px;
-        background-color: lightsteelblue;
+        background-color: $mobile-nav-li-color;
         text-align: center;
-        border: 3px solid lightslategrey;
+        border: 10px solid $mobile-nav-li-border-color;
         margin-top: 10px;
         margin-bottom: 10px;
         a {
@@ -75,7 +75,7 @@ header {
         }
     }
     li:hover {
-        border-bottom: 5px solid blue;
+        border-bottom: 5px solid $mobile-nav-li-hover-color;
     }
 }
 
@@ -88,21 +88,15 @@ header {
 //
 // Styleguide 1.2
 
-
-#nav-button {
+.mobile-nav-btn {
     @include span(4);
-    background-color: lightcoral;
+    background-color: $mobile-nav-btn-color;
     padding: 10px;
     text-align: center;
     font-size: 30px;
-}
-
-.nav-icon {
-    color: white;
-}
-
-.close-icon {
-    color: white;
+    span {
+        color: $mobile-nav-btn-icon-color;
+    }
 }
 
 // Mobile Navigation
@@ -125,19 +119,7 @@ header {
 
 
 #mobile-nav {
-    background-color: lightslategrey;
+    background-color: $mobile-nav-bg-color;
     animation-name: mobileNav;
     animation-duration: 3s;
-}
-
-#close-button {
-    @include span(4);
-    background-color: lightcoral;
-    padding: 3px;
-    text-align: center;
-    font-size: 30px;
-}
-
-.close-icon {
-    color: white;
 }

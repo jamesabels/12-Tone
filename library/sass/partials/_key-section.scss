@@ -64,10 +64,16 @@
 
 #key-select {
     @include span(4);
+
     option {
 
     }
 }
+
+#key-select:hover {
+
+}
+
 
 // Mode Select
 //
@@ -97,4 +103,6 @@
 
 #submit-key {
     @include span(4);
-}
+    background-color: $submit-key-button-color;
+    color: $submit-key-text-color;
+ }
