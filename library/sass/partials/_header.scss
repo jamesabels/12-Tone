@@ -39,11 +39,15 @@ header {
 
 
 #navigation {
-    #brand-wrap {
-        text-align: center;
-        @include span(4);
-        #logo {
+    background-color: $header-bg-color;
+    border: none;
+    border-bottom: solid 10px $header-border-color;
 
+        #brand-wrap {
+        @include span(4);
+        text-align: center;
+        h1 {
+          color: $logo-color;
         }
     }
     #nav-wrap {
@@ -59,23 +63,25 @@ header {
     list-style-type: none;
     display: inline-block;
     li {
-        padding: 30px;
+        padding: 10px;
         background-color: $mobile-nav-li-color;
         text-align: center;
-        border: 10px solid $mobile-nav-li-border-color;
         margin-top: 10px;
         margin-bottom: 10px;
+        border-bottom: 5px solid $mobile-nav-li-border-color;
         a {
             font-size: 1.8em;
             text-transform: uppercase;
             font-weight: 500;
+            color: $mobile-nav-li-text-color;
         }
         a:hover {
             text-decoration: none;
+            color: $mobile-nav-li-border-hover-color;
         }
     }
     li:hover {
-        border-bottom: 5px solid $mobile-nav-li-hover-color;
+        border-bottom: 5px solid $mobile-nav-li-border-hover-color;
     }
 }
 
@@ -91,6 +97,7 @@ header {
 .mobile-nav-btn {
     @include span(4);
     background-color: $mobile-nav-btn-color;
+    border-bottom: 5px solid $mobile-nav-btn-border-color;
     padding: 10px;
     text-align: center;
     font-size: 30px;
