@@ -4,15 +4,27 @@
 $mobile-nav-btn-color: lightcoral;
 $mobile-nav-btn-icon-color: white;
 
+// Mobile Nav List
 $mobile-nav-li-color: lightsteelblue;
-$mobile-nav-li-border-color: tan;
+$mobile-nav-li-border-color: tan; 
 $mobile-nav-li-hover-color: blue;
 $mobile-nav-bg-color: lightslategrey;
-
 
 // Key section Colors
 $submit-key-button-color: #888;
 $submit-key-text-color: white;
+
+// Note List Colors
+$note-border-color: white;
+$note-text-color: #111;
+$note-list-bg-color: lightcyan;
+
+//Chord Label Colors
+$chord-labels-bg-color: tan;
+$chord-labels-border-color: brown;
+
+// Chord Colors
+$chord-degree-bg-color: lightsteelblue;
 
 
 body {

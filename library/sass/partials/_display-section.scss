@@ -79,11 +79,11 @@
         li {
             @include span(1);
             padding: 5px;
-            border: 1px solid white;
+            border: 1px solid $note-border-color;
             text-align: center;
 
             a{
-                color: #111;
+                color: note-text-color;
                 font-size: 1em;
             }
         }
@@ -131,7 +131,7 @@
 ul.note-list {
     margin-bottom: 20px;
     li.scale-degree {
-        background-color: lightcyan;
+        background-color: $note-list-bg-color;
         a {
 
         }
@@ -165,7 +165,7 @@ ul.note-list {
 //   </div>
 //
 // Styleguide 3.5
-
+ 
 .chord-section {
     @include span(7);
     margin-top: 10px;
@@ -191,8 +191,8 @@ ul.note-list {
 
 ul.chord-labels {
     li.chord-numerals {
-        background-color: tan;
-        border-bottom: 1px solid brown;
+        background-color: $chord-labels-bg-color;
+        border-bottom: 1px solid $chord-labels-border-color;
         a {
         }
     }
@@ -218,9 +218,8 @@ ul.chord-labels {
 
 ul.chord-list {
     li.chord-degree {
-        background-color: lightsteelblue;
+        background-color: $chord-degree-bg-color;
         a {
         }
     }
 }
-
