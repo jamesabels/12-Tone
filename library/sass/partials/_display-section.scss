@@ -31,7 +31,7 @@
 //                    <li class="chord-numerals" role="menuitem"><a class="chord-link">IV</a></li>
 //                    <li class="chord-numerals" role="menuitem"><a class="chord-link">V</a></li>
 //                    <li class="chord-numerals" role="menuitem"><a class="chord-link">vi</a></li>
-//                    <li class="chord-numerals" role="menuitem"><a class="chord-link">vii°</a>     </li>
+//                    <li class="chord-numerals" role="menuitem"><a class="chord-link">vii°</a></li>
 //                </ul>
 //                <ul class="chord-list list-inline">
 //                    <li class="chord-degree" role="menuitem"><a class="chord-link">C</a></li>
@@ -83,11 +83,30 @@
             text-align: center;
 
             a{
-                color: note-text-color;
-                font-size: 1em;
+              color: $display-section-link-color;
+              color: note-text-color;
+              font-size: 1em;
             }
         }
     }
+}
+
+// Section Title
+//
+// markup:
+// <h1 class="section-title">Character</h1>
+//
+// Styleguide 3.3
+
+h1.section-title {
+    @include span(7);
+    color: $section-title-color;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 5px;
 }
 
 // Key Description
@@ -97,12 +116,17 @@
 //        <p class="key-char lead">Completely pure. It's character is: innocence, simplicity, naïvety, children's talk.</p>
 //     </div>
 //
-// Styleguide 3.3
+// Styleguide 3.4
 
 .key-desc {
     @include span(7);
+    background-color: $key-desc-bg-color;
+    border-color: $key-desc-border-color;
     text-align: center;
     margin-bottom: 10px;
+    p {
+      color: $key-desc-text-color;
+    }
 }
 
 // Note List
@@ -122,7 +146,7 @@
 //    </div>
 //   </div>
 //
-// Styleguide 3.4
+// Styleguide 3.5
 
 .list-wrap {
     @include span(7);
@@ -164,8 +188,8 @@ ul.note-list {
 //    </div>
 //   </div>
 //
-// Styleguide 3.5
- 
+// Styleguide 3.6
+
 .chord-section {
     @include span(7);
     margin-top: 10px;
@@ -186,7 +210,7 @@ ul.note-list {
 //    </ul>
 //   </div>
 //
-// Styleguide 3.6
+// Styleguide 3.7
 
 
 ul.chord-labels {
@@ -197,7 +221,6 @@ ul.chord-labels {
         }
     }
 }
-
 
 // Chord List
 //
@@ -214,7 +237,7 @@ ul.chord-labels {
 //    </ul>
 //   </div>
 //
-// Styleguide 3.7
+// Styleguide 3.8
 
 ul.chord-list {
     li.chord-degree {
