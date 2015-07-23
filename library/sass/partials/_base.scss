@@ -1,30 +1,40 @@
 // Variables
 
+// Basic Colors
+$black: #111; 0
+$red: lightcoral;
+$blue: lightsteelblue;
+$dark-blue: blue;
+$grey: lightslategrey;
+$tan: tan;
+$white: white;
+
+
 // Mobile Nav Colors
-$mobile-nav-btn-color: lightcoral;
-$mobile-nav-btn-icon-color: white;
+$mobile-nav-btn-color: $red;
+$mobile-nav-btn-icon-color: $white;
 
 // Mobile Nav List
-$mobile-nav-li-color: lightsteelblue;
-$mobile-nav-li-border-color: tan; 
-$mobile-nav-li-hover-color: blue;
-$mobile-nav-bg-color: lightslategrey;
+$mobile-nav-li-color: $blue;
+$mobile-nav-li-border-color: $tan;
+$mobile-nav-li-hover-color: $dark-blue;
+$mobile-nav-bg-color: $grey;
 
 // Key section Colors
-$submit-key-button-color: #888;
-$submit-key-text-color: white;
+$submit-key-button-color: $grey;
+$submit-key-text-color: $white;
 
 // Note List Colors
-$note-border-color: white;
-$note-text-color: #111;
+$note-border-color: $white;
+$note-text-color: $black;
 $note-list-bg-color: lightcyan;
 
 //Chord Label Colors
-$chord-labels-bg-color: tan;
-$chord-labels-border-color: brown;
+$chord-labels-bg-color: $tan;
+$chord-labels-border-color: $blue;
 
 // Chord Colors
-$chord-degree-bg-color: lightsteelblue;
+$chord-degree-bg-color: $blue;
 
 
 body {
