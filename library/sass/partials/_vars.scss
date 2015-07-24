@@ -19,7 +19,7 @@ $body-bg-color: desaturate($dark-blue, 90%);
 $section-title-color: $white;
 $logo-color: $white;
 
-// HEADER SECTION COLORS 
+// HEADER SECTION COLORS
 
 // Header Colors
 $header-bg-color: desaturate($light-blue, 70%);
@@ -56,7 +56,7 @@ $display-section-link-color: $header-border-color;
 // Key Description Colors
 $key-desc-bg-color: lighten($body-bg-color, 10%);
 $key-desc-border-color: darken($key-desc-bg-color, 15%);
-$key-desc-text-color: darken($key-desc-bg-color, 60%);
+$key-desc-text-color: darken($header-bg-color, 20%); 
 
 // Note List Colors
 $note-list-bg-color: desaturate($key-desc-bg-color, 40%);
