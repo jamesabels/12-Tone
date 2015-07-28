@@ -32,7 +32,7 @@ gulp.task('sass', function() {
 
 // Prefix CSS
 gulp.task('prefix-css', function() {
-  gulp.src('src/css/*.css')
+  gulp.src('dist/library/css/*.css')
     .pipe(plumber())
     .pipe(autoprefixer({browsers: ['> 5% in US', 'last 5 versions'], cascade: false}))
     .pipe(gulp.dest('dist/library/css'))
@@ -41,7 +41,7 @@ gulp.task('prefix-css', function() {
 
 // Compile HTML
 gulp.task('build-html', function() {
-  gulp.src('./src/html/index.jade')
+  gulp.src('./src/html/index.jade') 
     .pipe(plumber())
     .pipe(jade({
       pretty: true
@@ -67,7 +67,7 @@ gulp.task('styleguide:generate', function() {
 
 // Apply Styleguide
 gulp.task('styleguide:apply', function() {
-  return gulp.src('src/css/global.css')
+  return gulp.src('dist/library/css/global.css')
     .pipe(plumber())
     .pipe(sass({
       errLogToConsole: true
