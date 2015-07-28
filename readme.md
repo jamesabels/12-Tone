@@ -1,7 +1,11 @@
-# 12 Tone
+# Web Boilerplate
+A simple web boilerplate.
 
-<center>
-12 tone is a simple music reference app built using Sass, Bootstrap, Javascript and <3
+## Gulp Tasks
+A list of gulp tasks to help you build a host ready  project.
 
-<center>
-![12 tone image](http://i.imgur.com/UgoaE7n.png)
+#### gulp build
+Builds the project once, does not watch for changes.
+
+#### gulp watch
+Builds and watches project and syncs all devices browsers with Browser Sync.

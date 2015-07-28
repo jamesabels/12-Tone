@@ -1,0 +1,13 @@
+// styleguide:ignore:start
+@import "settings/_normalize";
+@import "settings/config";
+// styleguide:ignore:end
+
+// Media Queries
+$xsmall: max-width 600px;
+$small: 600px;
+$medium: 720px;
+$large: 1020px;
+$xlarge: 1920px;
+
+@import "src/sass/partials/typography.scss";
