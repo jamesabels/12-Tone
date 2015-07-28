@@ -10,5 +10,5 @@ $medium: 720px;
 $large: 1020px;
 $xlarge: 1920px;
 
-// @import "library/sass/vendor/_bootstrap.scss";
-@import "library/sass/partials/partials.scss";
+@import "vendor/_bootstrap.scss";
+@import "partials/partials.scss";
