@@ -32,7 +32,7 @@ gulp.task('sass', function() {
 
 // Prefix CSS
 gulp.task('prefix-css', function() {
-  gulp.src('dist/library/css/*.css')
+  gulp.src('src/css/*.css')
     .pipe(plumber())
     .pipe(autoprefixer({browsers: ['> 5% in US', 'last 5 versions'], cascade: false}))
     .pipe(gulp.dest('dist/library/css'))
@@ -41,7 +41,7 @@ gulp.task('prefix-css', function() {
 
 // Compile HTML
 gulp.task('build-html', function() {
-  gulp.src('./src/html/index.jade') 
+  gulp.src('./src/html/index.jade')
     .pipe(plumber())
     .pipe(jade({
       pretty: true
@@ -67,7 +67,7 @@ gulp.task('styleguide:generate', function() {
 
 // Apply Styleguide
 gulp.task('styleguide:apply', function() {
-  return gulp.src('dist/library/css/global.css')
+  return gulp.src('src/css/global.css')
     .pipe(plumber())
     .pipe(sass({
       errLogToConsole: true
@@ -173,7 +173,7 @@ gulp.task('watch', ['build'],
     });
     gulp.watch().on('change', browserSync.reload);
     gulp.watch('src/sass/**/*.scss', ['sass']);
-    gulp.watch('src/sass/**/*.scss', ['sass']);
+    gulp.watch('src/sass/**/*.scss', ['sass','styleguide']);
     gulp.watch('src/css/*.css', ['prefix-css']);
     gulp.watch(['src/html/**/*.jade','src/html/**/*.html','src/html/**/*.md'], ['build-html']);
     gulp.watch('dist/*.html').on('change', browserSync.reload);

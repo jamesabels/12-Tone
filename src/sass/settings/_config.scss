@@ -11,10 +11,18 @@ $susy: (
   gutter-position: inside,
 ); 
 
-$chord-section: (
-    columns: 7,
-    gutters: 1/4,
-    math: fluid,
-    output: float,
-    gutter-position: inside,
+$tablet: (
+  columns: 8,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+
+$desktop: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
 );
