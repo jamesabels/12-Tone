@@ -3,7 +3,7 @@
 // Styleguide 1.0
 
 header {
-
+    height: 50%; 
 }
 
 // Navigation
@@ -41,7 +41,7 @@ header {
 #navigation {
     background-color: $header-bg-color;
     border: none;
-    border-bottom: solid 10px $header-border-color;
+    border-bottom: solid 3px $header-border-color;
 
         #brand-wrap {
         @include span(4);
@@ -53,8 +53,8 @@ header {
     #nav-wrap {
         @include container(80%);
         margin: 0 auto;
-        margin-top: 25px;
-        margin-bottom: 25px;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 }
 
@@ -98,9 +98,9 @@ header {
     @include span(4);
     background-color: $mobile-nav-btn-color;
     border-bottom: 5px solid $mobile-nav-btn-border-color;
-    padding: 10px;
+    padding: 8px;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     span {
         color: $mobile-nav-btn-icon-color;
     }

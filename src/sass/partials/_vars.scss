@@ -13,7 +13,7 @@ $green: #ADFB9D;
 
 
 // Base Style Colors
-$body-bg-color: desaturate($dark-blue, 90%);
+$body-bg-color: lighten($dark-blue, 10%);
 
 // Typography Colors
 $section-title-color: $white;
@@ -22,7 +22,7 @@ $logo-color: $white;
 // HEADER SECTION COLORS
 
 // Header Colors
-$header-bg-color: desaturate($light-blue, 70%);
+$header-bg-color: desaturate($green, 60%);
 $header-border-color: darken($header-bg-color, 30%);
 
 // Mobile Nav Colors
@@ -56,7 +56,7 @@ $display-section-link-color: $header-border-color;
 // Key Description Colors
 $key-desc-bg-color: lighten($body-bg-color, 10%);
 $key-desc-border-color: darken($key-desc-bg-color, 15%);
-$key-desc-text-color: darken($header-bg-color, 20%); 
+$key-desc-text-color: darken($body-bg-color, 15%); 
 
 // Note List Colors
 $note-list-bg-color: desaturate($key-desc-bg-color, 40%);
