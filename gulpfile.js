@@ -97,7 +97,7 @@ gulp.task('concat', function() {
 
 // Minify Libs
 gulp.task('minify-libs', function() {
-  return gulp.src('src/js/vendor/*.js')
+  return gulp.src(['src/js/vendor/*.js', 'src/js/vendor/*.min.js'])
     .pipe(plumber())
     .pipe(uglify())
     .pipe(ext_replace('.min.js'))
