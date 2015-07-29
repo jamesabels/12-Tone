@@ -51,7 +51,7 @@ $submit-key-button-border-color: darken($submit-key-button-color, 10%);
 // DISPLAY SECTION COLORS
 
 // Display section links
-$display-section-link-color: $header-border-color;
+$display-section-link-color: darken($body-bg-color, 15%);
 
 // Key Description Colors
 $key-desc-bg-color: lighten($body-bg-color, 10%);
