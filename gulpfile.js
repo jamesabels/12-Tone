@@ -173,8 +173,7 @@ gulp.task('watch', ['build'],
     });
     gulp.watch().on('change', browserSync.reload);
     gulp.watch('src/sass/**/*.scss', ['sass']);
-    gulp.watch('src/sass/**/*.scss', ['sass']);
-    gulp.watch('src/css/*.css', ['prefix-css']);
+    gulp.watch('dist/library/css/*.css', ['prefix-css']);
     gulp.watch(['src/html/**/*.jade','src/html/**/*.html','src/html/**/*.md'], ['build-html']);
     gulp.watch('dist/*.html').on('change', browserSync.reload);
     gulp.watch('src/js/*.js', ['hint']);
