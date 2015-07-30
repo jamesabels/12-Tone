@@ -2,7 +2,7 @@
 <widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>12 Tone</name>
     <description>
-    12 tone is a simple music reference app built using Sass, Bootstrap, Javascript and <3 
+    12 tone is a simple music reference app built using Sass, Bootstrap, Javascript and love. 
     </description>
     <author email="jamesrabels@gmail.com" href="http://jamesabels.net">
         James Abels
