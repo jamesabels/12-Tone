@@ -1,0 +1,258 @@
+// Display Section
+//
+// Styleguide 3.0
+
+// Swiper Settings
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}   
+
+.swiper-slide {
+    padding: 4px;
+}
+
+// Display Section
+//
+// markup:
+//    <div id="display-section">
+//        <div class="display-wrap">
+//            <div class="key-desc">
+//                <p class="key-char lead">Completely pure. It's character is: innocence, simplicity, naïvety, children's talk.</p>
+//            </div>
+//            <div class="list-wrap">
+//                <ul class="note-list list-inline">
+//                    <li class="scale-degree" role="menuitem"><a class="scale-link">C</a></li>
+//                    <li class="scale-degree" role="menuitem"><a class="scale-link">D</a></li>
+//                    <li class="scale-degree" role="menuitem"><a class="scale-link">E</a></li>
+//                    <li class="scale-degree" role="menuitem"><a class="scale-link">F</a></li>
+//                    <li class="scale-degree" role="menuitem"><a class="scale-link">G</a></li>
+//                    <li class="scale-degree" role="menuitem"><a class="scale-link">A</a></li>
+//                    <li class="scale-degree" role="menuitem"><a class="scale-link">B</a></li>
+//                </ul>
+//            </div>
+//            <div class="chord-section">
+//                <ul class="chord-labels list-inline">
+//                    <li class="chord-numerals" role="menuitem"><a class="chord-link">I</a></li>
+//                    <li class="chord-numerals" role="menuitem"><a class="chord-link">ii</a></li>
+//                    <li class="chord-numerals" role="menuitem"><a class="chord-link">iii</a></li>
+//                    <li class="chord-numerals" role="menuitem"><a class="chord-link">IV</a></li>
+//                    <li class="chord-numerals" role="menuitem"><a class="chord-link">V</a></li>
+//                    <li class="chord-numerals" role="menuitem"><a class="chord-link">vi</a></li>
+//                    <li class="chord-numerals" role="menuitem"><a class="chord-link">vii°</a></li>
+//                </ul>
+//                <ul class="chord-list list-inline">
+//                    <li class="chord-degree" role="menuitem"><a class="chord-link">C</a></li>
+//                    <li class="chord-degree" role="menuitem"><a class="chord-link">D</a></li>
+//                    <li class="chord-degree" role="menuitem"><a class="chord-link">E</a></li>
+//                    <li class="chord-degree" role="menuitem"><a class="chord-link">F</a></li>
+//                    <li class="chord-degree" role="menuitem"><a class="chord-link">G</a></li>
+//                    <li class="chord-degree" role="menuitem"><a class="chord-link">A</a></li>
+//                    <li class="chord-degree" role="menuitem"><a class="chord-link">B</a></li>
+//                </ul>
+//            </div>
+//        </div>
+//    </div>
+//
+// Styleguide 3.1
+
+#display-section {
+    @include layout($chord-section);
+    @include span(7);
+    padding: 0;
+    height: 50%; 
+
+    #display-wrap {
+    }
+}
+
+// Display Section UL
+//
+// markup:
+//    <div id="display-section">
+//        <ul class="note-list list-inline">
+//            <li class="scale-degree" role="menuitem"><a class="scale-link">C</a></li>
+//            <li class="scale-degree" role="menuitem"><a class="scale-link">D</a></li>
+//            <li class="scale-degree" role="menuitem"><a class="scale-link">E</a></li>
+//            <li class="scale-degree" role="menuitem"><a class="scale-link">F</a></li>
+//            <li class="scale-degree" role="menuitem"><a class="scale-link">G</a></li>
+//            <li class="scale-degree" role="menuitem"><a class="scale-link">A</a></li>
+//            <li class="scale-degree" role="menuitem"><a class="scale-link">B</a></li>
+//        </ul>
+//    </div>
+//
+// Styleguide 3.2
+
+
+#display-section {
+    ul {
+        li {
+            @include span(1);
+            padding: 5px;
+            border: 1px solid $note-border-color;
+            text-align: center;
+
+            a{
+              color: $display-section-link-color;
+              color: note-text-color;
+              font-size: 1em;
+            }
+        }
+    }
+}
+
+// Section Title
+//
+// markup:
+// <h1 class="section-title">Character</h1>
+//
+// Styleguide 3.3
+
+h1.section-title {
+    @include span(7);
+    color: $section-title-color;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+// Key Description
+//
+// markup:
+//    <div class="key-desc">
+//        <p class="key-char lead">Completely pure. It's character is: innocence, simplicity, naïvety, children's talk.</p>
+//     </div>
+//
+// Styleguide 3.4
+
+.key-desc {
+    @include span(7);
+    background-color: $key-desc-bg-color;
+    border-color: $key-desc-border-color;
+    text-align: center;
+    margin-bottom: 10px;
+    p {
+      color: $key-desc-text-color;
+    }
+}
+
+// Note List
+//
+// markup:
+//   <div id="display-section">
+//    <div class="list-wrap">
+//        <ul class="note-list list-inline">
+//            <li class="scale-degree" role="menuitem"><a class="scale-link">C</a></li>
+//            <li class="scale-degree" role="menuitem"><a class="scale-link">D</a></li>
+//            <li class="scale-degree" role="menuitem"><a class="scale-link">E</a></li>
+//            <li class="scale-degree" role="menuitem"><a class="scale-link">F</a></li>
+//            <li class="scale-degree" role="menuitem"><a class="scale-link">G</a></li>
+//            <li class="scale-degree" role="menuitem"><a class="scale-link">A</a></li>
+//            <li class="scale-degree" role="menuitem"><a class="scale-link">B</a></li>
+//        </ul>
+//    </div>
+//   </div>
+//
+// Styleguide 3.5
+
+.list-wrap {
+    @include span(7);
+}
+
+ul.note-list {
+    margin-bottom: 20px;
+    li.scale-degree {
+        background-color: $note-list-bg-color;
+        a {
+
+        }
+    }
+}
+
+// Chord Section
+//
+// markup:
+//   <div id="display-section">
+//    <div class="chord-section">
+//        <ul class="chord-labels list-inline">
+//            <li class="chord-numerals" role="menuitem"><a class="chord-link">I</a></li>
+//            <li class="chord-numerals" role="menuitem"><a class="chord-link">ii</a></li>
+//            <li class="chord-numerals" role="menuitem"><a class="chord-link">iii</a></li>
+//            <li class="chord-numerals" role="menuitem"><a class="chord-link">IV</a></li>
+//            <li class="chord-numerals" role="menuitem"><a class="chord-link">V</a></li>
+//            <li class="chord-numerals" role="menuitem"><a class="chord-link">vi</a></li>
+//            <li class="chord-numerals" role="menuitem"><a class="chord-link">vii°</a></li>
+//        </ul>
+//        <ul class="chord-list list-inline">
+//            <li class="chord-degree" role="menuitem"><a class="chord-link">C</a></li>
+//            <li class="chord-degree" role="menuitem"><a class="chord-link">D</a></li>
+//            <li class="chord-degree" role="menuitem"><a class="chord-link">E</a></li>
+//            <li class="chord-degree" role="menuitem"><a class="chord-link">F</a></li>
+//            <li class="chord-degree" role="menuitem"><a class="chord-link">G</a></li>
+//            <li class="chord-degree" role="menuitem"><a class="chord-link">A</a></li>
+//            <li class="chord-degree" role="menuitem"><a class="chord-link">B</a></li>
+//        </ul>
+//    </div>
+//   </div>
+//
+// Styleguide 3.6
+
+.chord-section {
+    @include span(7);
+    margin-top: 10px;
+}
+
+// Chord Labels
+//
+// markup:
+//   <div id="display-section">
+//    <ul class="chord-labels list-inline">
+//        <li class="chord-numerals" role="menuitem"><a class="chord-link">I</a></li>
+//        <li class="chord-numerals" role="menuitem"><a class="chord-link">ii</a></li>
+//        <li class="chord-numerals" role="menuitem"><a class="chord-link">iii</a></li>
+//        <li class="chord-numerals" role="menuitem"><a class="chord-link">IV</a></li>
+//        <li class="chord-numerals" role="menuitem"><a class="chord-link">V</a></li>
+//        <li class="chord-numerals" role="menuitem"><a class="chord-link">vi</a></li>
+//        <li class="chord-numerals" role="menuitem"><a class="chord-link">vii°</a></li>
+//    </ul>
+//   </div>
+//
+// Styleguide 3.7
+
+
+ul.chord-labels {
+    li.chord-numerals {
+        background-color: $chord-labels-bg-color;
+        border-bottom: 1px solid $chord-labels-border-color;
+        a {
+        }
+    }
+}
+
+// Chord List
+//
+// markup:
+//   <div id="display-section">
+//    <ul class="chord-list list-inline">
+//        <li class="chord-degree" role="menuitem"><a class="chord-link">C</a></li>
+//        <li class="chord-degree" role="menuitem"><a class="chord-link">D</a></li>
+//        <li class="chord-degree" role="menuitem"><a class="chord-link">E</a></li>
+//        <li class="chord-degree" role="menuitem"><a class="chord-link">F</a></li>
+//        <li class="chord-degree" role="menuitem"><a class="chord-link">G</a></li>
+//        <li class="chord-degree" role="menuitem"><a class="chord-link">A</a></li>
+//        <li class="chord-degree" role="menuitem"><a class="chord-link">B</a></li>
+//    </ul>
+//   </div>
+//
+// Styleguide 3.8
+
+ul.chord-list {
+    li.chord-degree {
+        background-color: $chord-degree-bg-color;
+        a {
+        }
+    }
+}

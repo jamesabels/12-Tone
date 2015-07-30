@@ -1,0 +1,71 @@
+// Variables
+// Basic Colors
+$black: #111;
+$white: white;
+
+// Color Scheme
+$light-blue: #9DDCFB;
+$dark-blue: #9DADFB;
+$pink: #FB9DDC;
+$salmon: #FB9DAD;
+$yellow: #DCFB9D;
+$green: #ADFB9D;
+
+
+// Base Style Colors
+$body-bg-color: lighten($dark-blue, 10%);
+
+// Typography Colors
+$section-title-color: $white;
+$logo-color: $white;
+
+// HEADER SECTION COLORS
+
+// Header Colors
+$header-bg-color: desaturate($green, 60%);
+$header-border-color: darken($header-bg-color, 30%);
+
+// Mobile Nav Colors
+$mobile-nav-btn-color: $salmon;
+$mobile-nav-btn-icon-color: $white;
+$mobile-nav-btn-border-color: darken($mobile-nav-btn-color, 10%);
+
+// Mobile Nav List
+$mobile-nav-li-color: $dark-blue;
+$mobile-nav-li-border-color: darken($mobile-nav-li-color, 10%);
+$mobile-nav-li-border-hover-color: $white;
+$mobile-nav-bg-color: $body-bg-color;
+
+// Text Color
+$mobile-nav-li-text-color: lighten($mobile-nav-li-color, 15%);
+$mobile-nav-li-text-hover-color: $white;
+
+
+// KEY SECTION COLORS
+
+// Submit Button Colors
+$submit-key-button-color: $dark-blue;
+$submit-key-text-color: $white;
+$submit-key-button-border-color: darken($submit-key-button-color, 10%);
+
+// DISPLAY SECTION COLORS
+
+// Display section links
+$display-section-link-color: darken($body-bg-color, 15%);
+
+// Key Description Colors
+$key-desc-bg-color: lighten($body-bg-color, 10%);
+$key-desc-border-color: darken($key-desc-bg-color, 15%);
+$key-desc-text-color: darken($body-bg-color, 15%); 
+
+// Note List Colors
+$note-list-bg-color: desaturate($key-desc-bg-color, 40%);
+$note-text-color: $black;
+$note-border-color:  darken($body-bg-color, 3%);
+
+//Chord Label Colors
+$chord-labels-bg-color: $white;
+$chord-labels-border-color: $note-border-color;
+
+// Chord Colors
+$chord-degree-bg-color: $note-list-bg-color;
