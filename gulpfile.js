@@ -1,11 +1,9 @@
 // Plugin Calls
-var browserSync = require('browser-sync').create(); 
 var autoprefixer = require('gulp-autoprefixer');
 var ext_replace = require('gulp-ext-replace');
 var spritesmith = require('gulp.spritesmith');
 var prettify = require('gulp-html-prettify');
 var sourcemaps = require('gulp-sourcemaps');
-var styleguide = require('sc5-styleguide');
 var uglifycss = require('gulp-uglifycss');
 var imagemin = require('gulp-imagemin');
 var stylish = require('jshint-stylish');
@@ -26,17 +24,15 @@ gulp.task('sass', function() {
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(sourcemaps.write('./maps'))
-    .pipe(gulp.dest('dist/library/css'))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest('www/css'));
 });
 
 // Prefix CSS
 gulp.task('prefix-css', function() {
-  gulp.src('dist/library/css/*.css')
+  gulp.src('www/css/*.css')
     .pipe(plumber())
     .pipe(autoprefixer({browsers: ['> 5% in US', 'last 5 versions'], cascade: false}))
-    .pipe(gulp.dest('dist/library/css'))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest('./'));
 });
 
 // Compile HTML
@@ -47,35 +43,9 @@ gulp.task('build-html', function() {
       pretty: true
     }))
     .pipe(prettify({indent_char: ' ', indent_size: 2}))
-    .pipe(gulp.dest('./dist'))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest('www'));
 });
 
-// Generate Styleguide
-gulp.task('styleguide:generate', function() {
-  return gulp.src('src/sass/**/*.scss')
-    .pipe(plumber())
-    .pipe(styleguide.generate({
-        title: 'Web Boilerplate',
-        server: true,
-        port: 3008,
-        rootPath: 'dist/docs'
-      }))
-    .pipe(gulp.dest('dist/docs'))
-    .pipe(browserSync.stream());
-});
-
-// Apply Styleguide
-gulp.task('styleguide:apply', function() {
-  return gulp.src('dist/library/css/global.css')
-    .pipe(plumber())
-    .pipe(sass({
-      errLogToConsole: true
-    }))
-    .pipe(styleguide.applyStyles())
-    .pipe(gulp.dest('dist/docs'))
-    .pipe(browserSync.stream());
-});
 
 // Hint JS
 gulp.task('hint', function() {
@@ -91,8 +61,7 @@ gulp.task('concat', function() {
     .pipe(plumber())
     .pipe(concat('main.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/library/js'))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest('www/js'));
 });
 
 // Minify Libs
@@ -101,8 +70,7 @@ gulp.task('minify-libs', function() {
     .pipe(plumber())
     .pipe(uglify())
     .pipe(ext_replace('.min.js'))
-    .pipe(gulp.dest('dist/library/js/vendor'))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest('www/js/vendor'));
 });
 
 // Optimize Images
@@ -113,7 +81,7 @@ gulp.task('image-min', function () {
             progressive: true,
             svgoPlugins: [{removeViewBox: false}]
         }))
-        .pipe(gulp.dest('dist/library/img'));
+        .pipe(gulp.dest('www/img'));
 });
 
 // Create Spritesheet
@@ -127,21 +95,21 @@ gulp.task('sprite', function () {
     imgName: 'sprite.png',
     cssName: 'sprite.css'
   }))
-   return spriteData.pipe(gulp.dest('dist/library/img/sprites'));
+   return spriteData.pipe(gulp.dest('www/img/sprites'));
 });
 
 // Minify Sprites
 gulp.task('sprite-min', function() {
-  return gulp.src('dist/library/img/sprites/sprite.css')
+  return gulp.src('www/img/sprites/sprite.css')
     .pipe(plumber())
     .pipe(uglifycss())
-    .pipe(gulp.dest('dist/library/img/sprites'));
+    .pipe(gulp.dest('www/img/sprites'));
 });
 
 // Copy Fonts
 gulp.task('copy-fonts', function() {
   gulp.src('src/fonts/**/*')
-    .pipe(gulp.dest('dist/library/fonts'));
+    .pipe(gulp.dest('www/fonts'));
 });
 
 // BUILD TASKS
@@ -158,29 +126,5 @@ gulp.task('build',
     'sprite',
     'sprite-min',
     'copy-fonts',
-    'styleguide:generate',
-    'styleguide:apply',
     'build-html'
   ]);
-
-// Watch
-gulp.task('watch', ['build'],
-  function() {
-    browserSync.init({
-        server: {
-            baseDir: "dist"
-        }
-    });
-    gulp.watch().on('change', browserSync.reload);
-    gulp.watch('src/sass/**/*.scss', ['sass']);
-    gulp.watch('dist/library/css/*.css', ['prefix-css']);
-    gulp.watch(['src/html/**/*.jade','src/html/**/*.html','src/html/**/*.md'], ['build-html']);
-    gulp.watch('dist/*.html').on('change', browserSync.reload);
-    gulp.watch('src/js/*.js', ['hint']);
-    gulp.watch('src/js/**/*.js', ['minify-libs']);
-    gulp.watch('src/js/*.js', ['concat']);
-    gulp.watch('src/img/*.**', ['image-min']);
-    gulp.watch('src/img/sprites/*.png', ['sprite']);
-    gulp.watch('dist/library/img/sprites/*.css', ['sprite-min']);
-    gulp.watch('src/fonts/*', ['copy-fonts']);
-});
