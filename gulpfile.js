@@ -1,5 +1,5 @@
 // Plugin Calls
-var browserSync = require('browser-sync').create();
+var browserSync = require('browser-sync').create(); 
 var autoprefixer = require('gulp-autoprefixer');
 var ext_replace = require('gulp-ext-replace');
 var spritesmith = require('gulp.spritesmith');
