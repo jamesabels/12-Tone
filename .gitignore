@@ -8,7 +8,7 @@ dist/**
 dist/*.*
 .settings/*
 typings
-www/css/*
-www/js/*
-www/img/*
-www/fonts/* 
+www/css
+www/js
+www/img
+www/fonts
