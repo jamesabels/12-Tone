@@ -48,6 +48,9 @@ header {
         text-align: center;
         h1 {
           color: $logo-color;
+          font-size: 32px;
+          padding: 4px; 
+          margin: 0; 
         }
     }
     #nav-wrap {
@@ -127,6 +130,5 @@ header {
 
 #mobile-nav {
     background-color: $mobile-nav-bg-color;
-    animation-name: mobileNav;
-    animation-duration: 3s;
+    z-index: 99; 
 }
