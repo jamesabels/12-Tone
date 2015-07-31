@@ -6,12 +6,12 @@
         <param name="onload" value="true" />
     </feature>
     <allow-intent href="market:*" />
-    <name>Hello World</name>
+    <name>12 Tone</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+    12 tone is a simple music reference app built using Sass, Bootstrap, Javascript and love. 
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="jamesrabels@gmail.com" href="http://jamesabels.net">
+        James Abels
     </author>
     <content src="index.html" />
     <preference name="permissions" value="none" />
@@ -27,7 +27,7 @@
     <preference name="show-splash-screen-spinner" value="true" />
     <preference name="auto-hide-splash-screen" value="true" />
     <preference name="disable-cursor" value="false" />
-    <preference name="android-minSdkVersion" value="7" />
+    <preference name="android-minSdkVersion" value="10" />
     <preference name="android-installLocation" value="auto" />
     <gap:plugin name="org.apache.cordova.battery-status" />
     <gap:plugin name="org.apache.cordova.camera" />
