@@ -130,6 +130,5 @@ header {
 
 #mobile-nav {
     background-color: $mobile-nav-bg-color;
-    animation-name: mobileNav;
-    animation-duration: 3s;
+    z-index: 99; 
 }
