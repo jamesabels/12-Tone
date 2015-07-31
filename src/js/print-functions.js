@@ -1,7 +1,7 @@
 // Print
 function printLogic(key, mode) {
     // Append new key description
-        $("<p class='key-char lead'>" + key.keyChar + "</p>").appendTo(keyDesc);
+        $("<p class='key-char'>" + key.keyChar + "</p>").appendTo(keyDesc);
 
         // Append note array to unordered list.
         $.each(key.scale, function(i) {
