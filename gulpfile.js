@@ -25,7 +25,8 @@ gulp.task('sass', function() {
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(sourcemaps.write('./maps'))
-    .pipe(gulp.dest('www/css'));
+    .pipe(gulp.dest('www/css'))
+    .pipe(browserSync.stream());
 });
 
 // Prefix CSS
@@ -33,7 +34,8 @@ gulp.task('prefix-css', function() {
   gulp.src('www/css/*.css')
     .pipe(plumber())
     .pipe(autoprefixer({browsers: ['> 5% in US', 'last 5 versions'], cascade: false}))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./'))
+    .pipe(browserSync.stream())
 });
 
 // Compile HTML
@@ -44,7 +46,8 @@ gulp.task('build-html', function() {
       pretty: true
     }))
     .pipe(prettify({indent_char: ' ', indent_size: 2}))
-    .pipe(gulp.dest('www'));
+    .pipe(gulp.dest('www'))
+    .pipe(browserSync.stream());
 });
 
 
@@ -62,7 +65,8 @@ gulp.task('concat', function() {
     .pipe(plumber())
     .pipe(concat('main.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('www/js'));
+    .pipe(gulp.dest('www/js'))
+    .pipe(browserSync.stream());
 });
 
 // Minify Libs
@@ -71,7 +75,8 @@ gulp.task('minify-libs', function() {
     .pipe(plumber())
     .pipe(uglify())
     .pipe(ext_replace('.min.js'))
-    .pipe(gulp.dest('www/js/vendor'));
+    .pipe(gulp.dest('www/js/vendor'))
+    .pipe(browserSync.stream());
 });
 
 // Optimize Images
@@ -82,7 +87,8 @@ gulp.task('image-min', function () {
             progressive: true,
             svgoPlugins: [{removeViewBox: false}]
         }))
-        .pipe(gulp.dest('www/img'));
+        .pipe(gulp.dest('www/img'))
+        .pipe(browserSync.stream());
 });
 
 // Create Spritesheet
@@ -96,7 +102,7 @@ gulp.task('sprite', function () {
     imgName: 'sprite.png',
     cssName: 'sprite.css'
   }))
-   return spriteData.pipe(gulp.dest('www/img/sprites'));
+   return spriteData.pipe(gulp.dest('www/img/sprites'))
 });
 
 // Minify Sprites
@@ -104,13 +110,15 @@ gulp.task('sprite-min', function() {
   return gulp.src('www/img/sprites/sprite.css')
     .pipe(plumber())
     .pipe(uglifycss())
-    .pipe(gulp.dest('www/img/sprites'));
+    .pipe(gulp.dest('www/img/sprites'))
+    .pipe(browserSync.stream());
 });
 
 // Copy Fonts
 gulp.task('copy-fonts', function() {
   gulp.src('src/fonts/**/*')
-    .pipe(gulp.dest('www/fonts'));
+    .pipe(gulp.dest('www/fonts'))
+    .pipe(browserSync.stream());
 });
 
 // BUILD TASKS
