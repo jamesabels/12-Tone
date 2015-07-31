@@ -1,4 +1,5 @@
 // Plugin Calls
+var browserSync = require('browser-sync').create();
 var autoprefixer = require('gulp-autoprefixer');
 var ext_replace = require('gulp-ext-replace');
 var spritesmith = require('gulp.spritesmith');
@@ -128,3 +129,25 @@ gulp.task('build',
     'copy-fonts',
     'build-html'
   ]);
+  
+// Watch
+gulp.task('watch', ['build'],
+  function() {
+    browserSync.init({
+        server: {
+            baseDir: "www"
+        }
+    });
+    gulp.watch().on('change', browserSync.reload);
+    gulp.watch('src/sass/**/*.scss', ['sass']);
+    gulp.watch('www/css/*.css', ['prefix-css']);
+    gulp.watch(['src/html/**/*.jade','src/html/**/*.html','src/html/**/*.md'], ['build-html']);
+    gulp.watch('dist/*.html').on('change', browserSync.reload);
+    gulp.watch('src/js/*.js', ['hint']);
+    gulp.watch('src/js/**/*.js', ['minify-libs']);
+    gulp.watch('src/js/*.js', ['concat']);
+    gulp.watch('src/img/*.**', ['image-min']);
+    gulp.watch('src/img/sprites/*.png', ['sprite']);
+    gulp.watch('www/img/sprites/*.css', ['sprite-min']);
+    gulp.watch('src/fonts/*', ['copy-fonts']);
+});
