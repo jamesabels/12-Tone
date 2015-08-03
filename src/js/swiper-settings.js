@@ -1,5 +1,6 @@
 /// <reference path="../../typings/jquery/jquery.d.ts"/>
 
+
 // Init Swiper
 $(document).ready(function () {
   //initialize swiper when document ready  
