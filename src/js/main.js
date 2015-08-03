@@ -15,9 +15,13 @@ var chordLabels = ".chord-labels";
     printKey(Cmaj);
 }());
 
+function initSwiper() {
+    mySwiper.slideTo(1, 300, false);
+}
 
 // CHANGE KEYS
 function changeKey() {
+    initSwiper(); 
     // BASIC KEYS
     // C MAJOR
     if ( $(keyMenu).val() === "c" && $(modeMenu).val() === "major") {
