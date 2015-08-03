@@ -55,7 +55,7 @@ var Emaj = {
 };
 // E MINOR
 var Emin = {
-  keyChar: "Naive, womanly innocent declaration of love, lament without grumbling; sighs accompanied by few tears; this key speaks of the imminent hope of resolving in the pure happiness of C major. ",
+  keyChar: "Naive, womanly innocent declaration of love, lament without grumbling; sighs accompanied by few tears.",
   scale: ["E", "F&sharp;", "G", "A", "B", "C", "D"],
   color: paleBlue
 };
@@ -75,7 +75,7 @@ var Fmin = {
 
 // G MAJOR
 var Gmaj = {
-  keyChar: "Everything rustic, idyllic and lyrical, every calm and satisfied passion, every tender gratitude for true friendship and faithful love, --in a word every gentle and peaceful emotion of the   heart is correctly expressed by this key.",
+  keyChar: "Everything rustic, idyllic and lyrical, every calm and satisfied passion, every tender gratitude for true friendship and faithful love.",
   scale: ["G", "A", "B", "C", "D", "E", "F&sharp;"],
   color: orange
 };
@@ -116,7 +116,7 @@ var Bmin = {
 
 // C# MAJOR
 var CSharpMaj = {
-  keyChar: "A leering key, degenerating into grief and rapture. It cannot laugh, but it can smile; it cannot howl, but it can at least grimace its crying. --Consequently only unusual characters and feelings can be brought out in this key.",
+  keyChar: "A leering key, degenerating into grief and rapture. It cannot laugh, but it can smile; it cannot howl, but it can at least grimace its crying.",
   scale: ["C&sharp;", "D&sharp;", "E&sharp;", "F&sharp;", "G&sharp;", "A&sharp;", "B&sharp;"],
   color: red
 };
@@ -135,7 +135,7 @@ var DSharpMaj = {
 };
 // D# MINOR
 var DSharpMin = {
-  keyChar: "Feelings of the anxiety of the soul's deepest distress, of brooding despair, of blackest depresssion, of the most gloomy condition of the soul. Every fear, every hesitation of the shuddering   heart, breathes out of horrible D# minor. If ghosts could speak, their speech would approximate this key.",
+  keyChar: "Feelings of the anxiety of the soul's deepest distress, of brooding despair, of blackest depresssion, of the most gloomy condition of the soul.",
   scale: ["D&sharp;", "E&sharp;", "F&sharp;", "G&sharp;", "A&sharp;", "B", "C&sharp;"],
   color: yellow
 };
@@ -174,7 +174,7 @@ var ASharpMaj = {
 };
 // A# MINOR
 var ASharpMin = {
-  keyChar: "A quaint creature, often dressed in the garment of night. It is somewhat surly and very seldom takes on a pleasant countenance. Mocking God and the world; discontented with itself and with everything; preparation for suicide sounds in this key.",
+  keyChar: "A quaint creature, often dressed in the garment of night. It is somewhat surly and very seldom takes on a pleasant countenance.",
   scale: ["A&sharp;", "B&sharp;", "C&sharp;", "D&sharp;", "E&sharp;", "F&sharp;", "G&sharp;"],
   color: purple
 };
