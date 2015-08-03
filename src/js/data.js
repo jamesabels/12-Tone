@@ -88,7 +88,7 @@ var Gmin = {
 
 // A MAJOR
 var Amaj = {
-  keyChar: "Key of the grave. Death, grave, putrefaction, judgment, eternity lie in its radius.",
+  keyChar: "This key includes declarations of innocent love, satisfaction with one's state of affairs; hope of seeing one's beloved again when parting; youthful cheerfulness and trust in God.",
   scale: ["A", "B", "C&sharp;", "D", "E", "F&sharp;", "G&sharp;"],
   color: purple
 };
