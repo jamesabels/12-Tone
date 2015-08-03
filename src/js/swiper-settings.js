@@ -12,6 +12,8 @@ $(document).ready(function () {
     paginationHide: false,
     direction: 'horizontal',
     loop: true,
-    keyboardControl: true
+    keyboardControl: true,
+    initialSlide: 0, 
+    slidesPerView: 1
   });
 });
