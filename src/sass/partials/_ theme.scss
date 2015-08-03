@@ -1,0 +1,139 @@
+// Variables
+// Basic Colors
+$black: #111;
+$white: white;
+
+// Color Scheme
+$light-blue: #9DDCFB;
+$dark-blue: #9DADFB;
+$pink: #FB9DDC;
+$salmon: #FB9DAD;
+$yellow: #DCFB9D;
+$green: #ADFB9D;
+
+
+// Base Style Colors
+$body-bg-color: lighten($dark-blue, 10%);
+
+body {
+	background-color: $body-bg-color; 
+}
+
+// HEADER SECTION COLORS
+
+// Header Colors
+$header-bg-color: desaturate($green, 60%);
+$header-border-color: darken($header-bg-color, 30%);
+$logo-color: $white;
+
+#navigation {
+	background-color: $header-bg-color;
+    border-bottom-color: $header-border-color;	
+}
+
+#logo {
+	color: $logo-color; 
+}
+
+// Mobile Nav List
+$mobile-nav-li-color: $dark-blue;
+$mobile-nav-li-border-color: darken($mobile-nav-li-color, 10%);
+$mobile-nav-li-border-hover-color: $white;
+
+#nav-list > li {
+	background-color: $mobile-nav-li-color; 
+	border-bottom-color: $mobile-nav-li-border-color; 
+}
+ 
+#nav-list > li:hover {
+	background-color: $mobile-nav-li-color; 
+	border-bottom-color: $mobile-nav-li-border-hover-color; 
+}
+
+// Text Color
+$mobile-nav-li-text-color: lighten($mobile-nav-li-color, 15%);
+$mobile-nav-li-text-hover-color: $white;
+
+#nav-list > li > a {
+	color: $mobile-nav-li-text-color; 
+}
+
+#nav-list > li > a:hover {
+	color: $mobile-nav-li-text-hover-color; 
+}
+
+
+// Mobile Nav Colors
+$mobile-nav-btn-color: $salmon;
+$mobile-nav-btn-icon-color: $white;
+$mobile-nav-btn-border-color: darken($mobile-nav-btn-color, 10%);
+$mobile-nav-bg-color: $body-bg-color;
+
+.mobile-nav-btn {
+	background-color: $mobile-nav-btn-color;
+	border-bottom-color: $mobile-nav-btn-border-color;
+	
+	span {
+		color: $mobile-nav-btn-icon-color;
+	}
+}
+
+#mobile-nav {
+    background-color: $mobile-nav-bg-color; 
+}
+
+// KEY SECTION COLORS
+
+// Submit Button Colors
+$submit-key-button-color: $dark-blue;
+$submit-key-text-color: $white;
+$submit-key-button-border-color: darken($submit-key-button-color, 10%);
+
+#submit-key {
+    background-color: $submit-key-button-color;
+    color: $submit-key-text-color;
+    border-bottom-color: $submit-key-button-border-color;
+ }
+
+
+// DISPLAY SECTION COLORS
+
+// Display section links
+$section-title-color: $white;
+h1.section-title {
+    color: $section-title-color;
+}
+
+
+// UL Colors 
+
+$ul-bg-color: $white; 
+$ul-border-color:   darken($body-bg-color, 3%);
+$ul-link-color: darken($body-bg-color, 15%);
+
+#display-section {
+    ul {
+        li {
+			background-color: $ul-bg-color; 
+            border-color: $ul-border-color;
+
+            a{
+              color: $ul-link-color;
+            }
+        }
+    }
+}
+
+// Key Description Colors
+$key-desc-bg-color: lighten($body-bg-color, 10%);
+$key-desc-border-color: darken($key-desc-bg-color, 15%);
+$key-desc-text-color: darken($body-bg-color, 15%); 
+
+.key-desc {
+    background-color: $key-desc-bg-color;
+    border-color: $key-desc-border-color;
+    
+    p {
+      color: $key-desc-text-color;
+    }
+}

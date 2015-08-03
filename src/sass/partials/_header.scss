@@ -4,9 +4,8 @@ header {
 }
 
 #navigation {
-    background-color: $header-bg-color;
     border: none;
-    border-bottom: solid 3px $header-border-color;
+    border-bottom: solid 3px;
 
         #brand-wrap {
         @include span(4);
@@ -14,7 +13,6 @@ header {
         margin-top: 0.5%; 
         margin-bottom: 0.5%;
         h1 {
-          color: $logo-color;
           font-size: 32px;
           padding: 4px; 
           margin: 0; 
@@ -34,42 +32,34 @@ header {
     display: inline-block;
     li {
         padding: 10px;
-        background-color: $mobile-nav-li-color;
         text-align: center;
         margin-top: 2%;
         margin-bottom: 2%;
-        border-bottom: 5px solid $mobile-nav-li-border-color;
+        border-bottom: 5px solid;
         a {
             font-size: 1.8em;
             text-transform: uppercase;
             font-weight: 500;
-            color: $mobile-nav-li-text-color;
         }
         a:hover {
             text-decoration: none;
-            color: $mobile-nav-li-border-hover-color;
         }
     }
     li:hover {
-        border-bottom: 5px solid $mobile-nav-li-border-hover-color;
+        border-bottom: 5px solid;
     }
 }
 
 
 .mobile-nav-btn {
     @include span(4);
-    background-color: $mobile-nav-btn-color;
-    border-bottom: 5px solid $mobile-nav-btn-border-color;
+    border-bottom: 5px solid;
     padding: 4px;
     text-align: center;
     font-size: 20px;
-    margin-top: 1%;  
-    span {
-        color: $mobile-nav-btn-icon-color;
-    }
+    margin-top: 1%;
 }
 
 #mobile-nav {
-    background-color: $mobile-nav-bg-color;
     z-index: 99; 
 }

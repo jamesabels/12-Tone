@@ -26,12 +26,10 @@
         li {
             @include span(1);
             padding: 5px;
-            border: 1px solid $note-border-color;
+            border: 1px solid;
             text-align: center;
 
             a{
-              color: $display-section-link-color;
-              color: note-text-color;
               font-size: 1em;
             }
         }
@@ -40,7 +38,6 @@
 
 h1.section-title {
     @include span(7);
-    color: $section-title-color;
     text-align: center;
     font-size: 2em;
     font-weight: 500;
@@ -51,15 +48,12 @@ h1.section-title {
 
 .key-desc {
     @include span(7);
-    background-color: $key-desc-bg-color;
-    border-color: $key-desc-border-color;
     text-align: left;
     font-size: 16px; 
     padding: 8px;
     margin: 0;  
     
     p {
-      color: $key-desc-text-color;
       padding: 0;
       margin: 0;
     }
@@ -69,33 +63,6 @@ h1.section-title {
     @include span(7);
 }
 
-ul.note-list {
-    margin-bottom: 20px;
-    li.scale-degree {
-        background-color: $note-list-bg-color;
-        a {
-
-        }
-    }
-}
-
 .chord-section {
     @include span(7);
-}
-
-ul.chord-labels {
-    li.chord-numerals {
-        background-color: $chord-labels-bg-color;
-        border-bottom: 1px solid $chord-labels-border-color;
-        a {
-        }
-    }
-}
-
-ul.chord-list {
-    li.chord-degree {
-        background-color: $chord-degree-bg-color;
-        a {
-        }
-    }
 }
