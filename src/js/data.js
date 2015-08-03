@@ -36,7 +36,7 @@ var Cmin = {
 
 // D MAJOR
 var Dmaj = {
-  keyChar: "The key of triumph, of Hallejuahs, of war-cries, of victory-rejoicing. Thus, the inviting symphonies, the marches, holiday songs and heaven-rejoicing choruses are set in this key.",
+  keyChar: "The key of triumph, of Hallejuahs, of war-cries, of victory-rejoicing.",
   scale: ["D", "E", "F&sharp;", "G", "A", "B", "C&sharp;"],
   color: yellow
 };
