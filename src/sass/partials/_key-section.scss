@@ -14,7 +14,7 @@
 
 #key-select {
     @include span(4);
-
+    margin-top: 2%; 
     option {
 
     }
@@ -26,8 +26,7 @@
 
 #mode-select {
     @include span(4);
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 2%;
     option {
 
     }
@@ -41,4 +40,5 @@
     background-color: $submit-key-button-color;
     color: $submit-key-text-color;
     border-bottom: 5px solid $submit-key-button-border-color;
+    margin-top: 5%; 
  }

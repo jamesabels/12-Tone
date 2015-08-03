@@ -9,15 +9,15 @@
     padding: 6px;
 }
 
-
-
 #display-section {
     @include layout($chord-section);
     @include span(7);
     padding: 0;
+    margin-top: 5%; 
     height: 100%; 
 
     #display-wrap {
+        width: 100%; 
     }
 }
 
