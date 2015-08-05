@@ -39,4 +39,9 @@
     text-transform: uppercase;
     border-bottom: 5px solid;
     margin-top: 3%; 
+    
+    &:hover {
+        border-bottom: 0px solid;
+        border-top: 5px solid;
+    }
  }
