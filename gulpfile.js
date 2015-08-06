@@ -121,6 +121,13 @@ gulp.task('copy-fonts', function() {
     .pipe(browserSync.stream());
 });
 
+// Copy Sounds
+gulp.task('copy-sound', function() {
+  gulp.src('src/sound/**/*')
+    .pipe(gulp.dest('www/sound'))
+    .pipe(browserSync.stream());
+});
+
 // BUILD TASKS
 
 // Build
@@ -135,6 +142,7 @@ gulp.task('build',
     'sprite',
     'sprite-min',
     'copy-fonts',
+    'copy-sound',
     'build-html'
   ]);
   
@@ -158,4 +166,5 @@ gulp.task('watch', ['build'],
     gulp.watch('src/img/sprites/*.png', ['sprite']);
     gulp.watch('www/img/sprites/*.css', ['sprite-min']);
     gulp.watch('src/fonts/*', ['copy-fonts']);
+    gulp.watch('src/sound/*', ['copy-sound']);
 });
