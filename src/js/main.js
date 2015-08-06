@@ -13,7 +13,6 @@ var chordLabels = $('.chord-labels');
 // INIT C MAJOR KEY
 $(document).ready(function init () {
     printKey(Cmaj);
-    playKey("Cmaj"); 
 }) 
 
 function initSwiper() {
@@ -28,7 +27,6 @@ function changeKey() {
     if ( keyMenu.val() === "c" && modeMenu.val() === "major") {
         // Print Cmaj
         printKey(Cmaj);
-        playKey("Cmaj"); 
     }
     // C MINOR
     if ( keyMenu.val() === "c" && modeMenu.val() === "minor") {
