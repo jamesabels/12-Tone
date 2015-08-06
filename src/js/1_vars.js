@@ -9,3 +9,4 @@ var modeMenu = $('#mode-select');
 var notelist = $('.note-list');
 var chordList = $('.chord-list');
 var chordLabels = $('.chord-labels');
+var sectionTitles = $('.section-title'); 
