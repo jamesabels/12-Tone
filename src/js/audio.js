@@ -5,7 +5,7 @@ a.waveform = "Triangle";
 
 function playNote() {
 	note = new Audio(); 
-	note.src = "sound/piano/aNote.wav"; 
+	note.src = "sound/piano/aNote.mp3"; 
 	
 	note.play(); 
 }
