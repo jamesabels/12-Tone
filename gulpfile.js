@@ -53,7 +53,7 @@ gulp.task('build-html', function() {
 
 // Hint JS
 gulp.task('hint', function() {
-  return gulp.src('src/js/*.js')
+  return gulp.src(['src/js/*.js', '!src/js/vendor/*.js'])
     .pipe(plumber())
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'));
@@ -61,7 +61,7 @@ gulp.task('hint', function() {
 
 // Concat JS
 gulp.task('concat', function() {
-  return gulp.src(['src/js/*.js'])
+  return gulp.src(['src/js/*.js', '!src/js/vendor/*.js'])
     .pipe(plumber())
     .pipe(concat('main.min.js'))
     .pipe(uglify())
