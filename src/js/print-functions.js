@@ -8,7 +8,7 @@ function printLogic(key, mode) {
             var li = $('<li/>')
                 .addClass('scale-degree')
                 .attr('role', 'menuitem')
-                .appendTo($(notelist));
+                .appendTo(notelist);
             var liLink = $('<a/>')
                 .addClass('scale-link')
                 .html(key.scale[i])
@@ -20,7 +20,7 @@ function printLogic(key, mode) {
             var li = $('<li/>')
                 .addClass('chord-numerals')
                 .attr('role', 'menuitem')
-                .appendTo($(chordLabels));
+                .appendTo(chordLabels);
             var liLink = $('<a/>')
                 .addClass('chord-link')
                 .html(mode.nums[i])
@@ -32,7 +32,7 @@ function printLogic(key, mode) {
             var li = $('<li/>')
                 .addClass('chord-degree')
                 .attr('role', 'menuitem')
-                .appendTo($(chordList));
+                .appendTo(chordList);
             var liLink = $('<a/>')
                 .addClass('chord-link')
                 .html(key.scale[i])
@@ -45,12 +45,13 @@ function printLogic(key, mode) {
 // A function for all of the logic of printing the key, just pass the correct key object
 function printKey( musicalKey ) {
     // Empty before appending
-        $(keyChar).empty();
-        $(notelist).empty();
-        $(chordList).empty();
-        $(chordLabels).empty();
+        keyDesc.empty(); 
+        keyChar.empty();
+        notelist.empty();
+        chordList.empty();
+        chordLabels.empty();
     // Find Major
-    if ( $(modeMenu).val() === "major") {
+    if ( modeMenu.val() === "major") {
         // Pass printLogic they key and mode
         printLogic(musicalKey, majorNumerals);
     }
@@ -58,7 +59,7 @@ function printKey( musicalKey ) {
 
     // FIND MINOR
     // Pass printLogic they key and mode
-    if ( $(modeMenu).val() === "minor") {
+    if ( modeMenu.val() === "minor") {
         printLogic(musicalKey, minorNumerals);
     }
 }
