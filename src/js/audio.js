@@ -1,11 +1,4 @@
-Gibberish.init();
-var a = new Gibberish.Synth({ attack:44, decay:44100 }).connect();
- 
-a.waveform = "Triangle"; 
-
-function playNote() {
-	note = new Audio(); 
-	note.src = "sound/piano/aNote.mp3"; 
-	
-	note.play(); 
+function testAudio() {
+	var note = new Audio('sound/piano/aNote.mp3');
+	note.play();
 }
