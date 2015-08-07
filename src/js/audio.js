@@ -1,8 +1,3 @@
-function testAudio() {
-	var note = new Audio( instrument.piano.note.C );
-	note.play(); 
-}
-
 console.log(instrument.piano.note.C); 
 
 
