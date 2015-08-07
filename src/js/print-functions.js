@@ -10,9 +10,10 @@ function printLogic(obj, mode) {
                 .attr('role', 'menuitem')
                 .appendTo(notelist);
             var liLink = $('<a/>')
-                .addClass('scale-link')
+                .addClass(obj.scale[i].toString() + "-note") 
                 .html(obj.scale[i])
                 .appendTo(li);
+                armNote(obj.scale[i]); 
         });
 
         // Append Roman Numeral array to unordered list
@@ -22,7 +23,7 @@ function printLogic(obj, mode) {
                 .attr('role', 'menuitem')
                 .appendTo(chordLabels);
             var liLink = $('<a/>')
-                .addClass('chord-link')
+                .addClass(mode.nums[i].toString() + "-numeral")
                 .html(mode.nums[i])
                 .appendTo(li);
         });
@@ -34,7 +35,7 @@ function printLogic(obj, mode) {
                 .attr('role', 'menuitem')
                 .appendTo(chordList);
             var liLink = $('<a/>')
-                .addClass('chord-link')
+                .addClass(obj.scale[i].toString() + "-chord")
                 .html(obj.scale[i])
                 .appendTo(li);
         });
