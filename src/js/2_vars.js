@@ -10,3 +10,5 @@ var notelist = $('.note-list');
 var chordList = $('.chord-list');
 var chordLabels = $('.chord-labels');
 var sectionTitles = $('.section-title'); 
+var scaleLink = $('.scale-link');
+var chordLink = $('.chord-link');
