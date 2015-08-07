@@ -1,17 +1,17 @@
 // Print
-function printLogic(key, mode) {
+function printLogic(obj, mode) {
     // Append new key description
-        $("<p class='key-char'>" + key.keyChar + "</p>").appendTo(keyDesc);
+        $("<p class='key-char'>" + obj.keyChar + "</p>").appendTo(keyDesc);
 
         // Append note array to unordered list.
-        $.each(key.scale, function(i) {
+        $.each(obj.scale, function(i) {
             var li = $('<li/>')
                 .addClass('scale-degree')
                 .attr('role', 'menuitem')
                 .appendTo(notelist);
             var liLink = $('<a/>')
                 .addClass('scale-link')
-                .html(key.scale[i])
+                .html(obj.scale[i])
                 .appendTo(li);
         });
 
@@ -28,21 +28,21 @@ function printLogic(key, mode) {
         });
 
         // Append chord array to unordered list
-        $.each(key.scale, function(i) {
+        $.each(obj.scale, function(i) {
             var li = $('<li/>')
                 .addClass('chord-degree')
                 .attr('role', 'menuitem')
                 .appendTo(chordList);
             var liLink = $('<a/>')
                 .addClass('chord-link')
-                .html(key.scale[i])
+                .html(obj.scale[i])
                 .appendTo(li);
         });
 }
 // End printLogic //
 
 
-// A function for all of the logic of printing the key, just pass the correct key object
+// A function for all of the logic of printing the `, just pass the correct key object
 function printKey( musicalKey ) {
     // Empty before appending
         keyDesc.empty(); 
@@ -53,13 +53,13 @@ function printKey( musicalKey ) {
     // Find Major
     if ( modeMenu.val() === "major") {
         // Pass printLogic they key and mode
-        printLogic(musicalKey, majorNumerals);
+        printLogic(musicalKey, key.mode.major);
     }
     // END IF Major //
 
     // FIND MINOR
     // Pass printLogic they key and mode
     if ( modeMenu.val() === "minor") {
-        printLogic(musicalKey, minorNumerals);
+        printLogic(musicalKey, key.mode.minor); 
     }
-}
+} 
