@@ -12,11 +12,10 @@ function printLogic(obj, mode) {
             var liLink = $('<a/>')
                 .addClass('note-link')
                 .addClass(obj.scale[i].toString() + "-note")
-                .html(obj.scale[i])
-                .appendTo(li);
-
-            replaceSharpNotes(); 
-
+                .html(obj.scaleHTML[i])
+                .appendTo(li); 
+                
+                armNote(obj.scale[i]);
         });
 
         // Append Roman Numeral array to unordered list
@@ -42,8 +41,6 @@ function printLogic(obj, mode) {
                 .addClass(obj.scale[i].toString() + "-chord")
                 .html(obj.scale[i])
                 .appendTo(li);
-                
-            replaceSharpChords(); 
                
         });
 }

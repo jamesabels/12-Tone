@@ -1,7 +1,15 @@
 // INIT C MAJOR KEY
-$(document).ready(function init() {
+$(document).ready(function () {
     printKey(key.major.C);
 });
+
+
+function ArmC() {
+    $(".C#-note").click(function() {
+        console.log("Clicked"); 
+    }); 
+}
+
 
 function initSwiper() {
     mySwiper.slideTo(1, 300, false);
