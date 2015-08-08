@@ -39,7 +39,7 @@ function printLogic(obj, mode) {
             var liLink = $('<a/>')
                 .addClass('chord-link')
                 .addClass(obj.scale[i].toString() + "-chord")
-                .html(obj.scale[i])
+                .html(obj.scaleHTML[i])
                 .appendTo(li);
                
         });
