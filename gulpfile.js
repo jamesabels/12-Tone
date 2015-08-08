@@ -24,7 +24,7 @@ gulp.task('sass', function() {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(sourcemaps.write('./maps'))
+    .pipe(sourcemaps.write('../maps'))
     .pipe(gulp.dest('www/css'))
     .pipe(browserSync.stream());
 });
@@ -63,9 +63,12 @@ gulp.task('hint', function() {
 gulp.task('concat', function() {
   return gulp.src(['src/js/*.js', '!src/js/vendor/*.js'])
     .pipe(plumber())
-    .pipe(concat('main.min.js'))
-    .pipe(uglify())
+    .pipe(sourcemaps.init())
+      .pipe(concat('main.min.js'))
+      .pipe(uglify())
+    .pipe(sourcemaps.write('../maps'))
     .pipe(gulp.dest('www/js'))
+
     .pipe(browserSync.stream());
 });
 
