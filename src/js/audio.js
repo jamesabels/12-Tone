@@ -1,4 +1,24 @@
-console.log(instrument.piano.note.C); 
+/// <reference path="../../typings/jquery/jquery.d.ts"/>
+function replaceSharpNotes() {
+	// replace class for sharps 
+	if ($('.note-link').hasClass("C&sharp;-note")) {
+		$('.note-link').attr('id', 'C-sharp-note');
+		$('#C-sharp-note').addClass('C-sharp');
+		$('#C-sharp-note').removeClass('C&sharp;-note');
+	}
+}
+
+function replaceSharpChords() {
+	// replace class for sharps 
+	if ($('.chord-link').hasClass("C&sharp;-chord")) {
+		$('.chord-link').attr('id', 'C-sharp-chord');
+		$('#C-sharp-chord').addClass('C-sharp');
+		$('#C-sharp-chord').removeClass('C&sharp;-chord');
+	}
+}
+
+ 
+
 
 
 function armNote(note) {

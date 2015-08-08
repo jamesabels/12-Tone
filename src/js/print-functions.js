@@ -4,16 +4,19 @@ function printLogic(obj, mode) {
         $("<p class='key-char'>" + obj.keyChar + "</p>").appendTo(keyDesc);
 
         // Append note array to unordered list.
-        $.each(obj.scale, function(i) {
+        $.each(obj.scale, function (i) {
             var li = $('<li/>')
                 .addClass('scale-degree')
                 .attr('role', 'menuitem')
                 .appendTo(notelist);
             var liLink = $('<a/>')
-                .addClass(obj.scale[i].toString() + "-note") 
+                .addClass('note-link')
+                .addClass(obj.scale[i].toString() + "-note")
                 .html(obj.scale[i])
                 .appendTo(li);
-                armNote(obj.scale[i]); 
+
+            replaceSharpNotes(); 
+
         });
 
         // Append Roman Numeral array to unordered list
@@ -35,9 +38,13 @@ function printLogic(obj, mode) {
                 .attr('role', 'menuitem')
                 .appendTo(chordList);
             var liLink = $('<a/>')
+                .addClass('chord-link')
                 .addClass(obj.scale[i].toString() + "-chord")
                 .html(obj.scale[i])
                 .appendTo(li);
+                
+            replaceSharpChords(); 
+               
         });
 }
 // End printLogic //
