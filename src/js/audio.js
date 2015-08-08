@@ -38,7 +38,7 @@ function armNote(note) {
 	}
 	if(note === "E-Sharp") {
 		$("." + note + "-note").click(function () {
-			var src = new Audio(instrument.piano.note.Esharp);  
+			var src = new Audio(instrument.piano.note.e);  
 			src.play(); 
 			console.log("Clicked!");   
 		}); 
