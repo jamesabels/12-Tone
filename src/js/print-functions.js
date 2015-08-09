@@ -24,7 +24,7 @@ function printLogic(obj, mode) {
                 .addClass('chord-numerals')
                 .attr('role', 'menuitem')
                 .appendTo(chordLabels);
-            var liLink = $('<a/>')
+            var liLink = $('<p/>')
                 .addClass(mode.nums[i].toString() + "-numeral")
                 .html(mode.nums[i])
                 .appendTo(li);
@@ -38,9 +38,11 @@ function printLogic(obj, mode) {
                 .appendTo(chordList);
             var liLink = $('<a/>')
                 .addClass('chord-link')
-                .addClass(obj.scale[i].toString() + "-chord")
+                .addClass(obj.chords[i].toString())
                 .html(obj.scaleHTML[i])
                 .appendTo(li);
+                
+                armChords(obj.scale[i], obj.chords[i]); 
                
         });
 }
