@@ -29,6 +29,13 @@ function armNote(note) {
 			console.log("Clicked!");   
 		}); 
 	} 
+	if(note === "D-Flat") {
+		$("." + note + "-note").click(function () {
+			var src = new Audio(instrument.piano.note.Dflat);  
+			src.play(); 
+			console.log("Clicked!");   
+		}); 
+	} 
 	if(note === "E") {
 		$("." + note + "-note").click(function () {
 			var src = new Audio(instrument.piano.note.E);  
@@ -36,13 +43,13 @@ function armNote(note) {
 			console.log("Clicked!");  
 		}); 
 	}
-	if(note === "E-Sharp") {
+	if(note === "E-flat") {
 		$("." + note + "-note").click(function () {
-			var src = new Audio(instrument.piano.note.e);  
+			var src = new Audio(instrument.piano.note.Eflat);  
 			src.play(); 
-			console.log("Clicked!");   
+			console.log("Clicked!");  
 		}); 
-	} 
+	}
 	if(note === "F") {
 		$("." + note + "-note").click(function () {
 			var src = new Audio(instrument.piano.note.F);  
@@ -71,6 +78,13 @@ function armNote(note) {
 			console.log("Clicked!");   
 		}); 
 	} 
+	if(note === "G-Flat") {
+		$("." + note + "-note").click(function () {
+			var src = new Audio(instrument.piano.note.Gflat);  
+			src.play(); 
+			console.log("Clicked!");   
+		}); 
+	} 
 	if(note === "A") {
 		$("." + note + "-note").click(function () {
 			var src = new Audio(instrument.piano.note.A);  
@@ -84,6 +98,13 @@ function armNote(note) {
 			src.play(); 
 			console.log("Clicked!");   
 		}); 
+	}
+	if(note === "A-Flat") {
+		$("." + note + "-note").click(function () {
+			var src = new Audio(instrument.piano.note.Aflat);  
+			src.play(); 
+			console.log("Clicked!");   
+		}); 
 	} 
 	if(note === "B") {
 		$("." + note + "-note").click(function () {
@@ -92,9 +113,9 @@ function armNote(note) {
 			console.log("Clicked!");  
 		}); 
 	}
-	if(note === "B-Sharp") {
+	if(note === "B-Flat") {
 		$("." + note + "-note").click(function () {
-			var src = new Audio(instrument.piano.note.Bsharp);  
+			var src = new Audio(instrument.piano.note.Bflat);  
 			src.play(); 
 			console.log("Clicked!");   
 		}); 
