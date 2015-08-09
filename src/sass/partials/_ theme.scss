@@ -131,6 +131,10 @@ $ul-link-color: darken($body-bg-color, 15%);
             a{
               color: $ul-link-color;
             }
+            
+            p {
+              color: $ul-link-color;
+            }
         }
     }
 }
