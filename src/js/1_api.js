@@ -114,7 +114,7 @@ var key = {
     F: {
       keyChar: "Complaisance & Calm.",
       scale: ["F", "G", "A", "B-Flat", "C", "D", "E"],
-      scaleHTML: ["F", "G", "A", "&flat;", "C", "D", "E"],      
+      scaleHTML: ["F", "G", "A", "B&flat;", "C", "D", "E"],      
       color: darkRed
     },
     FSharp: {
