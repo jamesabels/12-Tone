@@ -100,11 +100,11 @@ $submit-key-button-border-hover-color: darken($submit-key-button-color, 5%);
     background-color: $submit-key-button-color;
     color: $submit-key-text-color;
     border-color: $submit-key-button-border-color;
-    
-    &:hover {
-        border-color: $submit-key-button-border-hover-color; 
-    }
  }
+ 
+ html.no-touch #submit-key:hover, #submit-key:active {
+    border-color: $submit-key-button-border-hover-color; 
+}
 
 
 // DISPLAY SECTION COLORS
@@ -133,7 +133,7 @@ $ul-link-color: darken($body-bg-color, 15%);
             }
             
             p {
-              color: $ul-link-color;
+                  color: $ul-link-color;
             }
         }
     }
