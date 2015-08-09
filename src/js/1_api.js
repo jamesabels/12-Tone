@@ -83,8 +83,6 @@ var key = {
       keyChar: "Completely pure. It's character is: innocence, simplicity, naïvety, children's talk.",
       scale: ["C", "D", "E", "F", "G", "A", "B"],
       scaleHTML: ["C", "D", "E", "F", "G", "A", "B"],
-      noteSound: [instrument.piano.note.C, instrument.piano.note.D, instrument.piano.note.E, instrument.piano.note.F, instrument.piano.note.G, instrument.piano.note.A, instrument.piano.note.B],
-      chordSound: [instrument.piano.chord.C, instrument.piano.chord.D, instrument.piano.chord.E, instrument.piano.chord.F, instrument.piano.chord.G, instrument.piano.chord.A, instrument.piano.chord.B],
       color: red
     },
     CSharp: {
