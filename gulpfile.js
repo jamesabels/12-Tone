@@ -11,6 +11,7 @@ var stylish = require('jshint-stylish');
 var vinylPaths = require('vinyl-paths');
 var plumber = require('gulp-plumber');
 var jshint = require('gulp-jshint');
+var purify = require('gulp-purifycss');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
@@ -29,13 +30,15 @@ gulp.task('sass', function() {
     .pipe(browserSync.stream());
 });
 
-// Prefix CSS
-gulp.task('prefix-css', function() {
-  gulp.src('www/css/*.css')
+
+// Process CSS
+gulp.task('process-css', function() {
+  return gulp.src('www/css/*.css')
     .pipe(plumber())
+    .pipe(purify(['www/js/*.js', 'www/js/vendor/*.js', 'www/*.html']))
     .pipe(autoprefixer({browsers: ['> 5% in US', 'last 5 versions'], cascade: false}))
-    .pipe(gulp.dest('./'))
-    .pipe(browserSync.stream())
+    .pipe(uglifycss())
+    .pipe(gulp.dest('www/css'));
 });
 
 // Compile HTML
@@ -137,7 +140,6 @@ gulp.task('copy-sound', function() {
 gulp.task('build',
   [
     'sass',
-    'prefix-css',
     'hint',
     'concat',
     'minify-libs',
@@ -146,7 +148,8 @@ gulp.task('build',
     'sprite-min',
     'copy-fonts',
     'copy-sound',
-    'build-html'
+    'build-html',
+    'process-css',
   ]);
   
 // Watch
@@ -159,7 +162,7 @@ gulp.task('watch', ['build'],
     });
     gulp.watch().on('change', browserSync.reload);
     gulp.watch('src/sass/**/*.scss', ['sass']);
-    gulp.watch('www/css/*.css', ['prefix-css']);
+    gulp.watch('src/sass/**/*.scss', ['process-css']);
     gulp.watch(['src/html/**/*.jade','src/html/**/*.html','src/html/**/*.md'], ['build-html']);
     gulp.watch('dist/*.html').on('change', browserSync.reload);
     gulp.watch('src/js/*.js', ['hint']);
