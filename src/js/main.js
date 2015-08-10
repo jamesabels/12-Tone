@@ -1,148 +1,144 @@
-// HTML TAGS
-var dropdownWrap = ".dropdown-wrap";
-var keyMenu = "#key-select";
-var keyDesc = ".key-desc";
-var keyChar = ".key-char";
-var modeMenu = "#mode-select";
-var displaySect = "display-section";
-var modeMenu = "#mode-select";
-var notelist = ".note-list";
-var chordList = ".chord-list";
-var chordLabels = ".chord-labels";
-
 // INIT C MAJOR KEY
-(function init () {
-    printKey(Cmaj);
-}());
+$(document).ready(function () {
+    printKey(key.major.C);
+});
+
+
+function ArmC() {
+    $(".C#-note").click(function() {
+        console.log("Clicked"); 
+    }); 
+}
+
 
 function initSwiper() {
     mySwiper.slideTo(1, 300, false);
-}
+} 
 
 // CHANGE KEYS
 function changeKey() {
     initSwiper(); 
     // BASIC KEYS
     // C MAJOR
-    if ( $(keyMenu).val() === "c" && $(modeMenu).val() === "major") {
+    if (keyMenu.val() === "c" && modeMenu.val() === "major") {
         // Print Cmaj
-        printKey(Cmaj);
+        printKey(key.major.C);
     }
     // C MINOR
-    if ( $(keyMenu).val() === "c" && $(modeMenu).val() === "minor") {
+    if (keyMenu.val() === "c" && modeMenu.val() === "minor") {
         // Print Cmin
-        printKey(Cmin);
+        printKey(key.minor.C);
     }
     // D MAJOR
-    if ( $(keyMenu).val() === "d" && $(modeMenu).val() === "major") {
+    if (keyMenu.val() === "d" && modeMenu.val() === "major") {
         // Print Dmaj
-        printKey(Dmaj);
+        printKey(key.major.D);
     }
     // D MINOR
-    if ( $(keyMenu).val() === "d" && $(modeMenu).val() === "minor") {
+    if (keyMenu.val() === "d" && modeMenu.val() === "minor") {
         // Print Dmin
-        printKey(Dmin);
+        printKey(key.minor.D);
     }
     // E MAJOR
-    if ( $(keyMenu).val() === "e" && $(modeMenu).val() === "major") {
+    if (keyMenu.val() === "e" && modeMenu.val() === "major") {
         // Print Dmaj
-        printKey(Emaj);
+        printKey(key.major.E);
     }
     // E MINOR
-    if ( $(keyMenu).val() === "e" && $(modeMenu).val() === "minor") {
+    if (keyMenu.val() === "e" && modeMenu.val() === "minor") {
         // Print Dmin
-        printKey(Emin);
+        printKey(key.minor.E);
     }
     // F MAJOR
-    if ( $(keyMenu).val() === "f" && $(modeMenu).val() === "major") {
+    if (keyMenu.val() === "f" && modeMenu.val() === "major") {
         // Print Dmaj
-        printKey(Fmaj);
+        printKey(key.major.F);
     }
     // F MINOR
-    if ( $(keyMenu).val() === "f" && $(modeMenu).val() === "minor") {
+    if (keyMenu.val() === "f" && modeMenu.val() === "minor") {
         // Print Dmin
-        printKey(Fmin);
+        printKey(key.minor.F);
     }
     // G MAJOR
-    if ( $(keyMenu).val() === "g" && $(modeMenu).val() === "major") {
+    if (keyMenu.val() === "g" && modeMenu.val() === "major") {
         // Print Dmaj
-        printKey(Gmaj);
+        printKey(key.major.G);
     }
     // G MINOR
-    if ( $(keyMenu).val() === "g" && $(modeMenu).val() === "minor") {
+    if (keyMenu.val() === "g" && modeMenu.val() === "minor") {
         // Print Dmin
-        printKey(Gmin);
+        printKey(key.minor.G);
     }
     // A MAJOR
-    if ( $(keyMenu).val() === "a" && $(modeMenu).val() === "major") {
+    if (keyMenu.val() === "a" && modeMenu.val() === "major") {
         // Print Dmaj
-        printKey(Amaj);
+        printKey(key.major.A);
     }
     // A MINOR
-    if ( $(keyMenu).val() === "a" && $(modeMenu).val() === "minor") {
+    if (keyMenu.val() === "a" && modeMenu.val() === "minor") {
         // Print Dmin
-        printKey(Amin);
+        printKey(key.minor.A);
     }
-        // B MAJOR
-    if ( $(keyMenu).val() === "b" && $(modeMenu).val() === "major") {
+    // B MAJOR
+    if (keyMenu.val() === "b" && modeMenu.val() === "major") {
         // Print Dmaj
-        printKey(Bmaj);
+        printKey(key.major.B);
     }
     // B MINOR
-    if ( $(keyMenu).val() === "b" && $(modeMenu).val() === "minor") {
+    if (keyMenu.val() === "b" && modeMenu.val() === "minor") {
         // Print Dmin
-        printKey(Bmin);
+        printKey(key.minor.B);
     }
     // SHARP AND FLAT KEYS
     // C# MAJOR
-    if ($(keyMenu).val() === "c#" && $(modeMenu).val() === "major") {
+    if (keyMenu.val() === "c#" && modeMenu.val() === "major") {
         // Print C#Maj
-        printKey(CSharpMaj);
+        printKey(key.major.CSharp);
     }
     // C# MINOR
-    if ( $(keyMenu).val() === "c#" && $(modeMenu).val() === "minor") {
+    if (keyMenu.val() === "c#" && modeMenu.val() === "minor") {
         // Print C#min
-        printKey(CSharpMin);
+        printKey(key.minor.CSharp);
     }
     // D# MAJOR
-    if ($(keyMenu).val() === "d#" && $(modeMenu).val() === "major") {
+    if (keyMenu.val() === "d#" && modeMenu.val() === "major") {
         // Print D#Maj
-        printKey(DSharpMaj);
+        printKey(key.major.DSharp);
     }
     // D# MINOR
-    if ( $(keyMenu).val() === "d#" && $(modeMenu).val() === "minor") {
+    if (keyMenu.val() === "d#" && modeMenu.val() === "minor") {
         // Print D#min
-        printKey(DSharpMin);
+        printKey(key.minor.DSharp);
     }
     // F# MAJOR
-    if ($(keyMenu).val() === "f#" && $(modeMenu).val() === "major") {
+    if (keyMenu.val() === "f#" && modeMenu.val() === "major") {
         // Print F#Maj
-        printKey(FSharpMaj);
+        printKey(key.major.FSharp);
     }
     // F# MINOR
-    if ( $(keyMenu).val() === "f#" && $(modeMenu).val() === "minor") {
+    if (keyMenu.val() === "f#" && modeMenu.val() === "minor") {
         // Print F#min
-        printKey(FSharpMin);
+        printKey(key.minor.FSharp);
     }
     // G# MAJOR
-    if ($(keyMenu).val() === "g#" && $(modeMenu).val() === "major") {
+    if (keyMenu.val() === "g#" && modeMenu.val() === "major") {
         // Print G#Maj
-        printKey(GSharpMaj);
+        printKey(key.major.GSharp);
     }
     // G# MINOR
-    if ( $(keyMenu).val() === "g#" && $(modeMenu).val() === "minor") {
+    if (keyMenu.val() === "g#" && modeMenu.val() === "minor") {
         // Print G#min
-        printKey(GSharpMin);
+        printKey(key.minor.GSharp);
     }
-        // A# MAJOR
-    if ($(keyMenu).val() === "a#" && $(modeMenu).val() === "major") {
+    // A# MAJOR
+    if (keyMenu.val() === "a#" && modeMenu.val() === "major") {
         // Print A#Maj
-        printKey(ASharpMaj);
+        printKey(key.minor.ASharp);
     }
     // A# MINOR
-    if ( $(keyMenu).val() === "a#" && $(modeMenu).val() === "minor") {
+    if (keyMenu.val() === "a#" && modeMenu.val() === "minor") {
         // Print A#min
-        printKey(ASharpMin);
+        printKey(key.minor.ASharp);
     }
 }
 

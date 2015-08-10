@@ -28,7 +28,7 @@ $logo-color: $white;
 
 #navigation {
 	background-color: $header-bg-color;
-    border-bottom-color: $header-border-color;	
+    border-color: $header-border-color;	
 }
 
 #logo {
@@ -42,12 +42,12 @@ $mobile-nav-li-border-hover-color: $white;
 
 #nav-list > li {
 	background-color: $mobile-nav-li-color; 
-	border-bottom-color: $mobile-nav-li-border-color; 
+	border-color: $mobile-nav-li-border-color; 
 }
  
 #nav-list > li:hover {
 	background-color: $mobile-nav-li-color; 
-	border-bottom-color: $mobile-nav-li-border-hover-color; 
+	border-color: $mobile-nav-li-border-hover-color; 
 }
 
 // Text Color
@@ -57,7 +57,7 @@ $mobile-nav-li-text-hover-color: $white;
 #nav-list > li > a {
 	color: $mobile-nav-li-text-color; 
 }
-
+ 
 #nav-list > li > a:hover {
 	color: $mobile-nav-li-text-hover-color; 
 }
@@ -67,12 +67,17 @@ $mobile-nav-li-text-hover-color: $white;
 $mobile-nav-btn-color: $salmon;
 $mobile-nav-btn-icon-color: $white;
 $mobile-nav-btn-border-color: darken($mobile-nav-btn-color, 10%);
+$mobile-nav-btn-border-hover-color: darken($mobile-nav-btn-color, 5%);
 $mobile-nav-bg-color: $body-bg-color;
 
 .mobile-nav-btn {
 	background-color: $mobile-nav-btn-color;
-	border-bottom-color: $mobile-nav-btn-border-color;
-	
+	border-color: $mobile-nav-btn-border-color;
+    
+    &:hover {
+       	border-color: $mobile-nav-btn-border-hover-color; 
+    }
+    
 	span {
 		color: $mobile-nav-btn-icon-color;
 	}
@@ -80,6 +85,7 @@ $mobile-nav-bg-color: $body-bg-color;
 
 #mobile-nav {
     background-color: $mobile-nav-bg-color; 
+    border-color: $mobile-nav-btn-border-color;
 }
 
 // KEY SECTION COLORS
@@ -88,12 +94,17 @@ $mobile-nav-bg-color: $body-bg-color;
 $submit-key-button-color: $dark-blue;
 $submit-key-text-color: $white;
 $submit-key-button-border-color: darken($submit-key-button-color, 10%);
+$submit-key-button-border-hover-color: darken($submit-key-button-color, 5%);
 
 #submit-key {
     background-color: $submit-key-button-color;
     color: $submit-key-text-color;
-    border-bottom-color: $submit-key-button-border-color;
+    border-color: $submit-key-button-border-color;
  }
+ 
+ html.no-touch #submit-key:hover, #submit-key:active {
+    border-color: $submit-key-button-border-hover-color; 
+}
 
 
 // DISPLAY SECTION COLORS
@@ -119,6 +130,10 @@ $ul-link-color: darken($body-bg-color, 15%);
 
             a{
               color: $ul-link-color;
+            }
+            
+            p {
+                  color: $ul-link-color;
             }
         }
     }

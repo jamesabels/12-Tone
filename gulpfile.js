@@ -11,6 +11,7 @@ var stylish = require('jshint-stylish');
 var vinylPaths = require('vinyl-paths');
 var plumber = require('gulp-plumber');
 var jshint = require('gulp-jshint');
+var purify = require('gulp-purifycss');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
@@ -24,18 +25,20 @@ gulp.task('sass', function() {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(sourcemaps.write('./maps'))
+    .pipe(sourcemaps.write('../maps'))
     .pipe(gulp.dest('www/css'))
     .pipe(browserSync.stream());
 });
 
-// Prefix CSS
-gulp.task('prefix-css', function() {
-  gulp.src('www/css/*.css')
+
+// Process CSS
+gulp.task('process-css', function() {
+  return gulp.src('www/css/*.css')
     .pipe(plumber())
+    .pipe(purify(['www/js/*.js', 'www/js/vendor/*.js', 'www/*.html']))
     .pipe(autoprefixer({browsers: ['> 5% in US', 'last 5 versions'], cascade: false}))
-    .pipe(gulp.dest('./'))
-    .pipe(browserSync.stream())
+    .pipe(uglifycss())
+    .pipe(gulp.dest('www/css'));
 });
 
 // Compile HTML
@@ -53,7 +56,7 @@ gulp.task('build-html', function() {
 
 // Hint JS
 gulp.task('hint', function() {
-  return gulp.src('src/js/*.js')
+  return gulp.src(['src/js/*.js', '!src/js/vendor/*.js'])
     .pipe(plumber())
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'));
@@ -61,11 +64,14 @@ gulp.task('hint', function() {
 
 // Concat JS
 gulp.task('concat', function() {
-  return gulp.src(['src/js/*.js'])
+  return gulp.src(['src/js/*.js', '!src/js/vendor/*.js'])
     .pipe(plumber())
-    .pipe(concat('main.min.js'))
-    .pipe(uglify())
+    .pipe(sourcemaps.init())
+      .pipe(concat('main.min.js'))
+      .pipe(uglify())
+    .pipe(sourcemaps.write('../maps'))
     .pipe(gulp.dest('www/js'))
+
     .pipe(browserSync.stream());
 });
 
@@ -121,13 +127,19 @@ gulp.task('copy-fonts', function() {
     .pipe(browserSync.stream());
 });
 
+// Copy Sounds
+gulp.task('copy-sound', function() {
+  gulp.src('src/sound/**/*')
+    .pipe(gulp.dest('www/sound'))
+    .pipe(browserSync.stream());
+});
+
 // BUILD TASKS
 
 // Build
 gulp.task('build',
   [
     'sass',
-    'prefix-css',
     'hint',
     'concat',
     'minify-libs',
@@ -135,7 +147,9 @@ gulp.task('build',
     'sprite',
     'sprite-min',
     'copy-fonts',
-    'build-html'
+    'copy-sound',
+    'build-html',
+    'process-css',
   ]);
   
 // Watch
@@ -148,7 +162,7 @@ gulp.task('watch', ['build'],
     });
     gulp.watch().on('change', browserSync.reload);
     gulp.watch('src/sass/**/*.scss', ['sass']);
-    gulp.watch('www/css/*.css', ['prefix-css']);
+    gulp.watch('src/sass/**/*.scss', ['process-css']);
     gulp.watch(['src/html/**/*.jade','src/html/**/*.html','src/html/**/*.md'], ['build-html']);
     gulp.watch('dist/*.html').on('change', browserSync.reload);
     gulp.watch('src/js/*.js', ['hint']);
@@ -158,4 +172,5 @@ gulp.task('watch', ['build'],
     gulp.watch('src/img/sprites/*.png', ['sprite']);
     gulp.watch('www/img/sprites/*.css', ['sprite-min']);
     gulp.watch('src/fonts/*', ['copy-fonts']);
+    gulp.watch('src/sound/*', ['copy-sound']);
 });

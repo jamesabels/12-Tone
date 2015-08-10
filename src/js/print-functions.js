@@ -1,18 +1,21 @@
 // Print
-function printLogic(key, mode) {
+function printLogic(obj, mode) {
     // Append new key description
-        $("<p class='key-char'>" + key.keyChar + "</p>").appendTo(keyDesc);
+        $("<p class='key-char'>" + obj.keyChar + "</p>").appendTo(keyDesc);
 
         // Append note array to unordered list.
-        $.each(key.scale, function(i) {
+        $.each(obj.scale, function (i) {
             var li = $('<li/>')
                 .addClass('scale-degree')
                 .attr('role', 'menuitem')
-                .appendTo($(notelist));
+                .appendTo(notelist);
             var liLink = $('<a/>')
-                .addClass('scale-link')
-                .html(key.scale[i])
-                .appendTo(li);
+                .addClass('note-link')
+                .addClass(obj.scale[i].toString() + "-note")
+                .html(obj.scaleHTML[i])
+                .appendTo(li); 
+                
+                armNote(obj.scale[i]);
         });
 
         // Append Roman Numeral array to unordered list
@@ -20,45 +23,50 @@ function printLogic(key, mode) {
             var li = $('<li/>')
                 .addClass('chord-numerals')
                 .attr('role', 'menuitem')
-                .appendTo($(chordLabels));
-            var liLink = $('<a/>')
-                .addClass('chord-link')
+                .appendTo(chordLabels);
+            var liLink = $('<p/>')
+                .addClass(mode.nums[i].toString() + "-numeral")
                 .html(mode.nums[i])
                 .appendTo(li);
         });
 
         // Append chord array to unordered list
-        $.each(key.scale, function(i) {
+        $.each(obj.scale, function(i) {
             var li = $('<li/>')
                 .addClass('chord-degree')
                 .attr('role', 'menuitem')
-                .appendTo($(chordList));
+                .appendTo(chordList);
             var liLink = $('<a/>')
                 .addClass('chord-link')
-                .html(key.scale[i])
+                .addClass(obj.chords[i].toString())
+                .html(obj.scaleHTML[i])
                 .appendTo(li);
+                
+                armChords(obj.scale[i], obj.chords[i]); 
+               
         });
 }
 // End printLogic //
 
 
-// A function for all of the logic of printing the key, just pass the correct key object
+// A function for all of the logic of printing the `, just pass the correct key object
 function printKey( musicalKey ) {
     // Empty before appending
-        $(keyChar).empty();
-        $(notelist).empty();
-        $(chordList).empty();
-        $(chordLabels).empty();
+        keyDesc.empty(); 
+        keyChar.empty();
+        notelist.empty();
+        chordList.empty();
+        chordLabels.empty();
     // Find Major
-    if ( $(modeMenu).val() === "major") {
+    if ( modeMenu.val() === "major") {
         // Pass printLogic they key and mode
-        printLogic(musicalKey, majorNumerals);
+        printLogic(musicalKey, key.mode.major);
     }
     // END IF Major //
 
     // FIND MINOR
     // Pass printLogic they key and mode
-    if ( $(modeMenu).val() === "minor") {
-        printLogic(musicalKey, minorNumerals);
+    if ( modeMenu.val() === "minor") {
+        printLogic(musicalKey, key.mode.minor); 
     }
-}
+} 

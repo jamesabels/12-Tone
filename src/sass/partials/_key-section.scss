@@ -38,5 +38,10 @@
     font-size: 1.2em;
     text-transform: uppercase;
     border-bottom: 5px solid;
-    margin-top: 3%; 
+    margin-top: 3%;
  }
+ 
+html.no-touch #submit-key:hover, #submit-key:active {
+    border-top: 5px solid;
+    border-bottom: 0px solid;
+}

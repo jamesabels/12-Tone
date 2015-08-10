@@ -37,6 +37,8 @@ header {
         margin-bottom: 2%;
         border-bottom: 5px solid;
         a {
+            display: block; 
+            padding: 30px;
             font-size: 1.8em;
             text-transform: uppercase;
             font-weight: 500;
@@ -50,7 +52,6 @@ header {
     }
 }
 
-
 .mobile-nav-btn {
     @include span(4);
     border-bottom: 5px solid;
@@ -58,6 +59,11 @@ header {
     text-align: center;
     font-size: 20px;
     margin-top: 1%;
+}
+
+.mobile-nav-btn:hover {
+    border-bottom: 0px solid;
+    border-top: 5px solid;
 }
 
 #mobile-nav {
