@@ -20,7 +20,7 @@ var instrument = {
       Gflat: "sound\\piano\\FSharpGFlat.mp3",
       G: "sound\\piano\\G.mp3",
       Gsharp: "sound\\piano\\GSharpAFlat.mp3",
-      Aflat: "sound\\piano\\GSharpAFlat.mp3",
+      Aflat: "sound\\piano\\GSharpAFlat.mp3", 
       A: "sound\\piano\\A.mp3",
       Asharp: "sound\\piano\\ASharpBFlat.mp3",
       Bflat: "sound\\piano\\ASharpBFlat.mp3",

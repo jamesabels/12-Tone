@@ -30,7 +30,8 @@
             text-align: center;
 
             a{
-              display: block;
+              display: block; 
+              padding: 8px;              
               font-size: 1em;
               
               &:hover {
@@ -41,7 +42,6 @@
             
             p{
               font-size: 1em;
-              padding: 0;
               margin: 0; 
             }
         }
@@ -62,7 +62,7 @@ h1.section-title {
     @include span(7);
     text-align: left;
     font-size: 16px; 
-    padding: 8px;
+    padding: 20px;
     margin: 0;  
     
     p {

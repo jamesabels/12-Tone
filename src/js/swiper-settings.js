@@ -10,6 +10,5 @@ var mySwiper = new Swiper('.swiper-container', {
   direction: 'horizontal',
   loop: true,
   keyboardControl: true,
-  initialSlide: 0, 
-  slidesPerView: 1
+  initialSlide: 0
 });
