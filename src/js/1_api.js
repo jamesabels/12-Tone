@@ -62,7 +62,7 @@ var instrument = {
         Aflat: "sound\\piano\\GSharpAFlatMin.mp3",
         A: "sound\\piano\\AMin.mp3",
         Asharp: "sound\\piano\\ASharpBFlatMin.mp3",
-        Bflat: "sound\\piano\\ASharpBFlatMin.mp3",
+        Bflat: "sound\\piano\\ASharpBFlatMin.mp3", 
         B: "sound\\piano\\BMin.mp3"
       }
     }
@@ -189,7 +189,7 @@ var key = {
     DSharp: {
       keyChar: "Feelings of the anxiety of the soul's deepest distress, of brooding despair, of blackest depresssion, of the most gloomy condition of the soul.",
       scale: ["D-Sharp", "F", "F-Sharp", "G-Sharp", "A-Sharp", "B", "C-Sharp"],
-      scaleHTML: ["D&sharp", "F", "F&sharp;", "G&sharp;", "A&sharp;", "B", "C&sharp;"],      
+      scaleHTML: ["D&sharp;", "F", "F&sharp;", "G&sharp;", "A&sharp;", "B", "C&sharp;"],      
       chords: ["D-Sharp-Minor", "F-Minor", "F-Sharp-Major", "G-Sharp-Minor", "A-Sharp-Major", "B-Major", "C-Sharp-Major"],                        
       color: yellow
     },
@@ -225,7 +225,7 @@ var key = {
       keyChar: "Grumbler, heart squeezed until it suffocates; wailing lament, difficult struggle; in a word, the color of this key is everything struggling with difficulty.",
       scale: ["G-Sharp", "A-Sharp", "B", "C-Sharp", "D-Sharp", "E", "F-Sharp"],
       scaleHTML: ["G&sharp;", "A&sharp;", "B", "C&sharp;", "D&sharp;", "E", "F&sharp;"],      
-      chords: ["G-Sharp-Minor", "A-Sharp-Minor", "B", "C-Sharp-Minor", "D-Sharp-Major", "E-Major", "F-Sharp-Major"],                        
+      chords: ["G-Sharp-Minor", "A-Sharp-Minor", "B-Major", "C-Sharp-Minor", "D-Sharp-Major", "E-Major", "F-Sharp-Major"],                        
       color: orange
     },
     A: {
