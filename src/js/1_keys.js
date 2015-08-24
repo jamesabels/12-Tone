@@ -52,7 +52,7 @@ var key = {
       keyChar: "Noisy shouts of joy, laughing pleasure and not yet complete, full delight lies in E Major.",
       scale: ["E", "F-Sharp", "G-Sharp", "A", "B", "C-Sharp", "D-Sharp"],
       scaleHTML: ["E", "F&sharp;", "G&sharp;", "A", "B", "C&sharp;", "D&sharp;"],
-      chords: ["E-Major", "F-Sharp-Minor", "G-Sharp-Minor", "A-Major", "B-Flat-Major", "C-Sharp-Minor", "D-Sharp-Minor"],
+      chords: ["E-Major", "F-Sharp-Minor", "G-Sharp-Minor", "A-Major", "B-Major", "C-Sharp-Minor", "D-Sharp-Minor"],
       color: paleBlue
     },
     F: {
