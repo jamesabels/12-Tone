@@ -1,0 +1,106 @@
+.nav-list {
+    @include span(12 of 12);
+    margin: 0 auto;
+    list-style-type: none;
+    margin-top: 5%;
+    li {
+        @include span(12 of 12);
+        background-color: $mobile-nav-li-color;
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+        border-bottom: 5px solid;
+        border-color: $mobile-nav-li-border-color;
+        a {
+          color: $mobile-nav-li-text-color;
+          display: block;
+          font-size: 1.8em;
+          padding: 5px;
+          text-transform: uppercase;
+          font-weight: 500;
+        }
+        a:hover {
+          color: $mobile-nav-li-text-hover-color;
+          text-decoration: none;
+        }
+    }
+    html.no-touch li:hover, li:active {
+      text-decoration: none;
+      background-color: $mobile-nav-li-color;
+      border-color: $mobile-nav-li-border-color;
+      color: $mobile-nav-li-border-color;
+      border-top: 5px solid;
+      border-bottom: none;
+    }
+}
+
+.mobile-nav {
+  background-color: $mobile-nav-bg-color;
+  border-color: $mobile-nav-btn-border-color;
+  z-index: 99;
+}
+
+.menu-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  z-index: 99;
+  height: 100vh;
+}
+
+.key-section  {
+  background-color: $body-bg-color;
+  .dropdown-wrap  {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .key-select {
+      @include span(12 of 12);
+      margin: 0 auto;
+      margin-top: 4%;
+      option {
+
+      }
+  }
+  .mode-select {
+      @include span(12 of 12);
+      margin: 0 auto;
+      margin-top: 4%;
+      option {
+
+      }
+  }
+}
+
+.display-section {
+    ul {
+        li {
+            @include span(1);
+            color: $ul-border-color;
+            background-color: $ul-bg-color;
+            border-color: $ul-border-color;
+            padding: 3px;
+            border: 1px solid;
+            text-align: center;
+            a{
+              color: $ul-link-color;
+              display: block;
+              padding: 5px;
+              font-size: 1em;
+              &:hover {
+                  text-decoration: none;
+                  font-weight: 500;
+              }
+            }
+            p{
+              color: $ul-link-color;
+              font-size: 1em;
+              margin: 0;
+            }
+        }
+    }
+}

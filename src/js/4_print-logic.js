@@ -1,8 +1,7 @@
-// Print
 function printLogic(obj, mode) {
     // Append new key description
         $("<p class='key-char'>" + obj.keyChar + "</p>").appendTo(keyDesc);
-
+        $("<h1 class='key-title'>" + obj.title + "</p>").appendTo(displayWrap);
         // Append note array to unordered list.
         $.each(obj.scale, function (i) {
             var li = $('<li/>')
@@ -13,11 +12,10 @@ function printLogic(obj, mode) {
                 .addClass('note-link')
                 .addClass(obj.scale[i].toString() + "-note")
                 .html(obj.scaleHTML[i])
-                .appendTo(li); 
-                
+                .appendTo(li);
+
                 armNote(obj.scale[i]);
         });
-
         // Append Roman Numeral array to unordered list
         $.each(mode.nums, function(i) {
             var li = $('<li/>')
@@ -29,7 +27,6 @@ function printLogic(obj, mode) {
                 .html(mode.nums[i])
                 .appendTo(li);
         });
-
         // Append chord array to unordered list
         $.each(obj.scale, function(i) {
             var li = $('<li/>')
@@ -41,32 +38,8 @@ function printLogic(obj, mode) {
                 .addClass(obj.chords[i].toString())
                 .html(obj.scaleHTML[i])
                 .appendTo(li);
-                
-                armChords(obj.scale[i], obj.chords[i]); 
-               
+
+                armChords(obj.scale[i], obj.chords[i]);
+
         });
 }
-// End printLogic //
-
-
-// A function for all of the logic of printing the `, just pass the correct key object
-function printKey( musicalKey ) {
-    // Empty before appending
-        keyDesc.empty(); 
-        keyChar.empty();
-        notelist.empty();
-        chordList.empty();
-        chordLabels.empty();
-    // Find Major
-    if ( modeMenu.val() === "major") {
-        // Pass printLogic they key and mode
-        printLogic(musicalKey, key.mode.major);
-    }
-    // END IF Major //
-
-    // FIND MINOR
-    // Pass printLogic they key and mode
-    if ( modeMenu.val() === "minor") {
-        printLogic(musicalKey, key.mode.minor); 
-    }
-} 
