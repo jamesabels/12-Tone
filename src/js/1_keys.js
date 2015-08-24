@@ -36,7 +36,7 @@ var key = {
       keyChar: "The key of triumph, of Hallejuahs, of war-cries, of victory-rejoicing.",
       scale: ["D", "E", "F-Sharp", "G", "A", "B", "C-Sharp"],
       scaleHTML: ["D", "E", "F&sharp;", "G", "A", "B", "C&sharp;"],
-      chords: ["D-Major", "E-Sharp-Minor", "F-Sharp-Minor", "G-Major", "A-Major", "B-Minor", "C-Sharp-Minor"],
+      chords: ["D-Major", "E-Minor", "F-Sharp-Minor", "G-Major", "A-Major", "B-Minor", "C-Sharp-Minor"],
       color: yellow
     },
     DSharp: {
