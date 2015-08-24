@@ -1,0 +1,45 @@
+.key-title {
+  text-align: center;
+  color: $section-title-color;
+  font-size: 2em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  margin-top: 3.4%;
+}
+
+h1.section-title {
+    @include span(7);
+    color: $section-title-color;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 5px;
+    margin: 0;
+    margin-top: 3%;
+}
+
+.key-desc {
+    @include span(7);
+    background-color: $key-desc-bg-color;
+    border-color: $key-desc-border-color;
+    text-align: left;
+    font-size: 16px;
+    padding: 10px;
+    margin: 0;
+
+    p {
+      color: $key-desc-text-color;
+      padding: 0;
+      margin: 0;
+    }
+}
+
+.logo {
+  color: $section-title-color;
+  text-align: center;
+  padding: 10px;
+}

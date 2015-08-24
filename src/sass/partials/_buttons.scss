@@ -1,0 +1,80 @@
+.standard-button {
+  border-bottom: 5px solid;
+  padding: 4px;
+  text-align: center;
+  font-size: 20px;
+  span {
+    color: $mobile-nav-btn-icon-color;
+  }
+}
+html.no-touch .standard-button:hover, .standard-button:active  {
+  border-bottom: 0px solid;
+  border-top: 5px solid;
+}
+
+.menu-button {
+  background-color: $mobile-nav-btn-color;
+  border-color: $mobile-nav-btn-border-color !important;
+  border-bottom: 5px solid;
+  padding: 4px;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 1%;
+
+  span {
+    color: $mobile-nav-btn-icon-color;
+  }
+}
+html.no-touch .menu-button:hover, .menu-button:active  {
+  border-bottom: 0px solid;
+  border-top: 5px solid;
+}
+
+.close-button {
+  position: fixed;
+  bottom: 0;
+}
+
+.key-close-button {
+  @include span(12 of 12);
+}
+
+.settings-close-button {
+  @include span(12 of 12);
+}
+
+.submit-btn {
+    @include span(12 of 12);
+    background-color: $submit-key-button-color;
+    color: $white;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    border-bottom: 5px solid;
+    border-color: $submit-key-button-border-color;
+    margin-top: 8%;
+    &:hover {
+      color: $submit-key-button-border-color;
+      border-color: $submit-key-button-border-hover-color;
+      border-top: 5px solid;
+      border-bottom: 0px solid;
+    }
+ }
+
+html.no-touch .submit-key:hover, .submit-key:active {
+  border-color: $submit-key-button-border-hover-color;
+  color: $submit-key-button-border-color;
+  border-top: 5px solid;
+  border-bottom: 0px solid;
+}
+
+.settings-button, .key-button {
+  @include span(6 of 12);
+}
+
+.key-button {
+  border-right: solid 2px $mobile-nav-btn-border-color;
+}
+
+.settings-button {
+  border-left: solid 2px $mobile-nav-btn-border-color;
+}

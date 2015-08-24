@@ -1,26 +1,96 @@
+html {
+  @include container(100%);
+  height: 100vh;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
 body {
-    @include container(100%);
+  margin: 0 auto;
+  position: relative;
+  background: none;
+  background-color: $body-bg-color;
+  color: transparent;
+  border-color: transparent;
+}
+
+.app {
+  position: relative;
+  margin-top: 3%;
 }
 
 .app-wrap {
+  @include container(80%);
+  padding: 0;
+  margin: 0 auto;
+  margin-top: -1%;
+}
+
+.display-navigation {
+  @include layout($susy);
+  background-color: $header-bg-color;
+  border: none;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation {
+  @include layout($susy);
+  background-color: $header-bg-color;
+  border-bottom: 5px solid $header-border-color;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  margin: 0;
+  .brand-wrap {
+    background-color: $header-bg-color;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    .logo {
+      color: $logo-color;
+      font-size: 32px;
+      padding: 10px;
+      margin: 0;
+    }
+  }
+  .nav-wrap {
     @include container(80%);
     margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
 }
 
-// Helper Classes
-.hide {
-    display: none;
+// DISPLAY SECTION
+.display-section {
+    @include layout($chord-section);
+    @include span(7);
+    position: relative;
+    padding: 0;
+    height: 100%;
+    .display-wrap {
+        width: 100%;
+    }
 }
 
-.full-screen {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    height: 100vh;
-    width: 100vw;
+.list-wrap {
 }
 
-.fixed-bottom {
-    position: fixed;
-    bottom: 0;
-} 
+.chord-section {
+    @include span(7);
+}
+
+// FOOTER SECTION
+.fotter-wrap {
+  @include layout($susy);
+  @include span(12 of 12);
+  position: absolute;
+  bottom: 0;
+}
