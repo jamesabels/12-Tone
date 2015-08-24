@@ -1,7 +1,7 @@
 function printLogic(obj, mode) {
     // Append new key description
         $("<p class='key-char'>" + obj.keyChar + "</p>").appendTo(keyDesc);
-        $("<h1 class='key-title'>" + obj.title + "</p>").appendTo(displayWrap); 
+        $("<h1 class='key-title'>" + obj.title + "</p>").appendTo(displayWrap);
         // Append note array to unordered list.
         $.each(obj.scale, function (i) {
             var li = $('<li/>')
