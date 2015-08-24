@@ -65,7 +65,7 @@ var key = {
     },
     FSharp: {
       title: "F# Major",
-      keyChar: "Triumph over difficulty, free sigh of relief utered when hurdles are surmounted; echo of a soul which has fiercely struggled and finally conquered lies in all uses of this key.",
+      keyChar: "Triumph over difficulty, free sigh of relief utered when hurdles are surmounted.",
       scale: ["F-Sharp", "G-Sharp", "A-Sharp", "B", "C-Sharp", "D-Sharp", "F"],
       scaleHTML: ["F&sharp;", "G&sharp;", "A&sharp;", "B", "C&sharp;", "D&sharp;", "F"],
       chords: ["F-Sharp-Minor", "G-Sharp-Minor", "A-Sharp-Major", "B", "C-Sharp-Minor", "D-Sharp-Minor", "F-Major"],
@@ -89,7 +89,7 @@ var key = {
     },
     A: {
       title: "A Major",
-      keyChar: "This key includes declarations of innocent love, satisfaction with one's state of affairs; hope of seeing one's beloved again when parting; youthful cheerfulness and trust in God.",
+      keyChar: "This key includes declarations of innocent love, satisfaction with one's state of affairs.",
       scale: ["A", "B", "C-Sharp", "D", "E", "F-Sharp", "G-Sharp"],
       scaleHTML: ["A", "B", "C&sharp;", "D", "E", "F&sharp;", "G&sharp;"],
       chords: ["A-Major", "B-Minor", "C-Sharp-Minor", "D-Major", "E-Major", "F-Sharp-Minor", "G-Sharp-Minor"],
@@ -105,7 +105,7 @@ var key = {
     },
     B: {
       title: "B Major",
-      keyChar: "Strongly coloured, announcing wild passions, composed from the most glaring coulors. Anger, rage, jealousy, fury, despair and every burden of the heart lies in its sphere.",
+      keyChar: "Strongly coloured, announcing wild passions, composed from the most glaring coulors.",
       scale: ["B", "C-Sharp", "D-Sharp", "E", "F-Sharp", "G-Sharp", "A-Sharp"],
       scaleHTML: ["B", "C&sharp;", "D&sharp;", "E", "F&sharp;", "G&sharp;", "A&sharp;"],
       chords: ["B-Major", "C-Sharp-Minor", "D-Sharp-Minor", "E-Major", "F-Sharp-Major", "G-Sharp-Minor", "A-Sharp-Minor"],
@@ -179,7 +179,7 @@ var key = {
     },
     GSharp: {
       title: "G# Minor",
-      keyChar: "Grumbler, heart squeezed until it suffocates; wailing lament, difficult struggle; in a word, the color of this key is everything struggling with difficulty.",
+      keyChar: "Grumbler, heart squeezed until it suffocates; wailing lament, difficult struggle.",
       scale: ["G-Sharp", "A-Sharp", "B", "C-Sharp", "D-Sharp", "E", "F-Sharp"],
       scaleHTML: ["G&sharp;", "A&sharp;", "B", "C&sharp;", "D&sharp;", "E", "F&sharp;"],
       chords: ["G-Sharp-Minor", "A-Sharp-Minor", "B-Major", "C-Sharp-Minor", "D-Sharp-Major", "E-Major", "F-Sharp-Major"],
@@ -187,7 +187,7 @@ var key = {
     },
     A: {
       title: "A Minor",
-      keyChar: "Grumbler, heart squeezed until it suffocates; wailing lament, difficult struggle; in a word, the color of this key is everything struggling with difficulty.",
+      keyChar: "Grumbler, heart squeezed until it suffocates; wailing lament, difficult struggle.",
       scale: ["A", "B", "C", "D", "E", "F", "G"],
       scaleHTML: ["A", "B", "C", "D", "E", "F", "G"],
       chords: ["A-Minor", "B-Minor", "C-Major", "D-Minor", "E-Major", "F-Major", "G-Major"],
