@@ -28,7 +28,7 @@ var key = {
       keyChar: "A leering key, degenerating into grief and rapture. It cannot laugh, but it can smile; it cannot howl, but it can at least grimace its crying.",
       scale: ["C-Sharp", "D-Sharp", "F", "F-Sharp", "G-Sharp", "A-Sharp", "C"],
       scaleHTML: ["C&sharp;", "D&sharp;", "F", "F&sharp;", "G&sharp;", "A&sharp;", "C"],
-      chords: ["C-Sharp-Major", "D-Sharp-Minor", "F-Minor", "F-Sharp-Major", "G-Sharp-Major", "A-Sharp-Minor", "C-Major"],
+      chords: ["C-Sharp-Major", "D-Sharp-Minor", "F-Minor", "F-Sharp-Major", "G-Sharp-Major", "A-Sharp-Minor", "C-Minor"],
       color: red
     },
     D: {
@@ -44,7 +44,7 @@ var key = {
       keyChar: "The key of love, of devotion, of intimate conversation with God.",
       scale: ["D-Sharp", "F", "G", "G-Sharp", "A-Sharp", "C", "D"],
       scaleHTML: ["D&sharp;", "F", "G", "G&sharp;", "A&sharp;", "C", "D"],
-      chords: ["D-Sharp-Minor", "F-Minor", "G-Major", "G-Sharp-Major", "A-Sharp-Minor", "C-Minor", "D-Major"],
+      chords: ["D-Sharp-Major", "F-Minor", "G-Minor", "G-Sharp-Major", "A-Sharp-Major", "C-Minor", "D-Minor"],
       color: yellow
     },
     E: {
@@ -68,7 +68,7 @@ var key = {
       keyChar: "Triumph over difficulty, free sigh of relief utered when hurdles are surmounted.",
       scale: ["F-Sharp", "G-Sharp", "A-Sharp", "B", "C-Sharp", "D-Sharp", "F"],
       scaleHTML: ["F&sharp;", "G&sharp;", "A&sharp;", "B", "C&sharp;", "D&sharp;", "F"],
-      chords: ["F-Sharp-Minor", "G-Sharp-Minor", "A-Sharp-Major", "B", "C-Sharp-Minor", "D-Sharp-Minor", "F-Major"],
+      chords: ["F-Sharp-Major", "G-Sharp-Minor", "A-Sharp-Minor", "B-Major", "C-Sharp-Major", "D-Sharp-Minor", "F-Minor"],
       color: darkRed
     },
     G: {
@@ -84,7 +84,7 @@ var key = {
       keyChar: "Key of the grave. Death, grave, putrefaction, judgment, eternity lie in its radius.",
       scale: ["G-Sharp", "A-Sharp", "C", "C-Sharp", "D-Sharp", "F", "G"],
       scaleHTML: ["G&sharp;", "A&sharp;", "C", "C&sharp;", "D&sharp;", "F", "G"],
-      chords: ["G-Sharp-Minor", "A-Sharp-Minor", "C-Major", "C-Sharp-Major", "D-Sharp-Minor", "F-Minor", "G-Major"],
+      chords: ["G-Sharp-Major", "A-Sharp-Minor", "C-Minor", "C-Sharp-Major", "D-Sharp-Major", "F-Minor", "G-Minor"],
       color: orange
     },
     A: {
@@ -100,7 +100,7 @@ var key = {
       keyChar: "Cheerful love, clear conscience, hope aspiration for a better world.",
       scale: ["A-Sharp", "C", "D", "D-Sharp", "F", "G", "A"],
       scaleHTML: ["A&sharp;", "C", "D", "D&sharp;", "F", "G", "A"],
-      chords: ["A-Sharp-Major", "C", "D", "D-Sharp-Major", "F-Major", "G-Minor", "A-Minor"],
+      chords: ["A-Sharp-Major", "C-Minor", "D-Minor", "D-Sharp-Major", "F-Major", "G-Minor", "A-Minor"],
       color: purple
     },
     B: {
@@ -118,7 +118,7 @@ var key = {
       keyChar: "Declaration of love and at the same time the lament of unhappy love. All languishing, longing, sighing of the love-sick soul lies in this key.",
       scale: ["C", "D", "D-Sharp", "F", "G", "G-Sharp", "A-Sharp"],
       scaleHTML: ["C", "D", "D&sharp;", "F", "G", "G&sharp;", "A&sharp;"],
-      chords: ["C-Minor", "D-Minor", "D-Sharp-Major", "F-Minor", "G-Major", "G-Sharp-Major", "A-Sharp-Major"],
+      chords: ["C-Minor", "D-Minor", "D-Sharp-Major", "F-Minor", "G-Minor", "G-Sharp-Major", "A-Sharp-Major"],
       color: red
     },
     CSharp: {
@@ -134,7 +134,7 @@ var key = {
       keyChar: "Melancholy womanliness, the spleen and humours brood.",
       scale: ["D", "E", "F", "G", "A", "A-Sharp", "C"],
       scaleHTML: ["D", "E", "F", "G", "A", "A&sharp;", "C"],
-      chords: ["D-Minor", "E-Minor", "F-Major", "G-Minor", "A-Major", "A-Sharp-Major", "C-Major"],
+      chords: ["D-Minor", "E-Minor", "F-Major", "G-Minor", "A-Minor", "A-Sharp-Major", "C-Major"],
       color: yellow
     },
     DSharp: {
@@ -142,7 +142,7 @@ var key = {
       keyChar: "Feelings of the anxiety of the soul's deepest distress, of brooding despair, of blackest depresssion, of the most gloomy condition of the soul.",
       scale: ["D-Sharp", "F", "F-Sharp", "G-Sharp", "A-Sharp", "B", "C-Sharp"],
       scaleHTML: ["D&sharp;", "F", "F&sharp;", "G&sharp;", "A&sharp;", "B", "C&sharp;"],
-      chords: ["D-Sharp-Minor", "F-Minor", "F-Sharp-Major", "G-Sharp-Minor", "A-Sharp-Major", "B-Major", "C-Sharp-Major"],
+      chords: ["D-Sharp-Minor", "F-Minor", "F-Sharp-Major", "G-Sharp-Minor", "A-Sharp-Minor", "B-Major", "C-Sharp-Major"],
       color: yellow
     },
     E: {
@@ -150,7 +150,7 @@ var key = {
       keyChar: "Naive, womanly innocent declaration of love, lament without grumbling; sighs accompanied by few tears.",
       scale: ["E", "FSharp", "G", "A", "B", "C", "D"],
       scaleHTML: ["E", "F&sharp;", "G", "A", "B", "C", "D"],
-      chords: ["E-Minor", "F-Sharp-Minor", "G-Major", "A-Minor", "B-Major", "C-Major", "D-Major"],
+      chords: ["E-Minor", "F-Sharp-Minor", "G-Major", "A-Minor", "B-Minor", "C-Major", "D-Major"],
       color: paleBlue
     },
     F: {
@@ -158,7 +158,7 @@ var key = {
       keyChar: "Deep depression, funereal lament, groans of misery and longing for the grave.",
       scale: ["F", "G", "G-Sharp", "A-Sharp", "C", "C-Sharp", "D-Sharp"],
       scaleHTML: ["F", "G", "G&sharp;", "A&sharp;", "C", "C&sharp;", "D&sharp;"],
-      chords: ["F-Minor", "G-Minor", "G-Sharp-Major", "A-Sharp-Minor", "C-Major", "C-Sharp-Major", "D-Sharp-Major"],
+      chords: ["F-Minor", "G-Minor", "G-Sharp-Major", "A-Sharp-Minor", "C-Minor", "C-Sharp-Major", "D-Sharp-Major"],
       color: darkRed
     },
     FSharp: {
@@ -166,7 +166,7 @@ var key = {
       keyChar: "A gloomy key: it tugs at passion as a dog biting a dress. Resentment and discontent are its language.",
       scale: ["F-Sharp", "G-Sharp", "A", "B", "C-Sharp", "D", "E"],
       scaleHTML: ["F&sharp;", "G&sharp;", "A", "B", "C&sharp;", "D", "E"],
-      chords: ["F-Sharp-Minor", "G-Sharp-Minor", "A-Major", "B-Minor", "C-Sharp-Major", "D-Major", "E-Major"],
+      chords: ["F-Sharp-Minor", "G-Sharp-Minor", "A-Major", "B-Minor", "C-Sharp-Minor", "D-Major", "E-Major"],
       color: darkRed
     },
     G: {
@@ -174,7 +174,7 @@ var key = {
       keyChar: "Discontent, uneasiness, worry about a failed scheme; bad-tempered gnashing of teeth; in a word: resentment and dislike.",
       scale: ["G", "A", "A-Sharp", "C", "D", "D-Sharp", "F"],
       scaleHTML: ["G", "A", "A&sharp;", "C", "D", "D&sharp;", "F"],
-      chords: ["G-Minor", "A-Minor", "A-Sharp-Major", "C-Minor", "D-Major", "D-Sharp-Major", "F-Major"],
+      chords: ["G-Minor", "A-Minor", "A-Sharp-Major", "C-Minor", "D-Minor", "D-Sharp-Major", "F-Major"],
       color: orange
     },
     GSharp: {
@@ -182,7 +182,7 @@ var key = {
       keyChar: "Grumbler, heart squeezed until it suffocates; wailing lament, difficult struggle.",
       scale: ["G-Sharp", "A-Sharp", "B", "C-Sharp", "D-Sharp", "E", "F-Sharp"],
       scaleHTML: ["G&sharp;", "A&sharp;", "B", "C&sharp;", "D&sharp;", "E", "F&sharp;"],
-      chords: ["G-Sharp-Minor", "A-Sharp-Minor", "B-Major", "C-Sharp-Minor", "D-Sharp-Major", "E-Major", "F-Sharp-Major"],
+      chords: ["G-Sharp-Minor", "A-Sharp-Minor", "B-Major", "C-Sharp-Minor", "D-Sharp-Minor", "E-Major", "F-Sharp-Major"],
       color: orange
     },
     A: {
@@ -190,7 +190,7 @@ var key = {
       keyChar: "Grumbler, heart squeezed until it suffocates; wailing lament, difficult struggle.",
       scale: ["A", "B", "C", "D", "E", "F", "G"],
       scaleHTML: ["A", "B", "C", "D", "E", "F", "G"],
-      chords: ["A-Minor", "B-Minor", "C-Major", "D-Minor", "E-Major", "F-Major", "G-Major"],
+      chords: ["A-Minor", "B-Minor", "C-Major", "D-Minor", "E-Minor", "F-Major", "G-Major"],
       color: purple
     },
     ASharp: {
@@ -198,7 +198,7 @@ var key = {
       keyChar: "A quaint creature, often dressed in the garment of night. It is somewhat surly and very seldom takes on a pleasant countenance.",
       scale: ["A-Sharp", "C", "C-Sharp", "D-Sharp", "F", "F-Sharp", "G-Sharp"],
       scaleHTML: ["A&sharp;", "C", "C&sharp;", "D&sharp;", "F", "F&sharp;", "G&sharp;"],
-      chords: ["A-Sharp-Minor", "C-Minor", "C-Sharp-Major", "D-Sharp-Minor", "F-Major", "F-Sharp-Major", "G-Sharp-Major"],
+      chords: ["A-Sharp-Minor", "C-Minor", "C-Sharp-Major", "D-Sharp-Minor", "F-Minor", "F-Sharp-Major", "G-Sharp-Major"],
       color: purple
     },
     B: {
@@ -206,7 +206,7 @@ var key = {
       keyChar: "This is as it were the key of patience, of calm awaiting ones's fate and of submission to divine dispensation.",
       scale: ["B", "C-Sharp", "D", "E", "F-Sharp", "G", "A"],
       scaleHTML: ["B", "C&sharp;", "D", "E", "F&sharp;", "G", "A&sharp;"],
-      chords: ["B-Minor", "C-Sharp-Minor", "D-Major", "E-Minor", "F-Sharp-Major", "G-Major", "A-Sharp-Major"],
+      chords: ["B-Minor", "C-Sharp-Minor", "D-Major", "E-Minor", "F-Sharp-Minor", "G-Major", "A-Sharp-Major"],
       color: paleBlue
     },
   }
