@@ -204,7 +204,7 @@ var key = {
     B: {
       title: "B Minor",
       keyChar: "This is as it were the key of patience, of calm awaiting ones's fate and of submission to divine dispensation.",
-      scale: ["B", "C2-Sharp", "D2", "E2", "F2-Sharp", "G2", "A2"],
+      scale: ["B", "C2-Sharp", "D2", "E2", "F2-Sharp", "G2", "A2-Sharp"],
       scaleHTML: ["B", "C&sharp;", "D", "E", "F&sharp;", "G", "A&sharp;"],
       chords: ["B-Minor", "C2-Sharp-Minor", "D2-Major", "E2-Minor", "F2-Sharp-Minor", "G2-Major", "A2-Sharp-Major"],
       color: paleBlue
