@@ -41,13 +41,6 @@ function armChords(note, chord) {
 			src.play();
 		});
 	}
-	// Db major
-	if (note === "D-Flat" && chord === "D-Flat-Major") {
-		$("." + chord).click(function () {
-			var src = new Audio(instrument.piano.chord.major.Dflat);
-			src.play();
-		});
-	}
 	// D minor
 	if (note === "D" && chord === "D-Minor") {
 		$("." + chord).click(function () {
@@ -62,13 +55,6 @@ function armChords(note, chord) {
 			src.play();
 		});
 	}
-	// Db minor
-	if (note === "D-Flat" && chord === "D-Flat-Minor") {
-		$("." + chord).click(function () {
-			var src = new Audio(instrument.piano.chord.minor.Dflat);
-			src.play();
-		});
-	}
 	// E major
 	if (note === "E" && chord === "E-Major") {
 		$("." + chord).click(function () {
@@ -76,24 +62,10 @@ function armChords(note, chord) {
 			src.play();
 		});
 	}
-	// Eb major
-	if (note === "E-Flat" && chord === "E-Flat-Major") {
-		$("." + chord).click(function () {
-			var src = new Audio(instrument.piano.chord.major.Eflat);
-			src.play();
-		});
-	}
 	// E minor
 	if (note === "E" && chord === "E-Minor") {
 		$("." + chord).click(function () {
 			var src = new Audio(instrument.piano.chord.minor.E);
-			src.play();
-		});
-	}
-	// Eb minor
-	if (note === "E-Flat" && chord === "E-Flat-Minor") {
-		$("." + chord).click(function () {
-			var src = new Audio(instrument.piano.chord.minor.Eflat);
 			src.play();
 		});
 	}
@@ -139,13 +111,6 @@ function armChords(note, chord) {
 			src.play();
 		});
 	}
-	// Gb major
-	if (note === "G-Flat" && chord === "G-Flat-Major") {
-		$("." + chord).click(function () {
-			var src = new Audio(instrument.piano.chord.major.Dflat);
-			src.play();
-		});
-	}
 	// G minor
 	if (note === "G" && chord === "G-Minor") {
 		$("." + chord).click(function () {
@@ -157,13 +122,6 @@ function armChords(note, chord) {
 	if (note === "G-Sharp" && chord === "G-Sharp-Minor") {
 		$("." + chord).click(function () {
 			var src = new Audio(instrument.piano.chord.minor.Gsharp);
-			src.play();
-		});
-	}
-	// Gb minor
-	if (note === "G-Flat" && chord === "G-Flat-Minor") {
-		$("." + chord).click(function () {
-			var src = new Audio(instrument.piano.chord.minor.Gflat);
 			src.play();
 		});
 	}
@@ -181,13 +139,6 @@ function armChords(note, chord) {
 			src.play();
 		});
 	}
-	// Ab major
-	if (note === "A-Flat" && chord === "A-Flat-Major") {
-		$("." + chord).click(function () {
-			var src = new Audio(instrument.piano.chord.major.Aflat);
-			src.play();
-		});
-	}
 	// A minor
 	if (note === "A" && chord === "A-Minor") {
 		$("." + chord).click(function () {
@@ -202,13 +153,6 @@ function armChords(note, chord) {
 			src.play();
 		});
 	}
-	// Ab minor
-	if (note === "A-Flat" && chord === "A-Flat-Minor") {
-		$("." + chord).click(function () {
-			var src = new Audio(instrument.piano.chord.minor.Aflat);
-			src.play();
-		});
-	}
 	// B major
 	if (note === "B" && chord === "B-Major") {
 		$("." + chord).click(function () {
@@ -216,24 +160,10 @@ function armChords(note, chord) {
 			src.play();
 		});
 	}
-	// Bb major
-	if (note === "B-Flat" && chord === "B-Flat-Major") {
-		$("." + chord).click(function () {
-			var src = new Audio(instrument.piano.chord.major.Bflat);
-			src.play();
-		});
-	}
 	// B minor
 	if (note === "B" && chord === "B-Minor") {
 		$("." + chord).click(function () {
 			var src = new Audio(instrument.piano.chord.minor.B);
-			src.play();
-		});
-	}
-	// Bb minor
-	if (note === "B-Flat" && chord === "B-Flat-Minor") {
-		$("." + chord).click(function () {
-			var src = new Audio(instrument.piano.chord.minor.Bflat);
 			src.play();
 		});
 	}
