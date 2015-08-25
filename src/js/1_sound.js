@@ -18,6 +18,23 @@ var instrument = {
       Asharp: "sound\\piano\\ASharpBFlat.mp3",
       Bflat: "sound\\piano\\ASharpBFlat.mp3",
       B: "sound\\piano\\B.mp3"
+      C2: "sound\\piano\\C2.mp3",
+      C2sharp: "sound\\piano\\C2SharpDFlat.mp3",
+      D2flat: "sound\\piano\\C2SharpDFlat.mp3",
+      D2: "sound\\piano\\D2.mp3",
+      D2sharp: "sound\\piano\\D2Sharp.mp3",
+      E2flat: "sound\\piano\\D2Sharp.mp3",
+      E2: "sound\\piano\\E2.mp3",
+      F2: "sound\\piano\\F2.mp3",
+      F2sharp: "sound\\piano\\F2SharpGFlat.mp3",
+      G2flat: "sound\\piano\\F2SharpGFlat.mp3",
+      G2: "sound\\piano\\G2.mp3",
+      G2sharp: "sound\\piano\\G2SharpAFlat.mp3",
+      A2flat: "sound\\piano\\G2SharpAFlat.mp3",
+      A2: "sound\\piano\\A2.mp3",
+      A2sharp: "sound\\piano\\A2SharpBFlat.mp3",
+      B2flat: "sound\\piano\\A2SharpBFlat.mp3",
+      B2: "sound\\piano\\B2.mp3"
     },
     chord: {
       major: {
@@ -38,6 +55,23 @@ var instrument = {
         Asharp: "sound\\piano\\ASharpBFlatMaj.mp3",
         Bflat: "sound\\piano\\ASharpBFlatMaj.mp3",
         B: "sound\\piano\\BMaj.mp3"
+        C2: "sound\\piano\\C2Maj.mp3",
+        C2sharp: "sound\\piano\\C2SharpDFlatMaj.mp3",
+        D2flat: "sound\\piano\\C2SharpDFlatMaj.mp3",
+        D2: "sound\\piano\\D2Maj.mp3",
+        D2sharp: "sound\\piano\\D2SharpMaj.mp3",
+        E2flat: "sound\\piano\\D2SharpMaj.mp3",
+        E2: "sound\\piano\\E2Maj.mp3",
+        F2: "sound\\piano\\F2Maj.mp3",
+        F2sharp: "sound\\piano\\F2SharpGFlatMaj.mp3",
+        G2flat: "sound\\piano\\F2SharpGFlatMaj.mp3",
+        G2: "sound\\piano\\G2Maj.mp3",
+        G2sharp: "sound\\piano\\G2SharpAFlatMaj.mp3",
+        A2flat: "sound\\piano\\G2SharpAFlatMaj.mp3",
+        A2: "sound\\piano\\A2Maj.mp3",
+        A2sharp: "sound\\piano\\A2SharpBFlatMaj.mp3",
+        B2flat: "sound\\piano\\A2SharpBFlatMaj.mp3",
+        B2: "sound\\piano\\B2Maj.mp3"
       },
       minor: {
         C: "sound\\piano\\CMin.mp3",
@@ -57,6 +91,23 @@ var instrument = {
         Asharp: "sound\\piano\\ASharpBFlatMin.mp3",
         Bflat: "sound\\piano\\ASharpBFlatMin.mp3",
         B: "sound\\piano\\BMin.mp3"
+        C2: "sound\\piano\\C2Min.mp3",
+        C2sharp: "sound\\piano\\C2SharpDFlatMin.mp3",
+        D2flat: "sound\\piano\\C2SharpDFlatMin.mp3",
+        D2: "sound\\piano\\D2Min.mp3",
+        D2sharp: "sound\\piano\\D2SharpMin.mp3",
+        E2flat: "sound\\piano\\D2SharpMin.mp3",
+        E2: "sound\\piano\\E2Min.mp3",
+        F2: "sound\\piano\\F2Min.mp3",
+        F2sharp: "sound\\piano\\F2SharpGFlatMin.mp3",
+        G2flat: "sound\\piano\\F2SharpGFlatMin.mp3",
+        G2: "sound\\piano\\G2Min.mp3",
+        G2sharp: "sound\\piano\\G2SharpAFlatMin.mp3",
+        A2flat: "sound\\piano\\G2SharpAFlatMin.mp3",
+        A2: "sound\\piano\\A2Min.mp3",
+        A2sharp: "sound\\piano\\A2SharpBFlatMin.mp3",
+        B2flat: "sound\\piano\\A2SharpBFlatMin.mp3",
+        B2: "sound\\piano\\B2Min.mp3"
       }
     }
   }
