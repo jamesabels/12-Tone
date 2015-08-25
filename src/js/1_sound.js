@@ -17,7 +17,7 @@ var instrument = {
       A: "sound\\piano\\A.mp3",
       Asharp: "sound\\piano\\ASharpBFlat.mp3",
       Bflat: "sound\\piano\\ASharpBFlat.mp3",
-      B: "sound\\piano\\B.mp3"
+      B: "sound\\piano\\B.mp3",
       C2: "sound\\piano\\C2.mp3",
       C2sharp: "sound\\piano\\C2SharpDFlat.mp3",
       D2flat: "sound\\piano\\C2SharpDFlat.mp3",
@@ -54,7 +54,7 @@ var instrument = {
         A: "sound\\piano\\AMaj.mp3",
         Asharp: "sound\\piano\\ASharpBFlatMaj.mp3",
         Bflat: "sound\\piano\\ASharpBFlatMaj.mp3",
-        B: "sound\\piano\\BMaj.mp3"
+        B: "sound\\piano\\BMaj.mp3",
         C2: "sound\\piano\\C2Maj.mp3",
         C2sharp: "sound\\piano\\C2SharpDFlatMaj.mp3",
         D2flat: "sound\\piano\\C2SharpDFlatMaj.mp3",
@@ -90,7 +90,7 @@ var instrument = {
         A: "sound\\piano\\AMin.mp3",
         Asharp: "sound\\piano\\ASharpBFlatMin.mp3",
         Bflat: "sound\\piano\\ASharpBFlatMin.mp3",
-        B: "sound\\piano\\BMin.mp3"
+        B: "sound\\piano\\BMin.mp3",
         C2: "sound\\piano\\C2Min.mp3",
         C2sharp: "sound\\piano\\C2SharpDFlatMin.mp3",
         D2flat: "sound\\piano\\C2SharpDFlatMin.mp3",
