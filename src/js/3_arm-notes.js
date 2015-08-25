@@ -90,7 +90,7 @@ function armNote(note) {
 			src.play();
 		});
 	}
-	// F#
+	// F2#
 	if (note === "F2-Sharp") {
 		$("." + note + "-note").click(function () {
 			var src = new Audio(instrument.piano.note.F2sharp);
